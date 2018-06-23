@@ -3,4 +3,4 @@ It essentially asks you a few questions and decides which distro suits you! I pl
 
 First I will make a CLI edition of it, merely to test out and work on my algorithm, next an ugly, basic website, and finally, the proper fancy, Bootstrap website.
 
-***To work on this / clone this / use this, install Flask (a pip install away!)***
+**To work on this / clone this / use this, install Flask (a pip install away!)**
