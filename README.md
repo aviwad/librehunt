@@ -3,6 +3,8 @@ It essentially asks you a few questions and decides which distro suits you! I pl
 
 First I will make a CLI edition of it, merely to test out and work on my algorithm, next an ugly, basic website, and finally, the proper fancy, Bootstrap website.
 
+The database is SQLite3
+
 **To work on this / clone this / use this, install Flask (a pip install away!)**
 
 This file is part of Librehunt.
@@ -21,3 +23,15 @@ You should have received a copy of the GNU General Public License
 along with Librehunt.  If not, see <https://www.gnu.org/licenses/>.
 
 Copyright 2018, Avi Wadhwa
+
+TODO:
+ - add more distro's
+ - add logo's for each distro
+ - add descriptions for each distro
+ - build the algorithm (fuzzy search, or best fit search)
+ - build the frontend for the chooser and recommendations
+ - make the feedback page (link to GitLab project)
+ - make the about page
+ - Bootstrap-ify everything!
+ - Find a webhost (DigitalOceans or PythonAnywhere most likely)
+ - make a domain name (DONE! librehunt.org is mine :D )
