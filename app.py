@@ -10,10 +10,9 @@ cursor = db.cursor()
 # Load entire Database as an array to use in Python
 cursor.execute('''SELECT * FROM distro''')
 fullDB = cursor.fetchall()
-# 6 categories to switch per for loop for "similar distros"
-matches= ("perfect", "lts", "fsfratingrating", "customtweaks", "secure", "niche")
 
-# empty array(s) waiting to be filled up corresponding to the tuple above
+# empty array(s) waiting to be filled up corresponding to the list below
+# perfect, lts, fsfrating, customtweaks, secure, niche
 all = [[],[],[],[],[],[]]
 app = Flask(__name__)
 
@@ -37,7 +36,7 @@ def chooser():
         # a hack to get around the messed up ordering of variables in the Database
         trueRow = [[],[],[],[],[],[]]
 
-        for index, item in enumerate(matches):
+        for index in range(6):
             for row in fullDB:
                 if row[1] == technicalexpertise:
                     # get the 5 switching attributes into the array synced with the final distros
