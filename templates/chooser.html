@@ -1,8 +1,57 @@
-<!DOCTYPE html>
-<head></head>
-<body>
-  <h1>To do, make a database storing distro's and their details, and make this page ask questions, give back the results to either the JS or itself for the recommendations page which makes a list of best fit distro's and gives reasons too</h1>
-  <p>mockups are given below</p>
-  <img src="../static/mockups/touchornot.png">
-  <script src="../static/scripts.js"></script>
-</body>
+{% extends "layout.html" %}
+
+{% block title %}
+ Chooser
+{% endblock %}
+{% block content %}
+  <form action="/chooser" method="post">
+    Technical Expertise?
+    <div>
+      <input type="radio" name="technicalexpertise" value="0" /> Beginner
+      <input type="radio" name="technicalexpertise" value="1" /> Medium
+      <input type="radio" name="technicalexpertise" value="2" /> Advanced
+    </div>
+    Old Hardware support (optional question)
+    <div>
+      <input type="radio" name="oldnew" value="0"/> Doesn't matter
+      <input type="radio" name="oldnew" value="1"/> I need it
+    </div>
+    LTS (timely updates)
+    <div>
+      <input type="radio" name="lts" value="0"/> No
+      <input type="radio" name="lts" value="1"/> Yes
+    </div>
+    Free Software Certification
+    <div>
+      <input type="radio" name="fsfrating" value="0"/> No
+      <input type="radio" name="fsfrating" value="1"/> Yes
+    </div>
+    Lookalike? (optional question)
+    <div>
+      <input type="radio" name="lookalike" value="0" /> Doesn't matter
+      <input type="radio" name="lookalike" value="mac" /> macOS
+      <input type="radio" name="lookalike" value="windows" /> Windows
+    </div>
+    Touch support (optional question)
+    <div>
+      <input type="radio" name="touch" value="0"/> Doesn't matter
+      <input type="radio" name="touch" value="1"/> I need it
+    </div>
+    Extreme Secure category?
+    <div>
+      <input type="radio" name="secure" value="0"/> No
+      <input type="radio" name="secure" value="1"/> Yes
+    </div>
+    Niche distro?
+    <div>
+      <input type="radio" name="niche" value="0"/> No
+      <input type="radio" name="niche" value="1"/> Yes
+    </div>
+    Custom desktop?
+    <div>
+      <input type="radio" name="customtweaks" value="0"/> No
+      <input type="radio" name="customtweaks" value="1"/> Yes
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}

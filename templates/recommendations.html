@@ -1,9 +1,31 @@
-<!DOCTYPE html>
-<head></head>
-<body>
-  <h1>To do, make chooser.html ask questions and send responsed to JS or frontend and redirect to this page with the distro's and their reasons for selections</h1>
-  <p>mockups attached</p>
-  <img src="../static/mockups/mainrecommended.png">
-  <img src="../static/mockups/nextrecommended.png">
-  <script src="../static/scripts.js"></script>
-</body>
+{% extends "layout.html" %}
+
+{% block title %}
+ Recommendations
+{% endblock %}
+{% block content %}
+  <div>
+    Perfect matches!
+  </div>
+  {% for item in perfect %}
+    <li>{{item}}</li>
+  {% endfor %}
+  <div>
+    Similar Matches:
+  </div>
+  {% for item in lts %}
+    <li>{{item}} - doesn't have lts option</li>
+  {% endfor %}
+  {% for item in fsfrating %}
+    <li>{{item}} - doesn't have fsf option</li>
+  {% endfor %}
+  {% for item in customtweaks %}
+    <li>{{item}} - doesn't have customtweaks option</li>
+  {% endfor %}
+  {% for item in secure %}
+    <li>{{item}} - doesn't have secure option</li>
+  {% endfor %}
+  {% for item in niche %}
+    <li>{{item}} - doesn't have niche option</li>
+  {% endfor %}
+{% endblock %}
