@@ -5,53 +5,136 @@
 {% endblock %}
 {% block content %}
   <form action="/chooser" method="post">
-    Technical Expertise?
+
     <div>
-      <input type="radio" name="technicalexpertise" value="0" /> Beginner
-      <input type="radio" name="technicalexpertise" value="1" /> Medium
-      <input type="radio" name="technicalexpertise" value="2" /> Advanced
+      Technical Expertise?
     </div>
-    Old Hardware support (optional question)
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="technicalexpertise" value="0"/> Beginner
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="technicalexpertise" value="1"/> Medium
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="technicalexpertise" value="2"/> Advanced
+      </label>
+    </div>
+
     <div>
-      <input type="radio" name="oldnew" value="0"/> Doesn't matter
-      <input type="radio" name="oldnew" value="1"/> I need it
+      Old Hardware Support (optional question)
     </div>
-    LTS (timely updates)
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="oldnew" value="0"/> Doesn't Matter
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="oldnew" value="1"/> I need it
+      </label>
+    </div>
+
     <div>
-      <input type="radio" name="lts" value="0"/> No
-      <input type="radio" name="lts" value="1"/> Yes
+      LTS (timely updates)
     </div>
-    Free Software Certification
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="lts" value="0"/> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="lts" value="1"/> Yes
+      </label>
+    </div>
+
     <div>
-      <input type="radio" name="fsfrating" value="0"/> No
-      <input type="radio" name="fsfrating" value="1"/> Yes
+      Free Software Certification
     </div>
-    Lookalike? (optional question)
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="fsfrating" value="0"/> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="fsfrating" value="1"/> Yes
+      </label>
+    </div>
+
     <div>
-      <input type="radio" name="lookalike" value="0" /> Doesn't matter
-      <input type="radio" name="lookalike" value="mac" /> macOS
-      <input type="radio" name="lookalike" value="windows" /> Windows
+      Lookalike? (optional question)
     </div>
-    Touch support (optional question)
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="lookalike" value="0"/> Doesn't Matter
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="lookalike" value="mac"/> macOS
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="lookalike" value="windows"/> Windows
+      </label>
+    </div>
+
     <div>
-      <input type="radio" name="touch" value="0"/> Doesn't matter
-      <input type="radio" name="touch" value="1"/> I need it
+      Touch Support (optional question)
     </div>
-    Extreme Secure category?
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="touch" value="0"/> Doesn't Matter
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="touch" value="1"/> Yes
+      </label>
+    </div>
+
+
     <div>
-      <input type="radio" name="secure" value="0"/> No
-      <input type="radio" name="secure" value="1"/> Yes
+      Extreme Secure Category?
     </div>
-    Niche distro?
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="secure" value="0"/> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="secure" value="1"/> Yes
+      </label>
+    </div>
+
+
     <div>
-      <input type="radio" name="niche" value="0"/> No
-      <input type="radio" name="niche" value="1"/> Yes
+      Niche Distro?
     </div>
-    Custom desktop?
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="niche" value="0"/> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="niche" value="1"/> Yes
+      </label>
+    </div>
+
     <div>
-      <input type="radio" name="customtweaks" value="0"/> No
-      <input type="radio" name="customtweaks" value="1"/> Yes
+      Custom Desktop?
     </div>
-    <input type="submit" value="Submit">
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+        <input type="radio" name="customtweaks" value="0"/> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="customtweaks" value="1"/> Yes
+      </label>
+    </div>
+
+    <!--input type="submit" value="Submit"-->
+    <div>
+      <p></p>
+      <button type="submit" class="btn btn-outline-dark">Submit</button>
+    </div>
   </form>
 {% endblock %}
