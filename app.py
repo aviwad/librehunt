@@ -13,7 +13,6 @@ fullDB = cursor.fetchall()
 
 # empty array(s) waiting to be filled up corresponding to the list below
 # perfect, lts, fsfrating, customtweaks, secure, niche
-all = [[],[],[],[],[],[]]
 app = Flask(__name__)
 
 @app.route("/")
@@ -23,6 +22,7 @@ def index():
 @app.route("/chooser", methods=["GET", "POST"])
 def chooser():
     if request.method == "POST":
+        all = [[],[],[],[],[],[]]
         technicalexpertise = int(request.form.get("technicalexpertise") or 0)
         oldnew = int(request.form.get("oldnew") or 0)
         lts = int(request.form.get("lts") or 0)
