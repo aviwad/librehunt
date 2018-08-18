@@ -73,3 +73,10 @@ def feedback():
 @app.route("/about")
 def about():
     return render_template('about.html')
+
+# add this for all errors to go to same generic page!
+app.config['TRAP_HTTP_EXCEPTIONS']=True
+
+@app.errorhandler(Exception)
+def page_not_found(e):
+    return render_template('404.html'), 404
