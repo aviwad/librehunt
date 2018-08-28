@@ -8,24 +8,72 @@
     Perfect matches!
   </div>
   {% for item in perfect %}
-    <li>{{item}}</li>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item[0]}}</h5>
+        <p class="card-text">TODO ADD DESCRIPTIONS</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <li>{{item[0]}}</li>
   {% endfor %}
   <div>
     Similar Matches:
   </div>
   {% for item in lts %}
-    <li>{{item}} - doesn't have lts option</li>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item[0]}}</h5>
+        <p class="card-text">TODO ADD DESCRIPTIONS</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <li>{{item[0]}} - doesn't have lts option</li>
   {% endfor %}
   {% for item in fsfrating %}
-    <li>{{item}} - doesn't have fsf option</li>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item[0]}}</h5>
+        <p class="card-text">TODO ADD DESCRIPTIONS</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <li>{{item[0]}} - doesn't have fsf option</li>
   {% endfor %}
   {% for item in customtweaks %}
-    <li>{{item}} - doesn't have customtweaks option</li>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item[0]}}</h5>
+        <p class="card-text">TODO ADD DESCRIPTIONS</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <li>{{item[0]}} - doesn't have customtweaks option</li>
   {% endfor %}
   {% for item in secure %}
-    <li>{{item}} - doesn't have secure option</li>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item[0]}}</h5>
+        <p class="card-text">TODO ADD DESCRIPTIONS</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <li>{{item[0]}} - doesn't have secure option</li>
   {% endfor %}
   {% for item in niche %}
-    <li>{{item}} - doesn't have niche option</li>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item[0]}}</h5>
+        <p class="card-text">TODO ADD DESCRIPTIONS</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <li>{{item[0]}} - doesn't have niche option</li>
   {% endfor %}
 {% endblock %}

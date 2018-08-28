@@ -53,14 +53,15 @@ def chooser():
                     if trueRow[1] == lts and trueRow[2] == fsfrating and trueRow[4] == secure and trueRow[5] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
                         if oldnew == 1 and row[2] == 1:
-                            all[index].append(row[0])
+                            all[index].append(row)
                         elif touch == 1 and row[6] == 1:
-                            all[index].append(row[0])
+                            all[index].append(row)
                         elif lookalike != 0 and row[5] == lookalike:
-                            all[index].append(row[0])
+                            all[index].append(row)
                         # otherwise just add it into the list of final distros
                         else:
-                            all[index].append(row[0])
+                            all[index].append(row)
+                        print(all)
 
         return render_template('recommendations.html', perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])
 
