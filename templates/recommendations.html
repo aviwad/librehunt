@@ -4,33 +4,25 @@
  Recommendations
 {% endblock %}
 {% block content %}
-  <div>
-    Perfect matches!
-  </div>
   {% for item in perfect %}
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{item[0]}}</h5>
-        <p class="card-text">TODO ADD DESCRIPTIONS</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <p class="card-text">TODO ADD DESCRIPTIONS (Perfect match!)</p>
+        <a href="#" class="btn btn-primary">(Perfect match!)</a>
       </div>
     </div>
-    <li>{{item[0]}}</li>
   {% endfor %}
-  <div>
-    Similar Matches:
-  </div>
   {% for item in lts %}
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{item[0]}}</h5>
         <p class="card-text">TODO ADD DESCRIPTIONS</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Similar match, (has opposite of LTS)</a>
       </div>
     </div>
-    <li>{{item[0]}} - doesn't have lts option</li>
   {% endfor %}
   {% for item in fsfrating %}
     <div class="card" style="width: 18rem;">
@@ -38,10 +30,9 @@
       <div class="card-body">
         <h5 class="card-title">{{item[0]}}</h5>
         <p class="card-text">TODO ADD DESCRIPTIONS</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Similar match, (has opposite of Free Software certification)</a>
       </div>
     </div>
-    <li>{{item[0]}} - doesn't have fsf option</li>
   {% endfor %}
   {% for item in customtweaks %}
     <div class="card" style="width: 18rem;">
@@ -49,10 +40,9 @@
       <div class="card-body">
         <h5 class="card-title">{{item[0]}}</h5>
         <p class="card-text">TODO ADD DESCRIPTIONS</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Similar match, (has opposite of Custom Desktop)</a>
       </div>
     </div>
-    <li>{{item[0]}} - doesn't have customtweaks option</li>
   {% endfor %}
   {% for item in secure %}
     <div class="card" style="width: 18rem;">
@@ -60,10 +50,9 @@
       <div class="card-body">
         <h5 class="card-title">{{item[0]}}</h5>
         <p class="card-text">TODO ADD DESCRIPTIONS</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Similar match, (has opposite of Secure)</a>
       </div>
     </div>
-    <li>{{item[0]}} - doesn't have secure option</li>
   {% endfor %}
   {% for item in niche %}
     <div class="card" style="width: 18rem;">
@@ -71,9 +60,8 @@
       <div class="card-body">
         <h5 class="card-title">{{item[0]}}</h5>
         <p class="card-text">TODO ADD DESCRIPTIONS</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Similar match, (has opposite of Niche)</a>
       </div>
     </div>
-    <li>{{item[0]}} - doesn't have niche option</li>
   {% endfor %}
 {% endblock %}
