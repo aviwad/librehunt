@@ -32,6 +32,7 @@ def chooser():
         secure = int(request.form.get("secure") or 0)
         niche = int(request.form.get("niche") or 0)
         customtweaks = int(request.form.get("customtweaks") or 0)
+        isPerfect = []
 
         # a hack to get around the messed up ordering of variables in the Database
         trueRow = [[],[],[],[],[],[]]
@@ -61,9 +62,9 @@ def chooser():
                         # otherwise just add it into the list of final distros
                         else:
                             all[index].append(row)
-                        print(all)
-
-        return render_template('recommendations.html', perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])
+        if (len(all[0]) != 0):
+            isPerfect.append(1)
+        return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])
 
     return render_template('chooser.html')
 
