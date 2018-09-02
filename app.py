@@ -64,6 +64,8 @@ def chooser():
                             all[index].append(row)
         if (len(all[0]) != 0):
             isPerfect.append(1)
+        if (all == []):
+            return render_template('none.html')
         return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])
 
     return render_template('chooser.html')
@@ -79,6 +81,6 @@ def about():
 # add this for all errors to go to same generic page!
 app.config['TRAP_HTTP_EXCEPTIONS']=True
 
-@app.errorhandler(Exception)
-def page_not_found(e):
-    return render_template('404.html'), 404
+#@app.errorhandler(Exception)
+#def page_not_found(e):
+#    return render_template('404.html'), 404
