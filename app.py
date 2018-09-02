@@ -81,6 +81,6 @@ def about():
 # add this for all errors to go to same generic page!
 app.config['TRAP_HTTP_EXCEPTIONS']=True
 
-#@app.errorhandler(Exception)
-#def page_not_found(e):
-#    return render_template('404.html'), 404
+@app.errorhandler(Exception)
+def page_not_found(e):
+    return render_template('404.html'), 404
