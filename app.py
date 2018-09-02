@@ -64,8 +64,9 @@ def chooser():
                             all[index].append(row)
         if (len(all[0]) != 0):
             isPerfect.append(1)
-        if (all == []):
+        if (all == [[], [], [], [], [], []]):
             return render_template('none.html')
+        print(all)
         return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])
 
     return render_template('chooser.html')
