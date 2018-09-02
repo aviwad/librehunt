@@ -19,7 +19,7 @@
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
-              <p class="card-text">TODO ADD DESCRIPTIONS (Perfect match!)</p>
+              <p class="card-text">{{item[15]}}</p>
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{item[11]}}">
                 More Details
               </button>
@@ -34,7 +34,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    ...
+                    {{item[12]}}
                   </div>
                   <div class="modal-footer">
                     <a href="{{item[13]}}" class="btn btn-primary" target="_blank">Website</a>
@@ -63,8 +63,31 @@
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
-              <p class="card-text">TODO ADD DESCRIPTIONS</p>
-              <a href="#" class="btn btn-primary">(has opposite of LTS)</a>
+              <p class="card-text">{{item[15]}} (has opposite of LTS)</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{item[11]}}">
+                More Details
+              </button>
+            </div>
+            <div class="modal fade" id="{{item[11]}}" tabindex="-1" role="dialog" aria-labelledby="{{item[11]}}" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="{{item[11]}}">More Details of {{item[0]}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    {{item[12]}}
+                  </div>
+                  <div class="modal-footer">
+                    <a href="{{item[13]}}" class="btn btn-primary" target="_blank">Website</a>
+                    {% if item[14] is not none %}
+                      <a href="{{item[14]}}" class="btn btn-secondary" target="_blank">Contribute</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         {% endfor %}
@@ -73,8 +96,31 @@
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
-              <p class="card-text">TODO ADD DESCRIPTIONS</p>
-              <a href="#" class="btn btn-primary">(has opposite of Free Software certification)</a>
+              <p class="card-text">{{item[15]}} (has opposite of Free Software certification)</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{item[11]}}">
+                More Details
+              </button>
+            </div>
+            <div class="modal fade" id="{{item[11]}}" tabindex="-1" role="dialog" aria-labelledby="{{item[11]}}" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="{{item[11]}}">More Details of {{item[0]}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    {{item[12]}}
+                  </div>
+                  <div class="modal-footer">
+                    <a href="{{item[13]}}" class="btn btn-primary" target="_blank">Website</a>
+                    {% if item[14] is not none %}
+                      <a href="{{item[14]}}" class="btn btn-secondary" target="_blank">Contribute</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         {% endfor %}
@@ -83,8 +129,31 @@
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
-              <p class="card-text">TODO ADD DESCRIPTIONS</p>
-              <a href="#" class="btn btn-primary">(has opposite of Custom Desktop)</a>
+              <p class="card-text">{{item[15]}} (has opposite of Custom Desktop)</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{item[11]}}">
+                More Details
+              </button>
+            </div>
+            <div class="modal fade" id="{{item[11]}}" tabindex="-1" role="dialog" aria-labelledby="{{item[11]}}" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="{{item[11]}}">More Details of {{item[0]}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    {{item[12]}}
+                  </div>
+                  <div class="modal-footer">
+                    <a href="{{item[13]}}" class="btn btn-primary" target="_blank">Website</a>
+                    {% if item[14] is not none %}
+                      <a href="{{item[14]}}" class="btn btn-secondary" target="_blank">Contribute</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         {% endfor %}
@@ -93,8 +162,31 @@
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
-              <p class="card-text">TODO ADD DESCRIPTIONS</p>
-              <a href="#" class="btn btn-primary">(has opposite of Secure)</a>
+              <p class="card-text">{{item[15]}} (has opposite of Secure)</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{item[11]}}">
+                More Details
+              </button>
+            </div>
+            <div class="modal fade" id="{{item[11]}}" tabindex="-1" role="dialog" aria-labelledby="{{item[11]}}" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="{{item[11]}}">More Details of {{item[0]}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    {{item[12]}}
+                  </div>
+                  <div class="modal-footer">
+                    <a href="{{item[13]}}" class="btn btn-primary" target="_blank">Website</a>
+                    {% if item[14] is not none %}
+                      <a href="{{item[14]}}" class="btn btn-secondary" target="_blank">Contribute</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         {% endfor %}
@@ -103,8 +195,31 @@
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
-              <p class="card-text">TODO ADD DESCRIPTIONS</p>
-              <a href="#" class="btn btn-primary">(has opposite of Niche)</a>
+              <p class="card-text">{{item[15]}} (has opposite of Niche)</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{item[11]}}">
+                More Details
+              </button>
+            </div>
+            <div class="modal fade" id="{{item[11]}}" tabindex="-1" role="dialog" aria-labelledby="{{item[11]}}" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="{{item[11]}}">More Details of {{item[0]}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    {{item[12]}}
+                  </div>
+                  <div class="modal-footer">
+                    <a href="{{item[13]}}" class="btn btn-primary" target="_blank">Website</a>
+                    {% if item[14] is not none %}
+                      <a href="{{item[14]}}" class="btn btn-secondary" target="_blank">Contribute</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         {% endfor %}
