@@ -43,3 +43,8 @@ fieldset[disabled] .btn-purple.active {
   color: #611BBD; 
   background-color: #ffffff; 
 }
+.btn-purple:not(:disabled):not(.disabled):focus,
+.btn-purple:not(:disabled):not(.disabled):active:focus,
+.show>.btn-purple.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #a06de4;
+}
