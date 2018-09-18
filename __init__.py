@@ -11,6 +11,10 @@ cursor = db.cursor()
 cursor.execute('''SELECT * FROM distro''')
 fullDB = cursor.fetchall()
 
+# Import random to shuffle distro list
+import random
+random.shuffle(fullDB)
+print(fullDB)
 # empty array(s) waiting to be filled up corresponding to the list below
 # perfect, lts, fsfrating, customtweaks, secure, niche
 app = Flask(__name__)
