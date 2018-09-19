@@ -20,9 +20,10 @@
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
               <p class="card-text">{{item[15]}}</p>
-              <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#{{item[11]}}">
-                More Details
-              </button>
+              <a href="{{item[13]}}" class="btn btn-purple" target="_blank">Website</a>
+              {% if item[14] is not none %}
+                <a href="{{item[14]}}" class="btn btn-success" target="_blank">Contribute</a>
+              {% endif %}
             </div>
           </div>
         {% endfor %}
@@ -43,9 +44,10 @@
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
               <p class="card-text">{{item[15]}}</p>
-              <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#{{item[11]}}">
-                More Details
-              </button>
+              <a href="{{item[13]}}" class="btn btn-purple" target="_blank">Website</a>
+              {% if item[14] is not none %}
+                <a href="{{item[14]}}" class="btn btn-success" target="_blank">Contribute</a>
+              {% endif %}
             </div>
             <div class="card-footer">
               Has opposite of what you wanted for LTS
@@ -58,9 +60,10 @@
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
               <p class="card-text">{{item[15]}}</p>
-              <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#{{item[11]}}">
-                More Details
-              </button>
+              <a href="{{item[13]}}" class="btn btn-purple" target="_blank">Website</a>
+              {% if item[14] is not none %}
+                <a href="{{item[14]}}" class="btn btn-success" target="_blank">Contribute</a>
+              {% endif %}
             </div>
             <div class="card-footer">
               Has opposite of what you wanted for Free Software Certification
@@ -73,9 +76,10 @@
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
               <p class="card-text">{{item[15]}}</p>
-              <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#{{item[11]}}">
-                More Details
-              </button>
+              <a href="{{item[13]}}" class="btn btn-purple" target="_blank">Website</a>
+              {% if item[14] is not none %}
+                <a href="{{item[14]}}" class="btn btn-success" target="_blank">Contribute</a>
+              {% endif %}
             </div>
             <div class="card-footer">
               Has opposite of what you wanted for a Custom Desktop
@@ -88,9 +92,10 @@
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
               <p class="card-text">{{item[15]}}</p>
-              <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#{{item[11]}}">
-                More Details
-              </button>
+              <a href="{{item[13]}}" class="btn btn-purple" target="_blank">Website</a>
+              {% if item[14] is not none %}
+                <a href="{{item[14]}}" class="btn btn-success" target="_blank">Contribute</a>
+              {% endif %}
             </div>
             <div class="card-footer">
               Has opposite of what you wanted for the Extreme Secure category
@@ -103,9 +108,10 @@
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
               <p class="card-text">{{item[15]}}</p>
-              <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#{{item[11]}}">
-                More Details
-              </button>
+              <a href="{{item[13]}}" class="btn btn-purple" target="_blank">Website</a>
+              {% if item[14] is not none %}
+                <a href="{{item[14]}}" class="btn btn-success" target="_blank">Contribute</a>
+              {% endif %}
             </div>
             <div class="card-footer">
               Has opposite of what you wanted for a Niche distro
