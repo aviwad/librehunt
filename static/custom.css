@@ -48,3 +48,7 @@ fieldset[disabled] .btn-purple.active {
 .show>.btn-purple.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem #a06de4;
 }
+.btn-purple.focus, .btn-purple:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #a06de4;
+}
