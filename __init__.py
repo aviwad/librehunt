@@ -2,6 +2,7 @@ from flask import (
     flash, g, redirect, render_template, request, url_for, Flask
 )
 app = Flask(__name__)
+
 # Use SQLite3 for the Distro Database
 import sqlite3
 db = sqlite3.connect('static/distro.db')
@@ -13,7 +14,6 @@ fullDB = cursor.fetchall()
 
 # Import random to shuffle distro list
 import random
-random.shuffle(fullDB)
 
 # empty array(s) waiting to be filled up corresponding to the list below
 # perfect, lts, fsfrating, customtweaks, secure, niche
