@@ -26,7 +26,10 @@ def index():
 @app.route("/chooser", methods=["GET", "POST"])
 def chooser():
     if request.method == "POST":
+        # empty list containing separate lists for perfect, lts, fsfrating, customtweaks, secure, niche
         all = [[],[],[],[],[],[]]
+
+        # take variables for user input, and default to 0
         technicalexpertise = int(request.form.get("technicalexpertise") or 0)
         oldnew = int(request.form.get("oldnew") or 0)
         lts = int(request.form.get("lts") or 0)
@@ -36,12 +39,13 @@ def chooser():
         secure = int(request.form.get("secure") or 0)
         niche = int(request.form.get("niche") or 0)
         customtweaks = int(request.form.get("customtweaks") or 0)
-        isPerfect = []
 
         # a hack to get around the messed up ordering of variables in the Database
         trueRow = [[],[],[],[],[],[]]
 
+        # loop through amount of distro types (similars+perfect)
         for index in range(6):
+            # loop through distros
             for row in fullDB:
                 if row[1] == technicalexpertise:
                     # get the 5 switching attributes into the array synced with the final distros
@@ -57,6 +61,7 @@ def chooser():
                     # check the values inputted with the distro values
                     if trueRow[1] == lts and trueRow[2] == fsfrating and trueRow[4] == secure and trueRow[5] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
+                        # TODO fix broken similar algorithm
                         if oldnew == 1 and row[2] == 1:
                             all[index].append(row)
                         elif touch == 1 and row[6] == 1:
@@ -66,28 +71,40 @@ def chooser():
                         # otherwise just add it into the list of final distros
                         else:
                             all[index].append(row)
+        # hack to check whether there are any perfect distros
+        isPerfect = []
         if (len(all[0]) != 0):
             isPerfect.append(1)
+
+        # load no distro website if no distros found
         if (all == [[], [], [], [], [], []]):
             return render_template('none.html')
+
+        # else, load the recommendations page
         return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])
 
+    # else, if it was a GET request, just render the chooser page
     return render_template('chooser.html')
 
 @app.route("/feedback")
 def feedback():
+    # TODO feedback
     return render_template('feedback.html')
 
 @app.route("/about")
 def about():
+    # TODO about
     return render_template('about.html')
 
 # add this for all errors to go to same generic page!
 app.config['TRAP_HTTP_EXCEPTIONS']=True
 
+# generic error page
 @app.errorhandler(Exception)
 def page_not_found(e):
     return render_template('404.html'), 404
+
+# use this for the DigitalOcean server, idk how it works but it does
 if __name__ == "__main__":
     app.run()
 
