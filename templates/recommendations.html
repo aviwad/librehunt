@@ -4,6 +4,7 @@
  Recommendations
 {% endblock %}
 {% block content %}
+  <!-- hacky workaround to only display perfect jumbotron when there's any perfect distros -->
   {% for item in isPerfect %}
     <section class="jumbotron text-center">
           <div class="container">
@@ -11,7 +12,7 @@
             <p class="lead">You're in luck! A perfect match from the database of distro's curated in here!</p>
           </div>
     </section>
-
+  <!-- perfect distro cards -->
   <div class="container">
     <div class="row justify-content-center align-items-center">
         {% for item in perfect %}
@@ -30,14 +31,18 @@
     </div>
   </div>
   {% endfor %}
+  <!-- jumbotron for similar distros -->
   <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Similar Matches</h1>
           <p class="lead">Similar matches, with distro's matching *almost* everything you wanted (what's missing will be written)</p>
         </div>
   </section>
+  <!-- distro card rows and classes to align and justify them to the middle -->
   <div class="container">
     <div class="row justify-content-center align-items-center">
+
+        <!-- LTS distros cards -->
         {% for item in lts %}
           <div class="card mx-auto my-3 text-center" style="width: 18rem;">
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
@@ -54,6 +59,8 @@
             </div>
           </div>
         {% endfor %}
+
+        <!-- FSFrating distros cards -->
         {% for item in fsfrating %}
           <div class="card mx-auto my-3 text-center" style="width: 18rem;">
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
@@ -70,6 +77,8 @@
             </div>
           </div>
         {% endfor %}
+
+        <!-- CustomTweak distros cards -->
         {% for item in customtweaks %}
           <div class="card mx-auto my-3 text-center" style="width: 18rem;">
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
@@ -86,6 +95,8 @@
             </div>
           </div>
         {% endfor %}
+
+        <!-- Secure distros cards -->
         {% for item in secure %}
           <div class="card mx-auto my-3 text-center" style="width: 18rem;">
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
@@ -102,6 +113,8 @@
             </div>
           </div>
         {% endfor %}
+
+        <!-- Niche distros cards -->
         {% for item in niche %}
           <div class="card mx-auto my-3 text-center" style="width: 18rem;">
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
