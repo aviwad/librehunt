@@ -1,19 +1,19 @@
 // list of questions =
-// how good are you with computers?
-// for retro gaming only?
-// 64 bit?
-// free morale?
-// install?
-// old?
-// DE?
-// games? steam?
-// stable vs newer updates
-// using right now?
-// custom or normal theme?
-// wifi available?
-// supported for a long time?
-// easy to use?
-// big default
+// how good are you with computers? DONE
+// for retro gaming only? LATER
+// 64 bit? LATER
+// free morale? DONE
+// install? what?
+// old? DONE
+// DE? LATER
+// games? steam? LATER
+// stable vs newer updates? DONE
+// using right now? what?
+// custom or normal theme? what?
+// wifi available? what?
+// supported for a long time? LATER
+// easy to use? what?
+// big default? what?
 
 // medium
 // everything before, and...
@@ -39,4 +39,4 @@
 // + wayland + systemd + update timings + old laptop compatility + subject
 // + UEFI support + easy level
 
-// TODO: find top 15 distro's from distrowatch of each category / question, make object per distro, add details for each distro.
+// TODO: do half of these questions later omg
