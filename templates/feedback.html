@@ -4,5 +4,53 @@
  Feedback
 {% endblock %}
 {% block content %}
-  <h1>To do, link to the GitLab project for you to give me GitLab issues the proper way!</h1>
+    <!-- Jumbotron!-->
+    <div class="jumbotron mx-5 my-5 text-center">
+      <h1 class="display-4">Want to help out?</h1>
+      <p class="lead">Since my code is open source, it is on GitLab (a website to put open source code), and so you can see the code, give me feedback, or even edit the code yourself!</p>
+      <hr class="my-4">
+      <a class="btn btn-purple btn-lg" href="https://www.gitlab.com/aviwad/librehunt" role="button">Explore My Code!</a>
+    </div>
+
+    <!-- Twitter -->
+    <section>
+      <div class="container py-3">
+        <div class="card">
+          <div class="row justify-content-center align-items-center ">
+            <div class="col-md-4">
+                <img src="../static/feedback/issues.png" class="mx-auto d-block">
+              </div>
+              <div class="col-md-8 px-3 py-3">
+                <div class="card-block px-3 py-3">
+                  <h4 class="card-title">Issues? Tell me about it!</h4>
+                  <p class="card-text">If you are a beginner, this is the way to contribute! Anyone can help out via issues, as helping out via merge requests is something advanced users can do! Since my website is open source, that means anyone can see, help out, and even contribute to the code! If you have a problem with it, you can come right up to the issues section and explain to me what you want added/fixed and why :)</p>
+                  <a href="https://www.gitlab.com/aviwad/librehunt/issues" class="btn btn-purple">Issues</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Twitter -->
+    <section>
+      <div class="container py-3">
+        <div class="card">
+          <div class="row justify-content-center align-items-center ">
+            <div class="col-md-4">
+                <img src="../static/feedback/mergeRequest.png" class="mx-auto d-block">
+              </div>
+              <div class="col-md-8 px-3 py-3">
+                <div class="card-block px-3 py-3">
+                  <h4 class="card-title">Wanna merge your code with mine? Sure!</h4>
+                  <p class="card-text">Are you a web developer? Linux enthusiast? Well, then, make a GitLab account, and share your code with me! This is the other advantage of open source: not only can you see my code and be sure that it is safe, but you can help me out too! The technical details of this website are, that it is using Bootstrap for the CSS library, Flask and Python for the server, and SQLite3 for the distro database. </p>
+                  <a href="https://www.gitlab.com/aviwad/librehunt/merge_requests" class="btn btn-purple">Merge Requests (link will only work if you have logged in with a GitLab account)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 {% endblock %}
