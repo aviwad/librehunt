@@ -6,7 +6,7 @@
 {% block content %}
   <!-- hacky workaround to only display perfect jumbotron when there's any perfect distros -->
   {% for item in isPerfect %}
-    <section class="jumbotron text-center">
+    <section class="jumbotron text-center mx-5 mt-5">
           <div class="container">
             <h1 class="jumbotron-heading">Perfect matches</h1>
             <p class="lead">You're in luck! A perfect match from the database of distro's curated in here!</p>
@@ -32,7 +32,7 @@
   </div>
   {% endfor %}
   <!-- jumbotron for similar distros -->
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center mx-5 mt-5">
         <div class="container">
           <h1 class="jumbotron-heading">Similar Matches</h1>
           <p class="lead">Similar matches, with distro's matching *almost* everything you wanted (what's missing will be written)</p>
