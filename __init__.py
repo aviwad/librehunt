@@ -62,15 +62,49 @@ def chooser():
                     if trueRow[1] == lts and trueRow[2] == fsfrating and trueRow[4] == secure and trueRow[5] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
                         # TODO fix broken similar algorithm
-                        if oldnew == 1 and row[2] == 1:
+                        # case scenarios:
+                        # old,touch,lookalike all 0, so all[index].append(row)
+                        # only one is not 0, and row matches it, so all[index].append(row)
+                        # only one is not 0, and row doesn't match
+                        # two are not 0, and row matches it, so all[index].append(row)
+                        # two are not 0, and row doesn't match one/two
+                        # all three are not 0, and row doesn't match one/two/three
+                        # all three are not 0, and row matches all, so all[index].append(row)
+                        #############NEW CODE#################
+                        # original user input for oldnew, touch, and lookalike
+                        FilterMatchUser = [oldnew, touch, lookalike]
+                        # original distro values for oldnew, touch, and lookalike
+                        FilterMatchDistro = [row[2], row[6], row[5]]
+                        # empty lists for taking just the values that aren't empty for distro and user
+                        FilterMatchUserNotEmpty = []
+                        FilterMatchDistroNotEmpty = []
+                        # loop through the three filter types of values, appending to not empty list depending on user input
+                        for index in range(3):
+                            if FilterMatchUser[index]!=0:
+                                FilterMatchUserNotEmpty.append(FilterMatchUser[index])
+                                FilterMatchDistroNotEmpty.append(FilterMatchDistro[index])
+                        # quick shortcut to add distro to final list if all user input empty
+                        if FilterMatchUserNotEmpty == []:
                             all[index].append(row)
-                        elif touch == 1 and row[6] == 1:
-                            all[index].append(row)
-                        elif lookalike != 0 and row[5] == lookalike:
-                            all[index].append(row)
-                        # otherwise just add it into the list of final distros
+                        # otherwise,  go through each not empty value and make sure all match distro and user, after which add distro to final list
                         else:
-                            all[index].append(row)
+                            FinalFilterLength= len(FilterMatchUserNotEmpty)
+                            CheckFilterLength = 0
+                            for index in range(FinalFilterLength):
+                                if FilterMatchUserNotEmpty[index] == FilterMatchDistroNotEmpty[index]:
+                                    CheckFilterLength= CheckFilterLength+1
+                            if CheckFilterLength == FinalFilterLength:
+                                all[index].append(row)
+                        #############OLD CODE#################
+                        #if oldnew == 1 and row[2] == 1:
+                        #    all[index].append(row)
+                        #elif touch == 1 and row[6] == 1:
+                        #    all[index].append(row)
+                        #elif lookalike != 0 and row[5] == lookalike:
+                        #    all[index].append(row)
+                        # otherwise just add it into the list of final distros
+                        #else:
+                        #    all[index].append(row)
         # hack to check whether there are any perfect distros
         isPerfect = []
         if (len(all[0]) != 0):
