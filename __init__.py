@@ -61,7 +61,7 @@ def chooser():
                     # check the values inputted with the distro values
                     if trueRow[1] == lts and trueRow[2] == fsfrating and trueRow[4] == secure and trueRow[5] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
-                        # TODO fix broken similar algorithm
+                        # TODO fix broken filter algorithm
                         # case scenarios:
                         # old,touch,lookalike all 0, so all[index].append(row)
                         # only one is not 0, and row matches it, so all[index].append(row)
