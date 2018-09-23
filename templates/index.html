@@ -4,6 +4,7 @@
 {% endblock %}
 {% block content %}
     <!-- layout ready, add content! -->
+    <!-- IDEA: merge chooser page onto homescreen, divide everything with jumbotrons -->
     <main role="main">
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -19,7 +20,7 @@
               <div class="carousel-caption text-left">
                 <h1>Example headline.</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Sign up today</a></p>
+                <p><a class="btn btn-lg btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>
@@ -29,7 +30,7 @@
               <div class="carousel-caption">
                 <h1>Another example headline.</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Learn more</a></p>
+                <p><a class="btn btn-lg btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -39,7 +40,7 @@
               <div class="carousel-caption text-right">
                 <h1>One more for good measure.</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Browse gallery</a></p>
+                <p><a class="btn btn-lg btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Browse gallery</a></p>
               </div>
             </div>
           </div>
@@ -59,39 +60,49 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
+      <!-- Jumbotron!-->
+      <div class="jumbotron mx-5 my-5 text-center">
+        <h1 class="jumbotron-heading">What is the meaning of these words?</h1>
+      </div>
+
       <div class="container marketing">
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Linux?</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">View details »</a></p>
+            <img class="rounded-circle" src="../static/home/openSource.png" alt="Open Source Initiative Logo" width="145" height="140">
+            <h2>Open Source? Libre?</h2>
+            <p>talk about open source</p>
+            <p><a class="btn btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">View details »</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Open Source?</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">View details »</a></p>
+            <img class="rounded-circle" src="../static/home/operatingSystem.svg" alt="Twitter Emoji for Disks, in context to Operating Systems" width="140" height="140">
+            <h2>Operating Systems? Distros?</h2>
+            <p>talk about operating systems and distros</p>
+            <p><a class="btn btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">View details »</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Libre what again?</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">View details »</a></p>
+            <img class="rounded-circle" src="../static/home/linux.svg" alt="Twitter Emoji for Penguin, in context to the Linux logo, Tux" width="140" height="140">
+            <h2>Linux? Is that like Mac?</h2>
+            <p>talk about linux and the distinction to mac</p>
+            <p><a class="btn btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">View details »</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
 
-        <!-- START THE FEATURETTES -->
+      <!-- START THE FEATURETTES -->
+
+      <!-- Jumbotron!-->
+      <div class="jumbotron text-center">
+        <h1 class="jumbotron-heading">Why should I use Linux?</h1>
+      </div>
 
         <hr class="featurette-divider">
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">There's a distro for everyone. <span class="text-muted">From the nerd to the newbie.</span></h2>
+            <p class="lead">There's a type for everyone. Advanced Linux distro's for the advanced users, while there are beginner distros for beginners. Distros also differ in their values, such as Ubuntu making Proprietary software easy to use for the average user, and Arch Linux, an advanced distro Keeping It Simple (KISS)! They also differ in their desktops, so a distro can have the simple GNOME desktop, or a customizable KDE Plasma desktop, or something lightweight and completely scriptable desktop like i3! Something for everyone.</p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_165f62c8c78%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_165f62c8c78%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1328125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
@@ -102,8 +113,8 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">100% Secure. <span class="text-muted">Check for yourself.</span></h2>
+            <p class="lead">Unlike in Mac or Windows, you can have your cake and eat it too! While remaining free (freedom wise as well as price) You can rest be assured your data does not get leaked to big corporations. The same, however, cannot be said for <a href="https://duckduckgo.com/?q=windows+user+spying">Google </a>Windows *insert link*. Plus, if you doubt me, don't take my word for it. You can see the source code, used to make the different components of the various distro's as well as the distro's themselves online, with a community always on the look out for any backdoors or any security vulnerabilities of any kind. With Linux, you're secured for sure!</p>
           </div>
           <div class="col-md-5 order-md-1">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_165f62c8c80%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_165f62c8c80%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1328125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
@@ -114,8 +125,8 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Use it anywhere. <span class="text-muted">Includes pen drives.</span></h2>
+            <p class="lead">Talk about sharing copies and all.</p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_165f62c8c89%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_165f62c8c89%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1328125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
