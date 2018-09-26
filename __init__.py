@@ -20,12 +20,8 @@ import random
 # perfect, lts, fsfrating, customtweaks, secure, niche
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template('index.html')
-
-@app.route("/chooser", methods=["GET", "POST"])
-def chooser():
     if request.method == "POST":
         # empty list containing separate lists for perfect, lts, fsfrating, customtweaks, secure, niche
         all = [[],[],[],[],[],[]]
@@ -63,6 +59,7 @@ def chooser():
                     if trueRow[1] == lts and trueRow[2] == fsfrating and trueRow[4] == secure and trueRow[5] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
                         # TODO fix broken similar algorithm
+                        # TODO DISTROS NOT COMING PROPERLY FIX THIS ENTIRE MESS
                         # case scenarios:
                         #############NEW CODE#################
                         # original user input for oldnew, touch, and lookalike
@@ -112,7 +109,7 @@ def chooser():
         return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])
 
     # else, if it was a GET request, just render the chooser page
-    return render_template('chooser.html')
+    return render_template('index.html')
 
 @app.route("/feedback")
 def feedback():
@@ -123,12 +120,12 @@ def about():
     return render_template('about.html')
 
 # add this for all errors to go to same generic page
-app.config['TRAP_HTTP_EXCEPTIONS']=True
+#app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-@app.errorhandler(Exception)
-def page_not_found(e):
-    return render_template('404.html'), 404
+#@app.errorhandler(Exception)
+#def page_not_found(e):
+#    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":
