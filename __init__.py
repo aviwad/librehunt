@@ -14,6 +14,7 @@ fullDB = cursor.fetchall()
 
 # Import random to shuffle distro list
 import random
+# TODO: shuffle the list of distros so they get shuffled on recommendations page each time
 
 # empty array(s) waiting to be filled up corresponding to the list below
 # perfect, lts, fsfrating, customtweaks, secure, niche
@@ -61,15 +62,8 @@ def chooser():
                     # check the values inputted with the distro values
                     if trueRow[1] == lts and trueRow[2] == fsfrating and trueRow[4] == secure and trueRow[5] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
-                        # TODO fix broken filter algorithm
+                        # TODO fix broken similar algorithm
                         # case scenarios:
-                        # old,touch,lookalike all 0, so all[index].append(row)
-                        # only one is not 0, and row matches it, so all[index].append(row)
-                        # only one is not 0, and row doesn't match
-                        # two are not 0, and row matches it, so all[index].append(row)
-                        # two are not 0, and row doesn't match one/two
-                        # all three are not 0, and row doesn't match one/two/three
-                        # all three are not 0, and row matches all, so all[index].append(row)
                         #############NEW CODE#################
                         # original user input for oldnew, touch, and lookalike
                         FilterMatchUser = [oldnew, touch, lookalike]
@@ -122,15 +116,13 @@ def chooser():
 
 @app.route("/feedback")
 def feedback():
-    # TODO feedback
     return render_template('feedback.html')
 
 @app.route("/about")
 def about():
-    # TODO about
     return render_template('about.html')
 
-# add this for all errors to go to same generic page!
+# add this for all errors to go to same generic page
 app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
@@ -138,7 +130,7 @@ app.config['TRAP_HTTP_EXCEPTIONS']=True
 def page_not_found(e):
     return render_template('404.html'), 404
 
-# use this for the DigitalOcean server, idk how it works but it does
+# use this for the DigitalOcean server
 if __name__ == "__main__":
     app.run()
 
