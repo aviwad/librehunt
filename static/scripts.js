@@ -39,4 +39,4 @@
 // + wayland + systemd + update timings + old laptop compatility + subject
 // + UEFI support + easy level
 
-// TODO: do half of these questions later omg
+// TODO: do half of these questions for later
