@@ -6,54 +6,212 @@
     <!-- layout ready, add content! -->
     <!-- IDEA: merge chooser page onto homescreen, divide everything with jumbotrons -->
     <main role="main">
-
-      <div id="chooserCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#chooserCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#chooserCarousel" data-slide-to="1"></li>
-          <li data-target="#chooserCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Sign up today</a></p>
+      <form action="/chooser" method="post">
+        <div id="chooserCarousel" class="carousel slide " data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators">
+            <li data-target="#chooserCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#chooserCarousel" data-slide-to="1"></li>
+            <li data-target="#chooserCarousel" data-slide-to="2"></li>
+            <li data-target="#chooserCarousel" data-slide-to="3"></li>
+            <li data-target="#chooserCarousel" data-slide-to="4"></li>
+            <li data-target="#chooserCarousel" data-slide-to="5"></li>
+            <li data-target="#chooserCarousel" data-slide-to="6"></li>
+            <li data-target="#chooserCarousel" data-slide-to="7"></li>
+            <li data-target="#chooserCarousel" data-slide-to="8"></li>
+            <li data-target="#chooserCarousel" data-slide-to="9"></li>
+            <li data-target="#chooserCarousel" data-slide-to="10"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Choose a distro today</h1>
+                  <p>New to Linux? No idea what to use? Confused by the gazillions of distros out there? Click next to go along discovering your perfect distro (out of our curated list) or click the button below if you have no idea what I'm saying.</p>
+                  <p><a class="btn btn-lg btn-purple" href="/#VocabJumbotron" role="button">Wait, what is this mumbo jumbo?</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Technical Expertise</h1>
+                  <p>How good are you with computers?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-lg btn-purple">
+                        <input type="radio" name="technicalexpertise" value="0"/> Beginner
+                      </label>
+                      <label class="btn btn-lg btn-purple">
+                        <input type="radio" name="technicalexpertise" value="1"/> Medium
+                      </label>
+                      <label class="btn btn-lg btn-purple">
+                        <input type="radio" name="technicalexpertise" value="2"/> Advanced
+                      </label>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Old Hardware Support</h1>
+                  <p>Do you need to run your distro on old hardware?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-lg btn-purple">
+                        <input type="radio" name="oldnew" value="0"/> Doesn't Matter
+                      </label>
+                      <label class="btn btn-lg btn-purple">
+                        <input type="radio" name="oldnew" value="1"/> I need it
+                      </label>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="fourth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Timely Updates</h1>
+                  <p>Do you want app-like updates, as in updates as they come, or OS-like updates as in once in 6 months?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-lg btn-purple">
+                        <input type="radio" name="lts" value="0"/> As they come
+                      </label>
+                      <label class="btn btn-lg btn-purple">
+                        <input type="radio" name="lts" value="1"/> Timely
+                      </label>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="fifth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Free Software Certification</h1>
+                  <p>This means the distro has been certified to be *completely* Open Source, but this might mean it to be challenging to use for the average user. If you aren't an advanced user, don't select this.</p>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="fsfrating" value="0"/> No
+                    </label>
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="fsfrating" value="1"/> Yes
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="sixth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Lookalike</h1>
+                  <p>Do you want the distro to look something like macOS or Windows, or it doesn't matter?</p>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="lookalike" value="0"/> Doesn't Matter
+                    </label>
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="lookalike" value="mac"/> macOS
+                    </label>
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="lookalike" value="windows"/> Windows
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="seventh-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Touch Support</h1>
+                  <p>Do you have a touchscreen? Will you be using the distro with a touchscreen?</p>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="touch" value="0"/> Doesn't Matter
+                    </label>
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="touch" value="1"/> Yes
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="eighth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Security Researcher / Extreme Security?</h1>
+                  <p>You're extremely into security, and would trade convenience for the amount of security the average user wouldn't care about. This will be challenging to use for the average user. If you aren't an advanced user or security researcher, don't select this.</p>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="secure" value="0"/> No
+                    </label>
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="secure" value="1"/> Yes
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="ninth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Niche Distro?</h1>
+                  <p>This would trade popularity in a distro with unique and indie-like features.</p>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="niche" value="0"/> No
+                    </label>
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="niche" value="1"/> Yes
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="tenth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Custom Desktop?</h1>
+                  <p>Here you get unique per distro desktops rather than something available everywhere.</p>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="customtweaks" value="0"/> No
+                    </label>
+                    <label class="btn btn-lg btn-purple">
+                      <input type="radio" name="customtweaks" value="1"/> Yes
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="eleventh-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Submit?</h1>
+                  <p>Hit the submit button to jump in and find some distro's today!</p>
+                  <p><button type="submit" class="btn btn-lg btn-purple">Submit</button></p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-purple" href="https://getbootstrap.com/docs/4.1/examples/carousel/?#" role="button">Browse gallery</a></p>
-              </div>
-            </div>
-          </div>
+          <a class="carousel-control-prev" href="#chooserCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#chooserCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a class="carousel-control-prev" href="#chooserCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#chooserCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+      </form>
 
 
       <!-- Marketing messaging and featurettes
@@ -62,7 +220,7 @@
 
       <!-- Jumbotron!-->
       <div class="jumbotron mx-5 my-5 text-center">
-        <h1 class="jumbotron-heading">Which language is this!?</h1>
+        <h1 class="jumbotron-heading" id="VocabJumbotron">Which language is this!?</h1>
       </div>
 
       <div class="container marketing">
@@ -78,14 +236,14 @@
           </div><!-- /.col text-center -->
           <div class="col text-center">
             <div class="mb-3">
-              <img src="../static/home/operatingSystem.svg" alt="Open Source Initiative Logo" width="145" height="140">
+              <img src="../static/home/operatingSystem.svg" alt="Disk emoji from Twemoji to represent operating systems" width="145" height="140">
             </div>
             <h3>Operating Systems?</h3>
             <p>Operating systems are the systems running on your phone, laptop, and even <a href="https://www.linux.com/news/crock-pot-slow-cooker-wi-fi-smarts-hands">Slow Cookers</a>, such as macOS, or Windows. However, whereas only different versions of Windows and macOS exist, There are countless Linux distro's, (anyone can make their own linux system, changing the desktop, the theme, because there's more power to the user!)</p>
           </div><!-- /.col text-center -->
           <div class="col text-center">
             <div class="mb-3">
-              <img src="../static/home/linux.svg" alt="Open Source Initiative Logo" width="145" height="140">
+              <img src="../static/home/linux.svg" alt="Penguin emoji from Twemoji to represent Linux" width="145" height="140">
             </div>
             <h3>Linux? Is that like macOS?</h3>
             <p>Well, sorta. Linux and macOS both are Unix based (technically) and so are related, but Apple uses proprietary (locked in) software for most of macOS, whereas Linux is free to use, free to edit, free to run, and free to share. You can even make your own linux spin, or your own linux distro!</p>
@@ -106,7 +264,7 @@
             <p class="lead">There's a type for everyone. Advanced Linux distro's for the advanced users, and beginner distros for beginners. Distros also differ in their values, such as Ubuntu making Proprietary software easy to use for the average user, and Arch Linux, an advanced distro Keeping It Simple (KISS)! They also differ in their desktops, so a distro can have the simple GNOME desktop, or a customizable KDE Plasma desktop, or something lightweight and completely scriptable desktop like i3! Everything is customizable (you can run it straight from the pendrive without installing). Something for everyone.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" alt="500x500" src="../static/home/everyone.png">
+            <img class="featurette-image img-fluid mx-auto" alt="Tux with icons relating to customization floating around it" src="../static/home/everyone.png">
           </div>
         </div>
 
@@ -118,7 +276,7 @@
             <p class="lead">Unlike in Mac or Windows, you can have your cake and eat it too! While remaining free (freedom wise as well as price) You can rest be assured your data does not get leaked to big corporations. The same, however, cannot be said for <a href="https://duckduckgo.com/?q=windows+user+spying">Windows</a>. Plus, if you doubt me, don't take my word for it. You can see the source code, used to make the different components of the various distro's as well as the distro's themselves online, with a community for every project, welcoming contributions, ideas, and users! With Linux, you're secured for sure!</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" alt="500x500" src="../static/home/secure.png">
+            <img class="featurette-image img-fluid mx-auto" alt="Tux with icons relating to security and privacy floating around it" src="../static/home/secure.png">
           </div>
         </div>
 
@@ -130,7 +288,7 @@
             <p class="lead">Since Linux is free (free as in free speech as well as free as in free beer) you can  make copies and share it with your friends and family, make your own too, and run it, share it, copy it everywhere! From supercomputers to simple pendrives, Linux is everywhere.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto d-block" alt="500x500" src="../static/home/anything.png">
+            <img class="featurette-image img-fluid mx-auto d-block" alt="Tux with icons relating to Linux Uses floating around it" src="../static/home/anything.png">
           </div>
         </div>
 
