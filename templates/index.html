@@ -5,6 +5,33 @@
 {% block content %}
     <!-- layout ready, add content! -->
     <!-- IDEA: merge chooser page onto homescreen, divide everything with jumbotrons -->
+
+   <div class="col-md-12">
+        <h2>Bootstrap Responsive Buttons<p class="lead text-muted">Resize the browser to demonstrate</p></h2>
+   		<button name="button" class="btn btn-default btn-responsive">Default</button>
+        <button name="button" class="btn btn-primary btn-responsive">Primary</button>
+     	<button name="button" class="btn btn-info btn-responsive">Info</button>
+        <a class="btn btn-danger btn-responsive" href="#">Danger</a>
+        <a class="btn btn-warning btn-responsive" href="#">Warning</a>
+        <a class="btn btn-success btn-responsive" href="#">Success</a>
+   </div>
+<hr>
+   <div class="col-md-12">
+        <div class="btn-group">
+          <button class="btn btn-info btn-responsive">Left</button>
+          <button class="btn btn-info btn-responsive">Middle</button>
+          <button class="btn btn-info btn-responsive">Right</button>
+        </div>
+   </div>
+<hr>
+   <div class="col-md-12">
+
+          <button class="btn btn-primary btn-sm btn-responsive">Small</button>
+          <button class="btn btn-primary btn-responsive">Medium</button>
+          <button class="btn btn-primary btn-lg btn-responsive">Large</button>
+
+   </div>
+
     <main role="main">
       <form action="/" method="post">
         <div id="chooserCarousel" class="carousel slide " data-ride="carousel" data-interval="false">
@@ -29,8 +56,8 @@
                   <h1>Choose a distro today</h1>
                   <p>New to Linux? No idea what to use? Confused by the gazillions of distros out there? Click next to go along discovering your perfect distro (out of our curated list) or click the button below if you have no idea what I'm saying.</p>
                   <div class="btn-group" role="group" aria-label="Continue with questions or read up first?">
-                    <a class="btn btn-lg btn-purple" href="/#VocabJumbotron" role="button">Help!?</a>
-                    <a class="btn btn-lg btn-purple" href="#chooserCarousel" role="button" data-slide="next">Continue!</a>
+                    <a class="btn btn-lg btn-purple btn-responsive" href="#VocabJumbotron" role="button">Help!?</a>
+                    <a class="btn btn-lg btn-purple btn-responsive" href="#chooserCarousel" role="button" data-slide="next">Continue!</a>
                   </div>
                 </div>
               </div>
@@ -42,13 +69,13 @@
                   <h1>Technical Expertise</h1>
                   <p>How good are you with computers?</p>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                      <label class="btn btn-lg btn-purple">
+                      <label class="btn btn-lg btn-purple btn-responsive">
                         <input type="radio" name="technicalexpertise" value="0"/> Beginner
                       </label>
-                      <label class="btn btn-lg btn-purple">
+                      <label class="btn btn-lg btn-purple btn-responsive">
                         <input type="radio" name="technicalexpertise" value="1"/> Medium
                       </label>
-                      <label class="btn btn-lg btn-purple">
+                      <label class="btn btn-lg btn-purple btn-responsive">
                         <input type="radio" name="technicalexpertise" value="2"/> Advanced
                       </label>
                     </div>
@@ -62,10 +89,10 @@
                   <h1>Old Hardware Support</h1>
                   <p>Do you need to run your distro on old hardware?</p>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                      <label class="btn btn-lg btn-purple">
+                      <label class="btn btn-lg btn-purple btn-responsive">
                         <input type="radio" name="oldnew" value="0"/> Doesn't Matter
                       </label>
-                      <label class="btn btn-lg btn-purple">
+                      <label class="btn btn-lg btn-purple btn-responsive">
                         <input type="radio" name="oldnew" value="1"/> I need it
                       </label>
                     </div>
@@ -79,10 +106,10 @@
                   <h1>Timely Updates</h1>
                   <p>Do you want app-like updates, as in updates as they come, or OS-like updates as in once in 6 months?</p>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                      <label class="btn btn-lg btn-purple">
+                      <label class="btn btn-lg btn-purple btn-responsive">
                         <input type="radio" name="lts" value="0"/> As they come
                       </label>
-                      <label class="btn btn-lg btn-purple">
+                      <label class="btn btn-lg btn-purple btn-responsive">
                         <input type="radio" name="lts" value="1"/> Timely
                       </label>
                     </div>
@@ -96,10 +123,10 @@
                   <h1>Free Software Certification</h1>
                   <p>This means the distro has been certified to be *completely* Open Source, but this might mean it to be challenging to use for the average user. If you aren't an advanced user, don't select this.</p>
                   <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="fsfrating" value="0"/> No
                     </label>
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="fsfrating" value="1"/> Yes
                     </label>
                   </div>
@@ -113,13 +140,13 @@
                   <h1>Lookalike</h1>
                   <p>Do you want the distro to look something like macOS or Windows, or it doesn't matter?</p>
                   <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="lookalike" value="0"/> Doesn't Matter
                     </label>
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="lookalike" value="mac"/> macOS
                     </label>
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="lookalike" value="windows"/> Windows
                     </label>
                   </div>
@@ -133,10 +160,10 @@
                   <h1>Touch Support</h1>
                   <p>Do you have a touchscreen? Will you be using the distro with a touchscreen?</p>
                   <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="touch" value="0"/> Doesn't Matter
                     </label>
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="touch" value="1"/> Yes
                     </label>
                   </div>
@@ -150,10 +177,10 @@
                   <h1>Security Researcher / Extreme Security?</h1>
                   <p>You're extremely into security, and would trade convenience for the amount of security the average user wouldn't care about. This will be challenging to use for the average user. If you aren't an advanced user or security researcher, don't select this.</p>
                   <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="secure" value="0"/> No
                     </label>
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="secure" value="1"/> Yes
                     </label>
                   </div>
@@ -167,10 +194,10 @@
                   <h1>Niche Distro?</h1>
                   <p>This would trade popularity in a distro with unique and indie-like features.</p>
                   <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="niche" value="0"/> No
                     </label>
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="niche" value="1"/> Yes
                     </label>
                   </div>
@@ -184,10 +211,10 @@
                   <h1>Custom Desktop?</h1>
                   <p>Here you get unique per distro desktops rather than something available everywhere.</p>
                   <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="customtweaks" value="0"/> No
                     </label>
-                    <label class="btn btn-lg btn-purple">
+                    <label class="btn btn-lg btn-purple btn-responsive">
                       <input type="radio" name="customtweaks" value="1"/> Yes
                     </label>
                   </div>
@@ -200,7 +227,7 @@
                 <div class="carousel-caption">
                   <h1>Submit?</h1>
                   <p>Hit the submit button to jump in and find some distro's today!</p>
-                  <p><button type="submit" class="btn btn-lg btn-purple">Submit</button></p>
+                  <p><button type="submit" class="btn btn-lg btn-purple btn-responsive">Submit</button></p>
                 </div>
               </div>
             </div>

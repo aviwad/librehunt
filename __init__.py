@@ -31,7 +31,7 @@ def index():
         oldnew = int(request.form.get("oldnew") or 0)
         lts = int(request.form.get("lts") or 0)
         fsfrating = int(request.form.get("fsfrating") or 0)
-        lookalike = (request.form.get("lookalike") or 0)
+        lookalike = (request.form.get("lookalike") or "0")
         touch = int(request.form.get("touch") or 0)
         secure = int(request.form.get("secure") or 0)
         niche = int(request.form.get("niche") or 0)
@@ -62,7 +62,7 @@ def index():
                         # add distro only if doesn't matter in these filter options, or if matches with user option
                         if oldnew == 0 or oldnew == row[2]:
                             if touch == 0 or touch == row[6]:
-                                if lookalike == 0 or lookalike == row[5]:
+                                if lookalike == "0" or lookalike == row[5]:
                                     all[index].append(row)
         # hack to check whether there are any perfect distros
         isPerfect = []
