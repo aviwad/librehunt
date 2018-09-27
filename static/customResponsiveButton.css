@@ -22,4 +22,8 @@
     max-width: 30%;
     height: auto;
   }
+  .btn-responsive-block {
+    width: 100%;
+    display: block;
+  }
 }
