@@ -22,6 +22,12 @@
     max-width: 30%;
     height: auto;
   }
+  .btn-responsive-block-full {
+    width: 100%;
+    display: block;
+  }
+}
+@media (max-width: 767px) {
   .btn-responsive-block {
     width: 100%;
     display: block;
