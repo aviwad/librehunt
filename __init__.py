@@ -31,7 +31,7 @@ def index():
         oldnew = int(request.form.get("oldnew") or 0)
         lts = int(request.form.get("lts") or 0)
         fsfrating = int(request.form.get("fsfrating") or 0)
-        lookalike = request.form.get("lookalike")
+        lookalike = (request.form.get("lookalike") or 0)
         touch = int(request.form.get("touch") or 0)
         secure = int(request.form.get("secure") or 0)
         niche = int(request.form.get("niche") or 0)
@@ -59,43 +59,11 @@ def index():
                     if trueRow[1] == lts and trueRow[2] == fsfrating and trueRow[4] == secure and trueRow[5] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
                         # TODO fix broken similar algorithm
-                        # TODO DISTROS NOT COMING PROPERLY FIX THIS ENTIRE MESS
-                        # case scenarios:
-                        #############NEW CODE#################
-                        # original user input for oldnew, touch, and lookalike
-                        FilterMatchUser = [oldnew, touch, lookalike]
-                        # original distro values for oldnew, touch, and lookalike
-                        FilterMatchDistro = [row[2], row[6], row[5]]
-                        # empty lists for taking just the values that aren't empty for distro and user
-                        FilterMatchUserNotEmpty = []
-                        FilterMatchDistroNotEmpty = []
-                        # loop through the three filter types of values, appending to not empty list depending on user input
-                        for index in range(3):
-                            if FilterMatchUser[index]!=0:
-                                FilterMatchUserNotEmpty.append(FilterMatchUser[index])
-                                FilterMatchDistroNotEmpty.append(FilterMatchDistro[index])
-                        # quick shortcut to add distro to final list if all user input empty
-                        if FilterMatchUserNotEmpty == []:
-                            all[index].append(row)
-                        # otherwise,  go through each not empty value and make sure all match distro and user, after which add distro to final list
-                        else:
-                            FinalFilterLength= len(FilterMatchUserNotEmpty)
-                            CheckFilterLength = 0
-                            for index in range(FinalFilterLength):
-                                if FilterMatchUserNotEmpty[index] == FilterMatchDistroNotEmpty[index]:
-                                    CheckFilterLength= CheckFilterLength+1
-                            if CheckFilterLength == FinalFilterLength:
-                                all[index].append(row)
-                        #############OLD CODE#################
-                        #if oldnew == 1 and row[2] == 1:
-                        #    all[index].append(row)
-                        #elif touch == 1 and row[6] == 1:
-                        #    all[index].append(row)
-                        #elif lookalike != 0 and row[5] == lookalike:
-                        #    all[index].append(row)
-                        # otherwise just add it into the list of final distros
-                        #else:
-                        #    all[index].append(row)
+                        # add distro only if doesn't matter in these filter options, or if matches with user option
+                        if oldnew == 0 or oldnew == row[2]:
+                            if touch == 0 or touch == row[6]:
+                                if lookalike == 0 or lookalike == row[5]:
+                                    all[index].append(row)
         # hack to check whether there are any perfect distros
         isPerfect = []
         if (len(all[0]) != 0):
@@ -120,12 +88,12 @@ def about():
     return render_template('about.html')
 
 # add this for all errors to go to same generic page
-#app.config['TRAP_HTTP_EXCEPTIONS']=True
+app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-#@app.errorhandler(Exception)
-#def page_not_found(e):
-#    return render_template('404.html'), 404
+@app.errorhandler(Exception)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":
