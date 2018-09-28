@@ -1,3 +1,4 @@
+/* purple button */
 .btn-purple {
   color: #ffffff; 
   background-color: #611BBD; 
@@ -52,10 +53,12 @@ fieldset[disabled] .btn-purple.active {
     outline: 0;
     box-shadow: 0 0 0 0.2rem #a06de4;
 }
+/* no padding for jumbotron (besides sides) */
 .jumbotron-no-padding {
    padding: 0rem 1rem;
    margin-bottom: 0rem;
 }
+/* no padding for jumbotron (besides top/bottom) */
 .jumbotron-little-padding {
    padding: 1rem 0rem;
    margin-bottom: 0rem;
