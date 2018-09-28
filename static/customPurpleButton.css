@@ -56,3 +56,7 @@ fieldset[disabled] .btn-purple.active {
    padding: 0rem 1rem;
    margin-bottom: 0rem;
 }
+.jumbotron-little-padding {
+   padding: 1rem 0rem;
+   margin-bottom: 0rem;
+}
