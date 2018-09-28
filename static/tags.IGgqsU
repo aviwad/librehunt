@@ -1,0 +1,50 @@
+.carousel	customCarouselBootstrap.css	/^.carousel {$/;"	c
+.carousel-caption	customCarouselBootstrap.css	/^.carousel-caption {$/;"	c
+.carousel-item	customCarouselBootstrap.css	/^.carousel-item {$/;"	c
+.carousel-item > img	customCarouselBootstrap.css	/^.carousel-item > img {$/;"	s
+.marketing .col-lg-4	customCarouselBootstrap.css	/^.marketing .col-lg-4 {$/;"	c
+.marketing h2	customCarouselBootstrap.css	/^.marketing h2 {$/;"	s
+.marketing .col-lg-4 p	customCarouselBootstrap.css	/^.marketing .col-lg-4 p {$/;"	s
+.featurette-divider	customCarouselBootstrap.css	/^.featurette-divider {$/;"	c
+.featurette-heading	customCarouselBootstrap.css	/^.featurette-heading {$/;"	c
+.carousel-caption p	customCarouselBootstrap.css	/^  .carousel-caption p {$/;"	s
+.featurette-heading	customCarouselBootstrap.css	/^  .featurette-heading {$/;"	c
+.featurette-heading	customCarouselBootstrap.css	/^  .featurette-heading {$/;"	c
+.btn	customResponsiveButton.css	/^  .btn {$/;"	c
+.img-fluid-cooler	customResponsiveButton.css	/^  .img-fluid-cooler {$/;"	c
+.btn-responsive-block-full	customResponsiveButton.css	/^  .btn-responsive-block-full {$/;"	c
+.btn-responsive-block	customResponsiveButton.css	/^  .btn-responsive-block {$/;"	c
+.btn-purple	customPurpleButton.css	/^.btn-purple {$/;"	c
+.btn-purple:hover	customPurpleButton.css	/^.btn-purple:hover,$/;"	c
+.btn-purple:focus	customPurpleButton.css	/^.btn-purple:focus,$/;"	c
+.btn-purple:active	customPurpleButton.css	/^.btn-purple:active,$/;"	c
+.btn-purple.active	customPurpleButton.css	/^.btn-purple.active,$/;"	c
+.open .dropdown-toggle.btn-purple	customPurpleButton.css	/^.open .dropdown-toggle.btn-purple {$/;"	c
+.btn-purple:active	customPurpleButton.css	/^.btn-purple:active,$/;"	c
+.btn-purple.active	customPurpleButton.css	/^.btn-purple.active,$/;"	c
+.open .dropdown-toggle.btn-purple	customPurpleButton.css	/^.open .dropdown-toggle.btn-purple {$/;"	c
+.btn-purple.disabled	customPurpleButton.css	/^.btn-purple.disabled,$/;"	c
+.btn-purple[disabled]	customPurpleButton.css	/^.btn-purple[disabled],$/;"	c
+fieldset[disabled] .btn-purple	customPurpleButton.css	/^fieldset[disabled] .btn-purple,$/;"	c
+.btn-purple.disabled:hover	customPurpleButton.css	/^.btn-purple.disabled:hover,$/;"	c
+.btn-purple[disabled] :hover	customPurpleButton.css	/^.btn-purple[disabled]:hover,$/;"	s
+fieldset[disabled] .btn-purple:hover	customPurpleButton.css	/^fieldset[disabled] .btn-purple:hover,$/;"	c
+.btn-purple.disabled:focus	customPurpleButton.css	/^.btn-purple.disabled:focus,$/;"	c
+.btn-purple[disabled] :focus	customPurpleButton.css	/^.btn-purple[disabled]:focus,$/;"	s
+fieldset[disabled] .btn-purple:focus	customPurpleButton.css	/^fieldset[disabled] .btn-purple:focus,$/;"	c
+.btn-purple.disabled:active	customPurpleButton.css	/^.btn-purple.disabled:active,$/;"	c
+.btn-purple[disabled] :active	customPurpleButton.css	/^.btn-purple[disabled]:active,$/;"	s
+fieldset[disabled] .btn-purple:active	customPurpleButton.css	/^fieldset[disabled] .btn-purple:active,$/;"	c
+.btn-purple.disabled.active	customPurpleButton.css	/^.btn-purple.disabled.active,$/;"	c
+.btn-purple[disabled] .active	customPurpleButton.css	/^.btn-purple[disabled].active,$/;"	c
+fieldset[disabled] .btn-purple.active	customPurpleButton.css	/^fieldset[disabled] .btn-purple.active {$/;"	c
+.btn-purple .badge	customPurpleButton.css	/^.btn-purple .badge {$/;"	c
+.btn-purple:not(:disabled):not(.disabled):focus	customPurpleButton.css	/^.btn-purple:not(:disabled):not(.disabled):focus,$/;"	c
+.btn-purple:not(:disabled):not(.disabled):active:focus	customPurpleButton.css	/^.btn-purple:not(:disabled):not(.disabled):active:focus,$/;"	c
+.show>.btn-purple.dropdown-toggle:focus	customPurpleButton.css	/^.show>.btn-purple.dropdown-toggle:focus {$/;"	c
+.btn-purple.focus	customPurpleButton.css	/^.btn-purple.focus, .btn-purple:focus {$/;"	c
+.btn-purple:focus	customPurpleButton.css	/^.btn-purple.focus, .btn-purple:focus {$/;"	c
+.jumbotron-no-padding	customPurpleButton.css	/^.jumbotron-no-padding {$/;"	c
+.jumbotron-little-padding	customPurpleButton.css	/^.jumbotron-little-padding {$/;"	c
+.vertical-center	customPurpleButton.css	/^.vertical-center {$/;"	c
+.modal-dialogue	customPurpleButton.css	/^.modal-dialogue {$/;"	c

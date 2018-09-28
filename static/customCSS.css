@@ -63,3 +63,30 @@ fieldset[disabled] .btn-purple.active {
    padding: 1rem 0rem;
    margin-bottom: 0rem;
 }
+.jumbotron-little-little-padding {
+   padding: 1rem 1rem;
+   margin-bottom: 0rem;
+}
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+.modal {
+  width: 80%;
+  margin: auto;
+}
+.modal-dialog {
+  height: 90%; /* = 90% of the .modal-backdrop block = %90 of the screen */
+  max-width: 80%;
+}
+.modal-content {
+  height: 100%; /* = 100% of the .modal-dialog block */
+}
+.carousel {
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    ...
+}
