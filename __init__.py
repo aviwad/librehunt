@@ -71,7 +71,7 @@ def index():
 
         # load no distro website if no distros found
         if (all == [[], [], [], [], [], []]):
-            return render_template('none.html')
+            return render_template('none.html', technicalexpertise=technicalexpertise, oldnew=oldnew, lts=lts, fsfrating=fsfrating, lookalike=lookalike, touch=touch, secure=secure, niche=niche, customtweaks=customtweaks)
 
         # else, load the recommendations page
         return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])

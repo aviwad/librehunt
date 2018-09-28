@@ -5,10 +5,28 @@
 {% endblock %}
 {% block content %}
   <!-- Jumbotron for when you get no matches -->
-  <section class="jumbotron mx-5 my-5 text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">No matches!</h1>
-          <p class="lead">This is odd!? No distro matches (perfect nor similar) could be found. Maybe tell me about this issue from the Feedback page?</p>
+  <section class="mx-5 my-5">
+        <div class="container text-center">
+          <h1 class="jumbotron-heading">No matches! Quick, screenshot this!</h1>
+          <p class="lead">That wasn't supposed to happen!? No distro matches (perfect nor similar) could be found. However, you can help us! Quick, screenshot the stuff below so the developer can fix it! And file an issue as seen on the feedback page. Make sure the entire code below is screenshotted.</p>
+          <hr class="my-4">
+          <a class="btn btn-purple btn-lg mb-3" href="/feedback" role="button">Give me feedback</a>
+        </div>
+        <div class="container jumbotron jumbotron-no-padding">
+          <pre>
+            <code>
+technicalexpertise: {{ technicalexpertise }}
+lts: {{ lts }}
+oldnew: {{ oldnew }}
+fsfrating: {{ fsfrating }}
+lookalike: {{ lookalike }}
+touch: {{ touch }}
+secure: {{ secure }}
+niche: {{ niche }}
+customtweaks: {{ customtweaks }}
+version: v1.0
+            </code>
+          </pre>
         </div>
   </section>
 {% endblock %}
