@@ -11,26 +11,24 @@ db = sqlite3.connect('static/distro.db')
 cursor = db.cursor()
 
 # Load entire Database as an array to use in Python
-cursor.execute('''SELECT * FROM distro''')
+cursor.execute('''SELECT name,technicalexpertise,oldnew,notrolling,lookalike,touch,secure,niche,customtweaks,desktops,codename,link,donate,shortdes FROM distro''')
 fullDB = cursor.fetchall()
 
 # Import random to shuffle distro list
 import random
 random.shuffle(fullDB)
-print(fullDB)
-# TODO: shuffle the list of distros so they get shuffled on recommendations page each time
+# convert sqlite list of tupple to list of list, so i can add on the values of disimilarity later on
+fullDB = [list(elem) for elem in fullDB]
 
-# empty array(s) waiting to be filled up corresponding to the list below
-# perfect, notrolling, fsfrating, customtweaks, secure, niche
 app = Flask(__name__)
+
+def takeTwentyFirst(elem):
+    return elem[21]
 
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        # empty list containing separate lists for perfect, notrolling, fsfrating, customtweaks, secure, niche
-        all = [[],[],[],[],[]]
-
-        # take variables for user input, and default to 0
+        # user input, else default to 0
         technicalexpertise = int(request.form.get("technicalexpertise") or 0)
         oldnew = int(request.form.get("oldnew") or 0)
         notrolling = int(request.form.get("lts") or 0)
@@ -39,72 +37,48 @@ def index():
         secure = int(request.form.get("secure") or 0)
         niche = int(request.form.get("niche") or 0)
         customtweaks = int(request.form.get("customtweaks") or 0)
+        # this will be the order of user input, and distro output
+        UserOptions=[technicalexpertise,oldnew,notrolling,lookalike,touch,secure,niche,customtweaks]
+        # empty array for selected distros
+        SelectedDistros = []
+        # loop through database
+        for distro in fullDB:
+            # add distro to selected distro's if the technical expertise is the same
+            if distro[1] == technicalexpertise:
+                SelectedDistros.append(distro)
+        # loop through selected distros
+        for distro in SelectedDistros:
+            # add empty lists at the end 8 times, 7 for the similar and disimilar properties, and the last one to total and order the distros in a descending order for most similar to least similar
+            for similarvariable in range(8):
+                distro.append([])
+            # loop through similarvariables
+            for similarvariable in range(7):
+                # if similar variable is filter variable
+                if similarvariable == 2 or similarvariable == 4 or similarvariable == 5:
+                    # if current filter variable is not 0
+                    if similarvariable != 0:
+                        # then continue and add a 1 to the array at the end coresponding to similarvariable if the distro and user have different values for the property
+                        if UserOptions[similarvariable-1] != distro[similarvariable]:
+                            for loop in range(1):
+                                distro[similarvariable+14].append(1)
+                elif UserOptions[similarvariable-1] != distro[similarvariable]:
+                    for loop in range(1):
+                        distro[similarvariable+14].append(1)
+            # add a 0, so when totaling and sorting descending, it doesn't give error
+            distro[21].append(0)
+            for similarvariable in range(7):
+                # add up the total of disimilarities between distro and user
+                if len(distro[similarvariable+14]) == 1:
+                    distro[21][0] = distro[21][0] + distro[similarvariable+14][0]
+        # sort the distros by how similar they are to what the user wanted
+        SelectedDistros.sort(key=takeTwentyFirst)
+        return render_template("recommendations.html", distros=SelectedDistros)
 
-        # a hack to get around the messed up ordering of variables in the Database
-        trueRow = [[],[],[],[],[]]
 
-        # loop through amount of distro types (similars+perfect)
-        for index in range(5):
-            # loop through distros
-            for row in fullDB:
-                if row[1] == technicalexpertise:
-                    # get the 5 switching attributes into the array synced with the final distros
-                    trueRow[1] = row[3]
-                    trueRow[2] = row[8]
-                    trueRow[3] = row[10]
-                    trueRow[4] = row[7]
-                    #trueRow[5] = row[8]
-                    # switch the value of an attribute temporarily if not the perfect distro check
-                    if index != 0:
-                        trueRow[index] = int(not trueRow[index])
-
-                    # check the values inputted with the distro values
-                    if trueRow[1] == notrolling and trueRow[4] == secure and trueRow[2] == niche and trueRow[3] == customtweaks:
-                        # if the oldnew/touch/lookalike option is specified, filter with the distro
-                        # TODO fix broken similar algorithm
-                        # add distro only if doesn't matter in these filter options, or if matches with user option
-                        if oldnew == 0 or oldnew == row[2]:
-                            if touch == 0 or touch == row[6]:
-                                if lookalike == "0" or lookalike == row[5]:
-                                    all[index].append(row)
-        # hack to check whether there are any perfect distros
-        isPerfect = []
-        isSimilar = [1]
-        if (len(all[0]) != 0):
-            isPerfect.append(1)
-        if (len(all[1]) != 0):
-            if (len(all[2]) != 0):
-                if (len(all[3]) != 0):
-                    if (len(all[4]) != 0):
-                        isSimilar.pop()
-        # load no distro website if no distros found
-        if (all == [[], [], [], [], []]):
-            mail_settings = {
-                "MAIL_SERVER": 'smtp.gmail.com',
-                "MAIL_PORT": 465,
-                "MAIL_USE_TLS": False,
-                "MAIL_USE_SSL": True,
-                "MAIL_USERNAME": "aviwad@gmail.com",
-                "MAIL_PASSWORD": os.environ['EMAIL_PASSWORD']
-            }
-
-            app.config.update(mail_settings)
-            mail = Mail(app)
-
-            with app.app_context():
-                msg = Message(subject="No Matches Found!",
-                              sender="aviwad@gmail.com",
-                              recipients=["aviwad@gmail.com"], # replace with your email for testing
-                              body="Hey, there's a bug in your code. no matches were found! technicalexpertise: "+str(technicalexpertise)+" notrolling: "+str(notrolling)+" oldnew: "+str(oldnew)+" lookalike: "+str(lookalike)+" touch: "+str(touch)+" secure: "+str(secure)+" niche: "+str(niche)+" customtweaks: "+str(customtweaks)+" version: v1.0")
-                mail.send(msg)
-
-            return render_template('none.html')
-
-        # else, load the recommendations page
-        return render_template('recommendations.html', isSimilar=isSimilar, isPerfect=isPerfect, perfect=all[0], notrolling=all[1], niche=all[2], customtweaks=all[3], secure=all[4])
 
     # else, if it was a GET request, just render the chooser page
-    return render_template('index.html')
+    elif request.method == "GET":
+        return render_template('index.html')
 
 @app.route("/feedback")
 def feedback():
@@ -115,12 +89,12 @@ def about():
     return render_template('about.html')
 
 # add this for all errors to go to same generic page
-#app.config['TRAP_HTTP_EXCEPTIONS']=True
+app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-#@app.errorhandler(Exception)
-#def page_not_found(e):
-#    return render_template('404.html'), 404
+@app.errorhandler(Exception)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":
