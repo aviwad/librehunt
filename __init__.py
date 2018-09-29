@@ -26,13 +26,12 @@ app = Flask(__name__)
 def index():
     if request.method == "POST":
         # empty list containing separate lists for perfect, lts, fsfrating, customtweaks, secure, niche
-        all = [[],[],[],[],[],[]]
+        all = [[],[],[],[],[]]
 
         # take variables for user input, and default to 0
         technicalexpertise = int(request.form.get("technicalexpertise") or 0)
         oldnew = int(request.form.get("oldnew") or 0)
         lts = int(request.form.get("lts") or 0)
-        fsfrating = int(request.form.get("fsfrating") or 0)
         lookalike = (request.form.get("lookalike") or "0")
         touch = int(request.form.get("touch") or 0)
         secure = int(request.form.get("secure") or 0)
@@ -40,25 +39,25 @@ def index():
         customtweaks = int(request.form.get("customtweaks") or 0)
 
         # a hack to get around the messed up ordering of variables in the Database
-        trueRow = [[],[],[],[],[],[]]
+        trueRow = [[],[],[],[],[]]
 
         # loop through amount of distro types (similars+perfect)
-        for index in range(6):
+        for index in range(5):
             # loop through distros
             for row in fullDB:
                 if row[1] == technicalexpertise:
                     # get the 5 switching attributes into the array synced with the final distros
                     trueRow[1] = row[3]
-                    trueRow[2] = row[4]
+                    trueRow[2] = row[8]
                     trueRow[3] = row[10]
                     trueRow[4] = row[7]
-                    trueRow[5] = row[8]
+                    #trueRow[5] = row[8]
                     # switch the value of an attribute temporarily if not the perfect distro check
                     if index != 0:
                         trueRow[index] = int(not trueRow[index])
 
                     # check the values inputted with the distro values
-                    if trueRow[1] == lts and trueRow[2] == fsfrating and trueRow[4] == secure and trueRow[5] == niche and trueRow[3] == customtweaks:
+                    if trueRow[1] == lts and trueRow[4] == secure and trueRow[2] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
                         # TODO fix broken similar algorithm
                         # add distro only if doesn't matter in these filter options, or if matches with user option
@@ -89,13 +88,13 @@ def index():
                 msg = Message(subject="No Matches Found!",
                               sender="aviwad@gmail.com",
                               recipients=["aviwad@gmail.com"], # replace with your email for testing
-                              body="Hey, there's a bug in your code. no matches were found! technicalexpertise:"+str(technicalexpertise)+" lts: "+str(lts)+" oldnew: "+str(oldnew)+" fsfrating: "+str(fsfrating)+" lookalike: "+str(lookalike)+" touch: "+str(touch)+" secure: "+str(secure)+" niche: "+str(niche)+" customtweaks: "+str(customtweaks)+" version: v1.0")
+                              body="Hey, there's a bug in your code. no matches were found! technicalexpertise: "+str(technicalexpertise)+" lts: "+str(lts)+" oldnew: "+str(oldnew)+" lookalike: "+str(lookalike)+" touch: "+str(touch)+" secure: "+str(secure)+" niche: "+str(niche)+" customtweaks: "+str(customtweaks)+" version: v1.0")
                 mail.send(msg)
 
-            return render_template('none.html', technicalexpertise=technicalexpertise, oldnew=oldnew, lts=lts, fsfrating=fsfrating, lookalike=lookalike, touch=touch, secure=secure, niche=niche, customtweaks=customtweaks)
+            return render_template('none.html')
 
         # else, load the recommendations page
-        return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], fsfrating=all[2], customtweaks=all[3], secure=all[4], niche=all[5])
+        return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], niche=all[2], customtweaks=all[3], secure=all[4])
 
     # else, if it was a GET request, just render the chooser page
     return render_template('index.html')
@@ -109,12 +108,12 @@ def about():
     return render_template('about.html')
 
 # add this for all errors to go to same generic page
-app.config['TRAP_HTTP_EXCEPTIONS']=True
+#app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-@app.errorhandler(Exception)
-def page_not_found(e):
-    return render_template('404.html'), 404
+#@app.errorhandler(Exception)
+#def page_not_found(e):
+#    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":

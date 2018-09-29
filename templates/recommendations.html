@@ -61,8 +61,8 @@
           </div>
         {% endfor %}
 
-        <!-- FSFrating distros cards -->
-        {% for item in fsfrating %}
+        <!-- niche distros cards -->
+        {% for item in niche %}
           <div class="card mx-auto my-3 text-center" style="width: 18rem;">
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
             <div class="card-body">
@@ -74,7 +74,7 @@
               {% endif %}
             </div>
             <div class="card-footer">
-              Has opposite of what you wanted for free software certification
+              Has opposite of what you wanted for a niche distro
             </div>
           </div>
         {% endfor %}
@@ -111,24 +111,6 @@
             </div>
             <div class="card-footer">
               Has opposite of what you wanted for the extremely secure category
-            </div>
-          </div>
-        {% endfor %}
-
-        <!-- Niche distros cards -->
-        {% for item in niche %}
-          <div class="card mx-auto my-3 text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">{{item[0]}}</h5>
-              <p class="card-text">{{item[15]}}</p>
-              <a href="{{item[13]}}" class="btn btn-purple" target="_blank">Website</a>
-              {% if item[14] is not none %}
-                <a href="{{item[14]}}" class="btn btn-success" target="_blank">Contribute</a>
-              {% endif %}
-            </div>
-            <div class="card-footer">
-              Has opposite of what you wanted for a niche distro
             </div>
           </div>
         {% endfor %}
