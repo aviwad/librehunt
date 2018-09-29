@@ -4,6 +4,12 @@
  Recommendations
 {% endblock %}
 {% block content %}
+  <section class="jumbotron mx-5 my-5">
+        <div class="container text-center">
+          <h1 class="jumbotron-heading">Distro's found!</h1>
+          <p class="lead">All distro's matching even a little of what you said are here, ordered ascending to what is the most similar to what you wanted to what is the most disimilar</p>
+        </div>
+  </section>
   <div class="container">
     <div class="row justify-content-center align-items-center">
         {% for item in distros %}
@@ -12,13 +18,13 @@
             <div class="card-body">
               <h5 class="card-title">{{item[0]}}</h5>
               <p class="card-text font-weight-bold">{{item[13]}}</p>
-              <p class="card-text">Extreme Security: Does {% for item in item[19] %}Not {% endfor %}Match </p>
-              <p class="card-text">Timely Updates: Does {% for item in item[16] %}Not {% endfor %}Match </p>
-              <p class="card-text">Niche Distro: Does {% for item in item[20] %}Not {% endfor %}Match </p>
-              <p class="card-text">Custom Tweaks: Does {% for item in item[21] %}Not {% endfor %}Match </p>
-              <p class="card-text">Old Hardware Support: Does {% for item in item[15] %}Not {% endfor %}Match </p>
-              <p class="card-text">Touch Support: Does {% for item in item[18] %}Not {% endfor %}Match </p>
-              <p class="card-text">Lookalike: Does {% for item in item[17] %}Not {% endfor %}Match </p>
+              <p class="card-text">Extreme Security: Does {% for item in item[19] %}Not {% endfor %}Match {% for item in item[19] %}❌{% else %}✔️{% endfor %}</p>
+              <p class="card-text">Timely Updates: Does {% for item in item[16] %}Not {% endfor %}Match {% for item in item[16] %}❌{% else %}✔️{% endfor %}</p>
+              <p class="card-text">Niche Distro: Does {% for item in item[20] %}Not {% endfor %}Match {% for item in item[20] %}❌{% else %}✔️{% endfor %}</p>
+              <p class="card-text">Custom Tweaks: Does {% for item in item[21] %}Not {% endfor %}Match {% for item in item[21] %}❌{% else %}✔️{% endfor %}</p>
+              <p class="card-text">Old Hardware Support: Does {% for item in item[15] %}Not {% endfor %}Match {% for item in item[15] %}❌{% else %}✔️{% endfor %}</p>
+              <p class="card-text">Touch Support: Does {% for item in item[18] %}Not {% endfor %}Match {% for item in item[18] %}❌{% else %}✔️{% endfor %}</p>
+              <p class="card-text">Lookalike: Does {% for item in item[17] %}Not {% endfor %}Match {% for item in item[17] %}❌{% else %}✔️{% endfor %}</p>
               <a href="{{item[11]}}" class="btn btn-purple" target="_blank">Website</a>
               <a href="{{item[12]}}" class="btn btn-success" target="_blank">Contribute</a>
             </div>
