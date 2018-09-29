@@ -67,11 +67,16 @@ def index():
                                     all[index].append(row)
         # hack to check whether there are any perfect distros
         isPerfect = []
+        isSimilar = []
         if (len(all[0]) != 0):
             isPerfect.append(1)
-
+        if (len(all[1]) != 0):
+            if (len(all[2]) != 0):
+                if (len(all[3]) != 0):
+                    if (len(all[4]) != 0):
+                        isSimilar.append(1)
         # load no distro website if no distros found
-        if (all == [[], [], [], [], [], []]):
+        if (all == [[], [], [], [], []]):
             mail_settings = {
                 "MAIL_SERVER": 'smtp.gmail.com',
                 "MAIL_PORT": 465,
@@ -94,7 +99,7 @@ def index():
             return render_template('none.html')
 
         # else, load the recommendations page
-        return render_template('recommendations.html', isPerfect=isPerfect, perfect=all[0], lts=all[1], niche=all[2], customtweaks=all[3], secure=all[4])
+        return render_template('recommendations.html', isSimilar=isSimilar, isPerfect=isPerfect, perfect=all[0], lts=all[1], niche=all[2], customtweaks=all[3], secure=all[4])
 
     # else, if it was a GET request, just render the chooser page
     return render_template('index.html')
@@ -111,9 +116,9 @@ def about():
 #app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-#@app.errorhandler(Exception)
-#def page_not_found(e):
-#    return render_template('404.html'), 404
+@app.errorhandler(Exception)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":

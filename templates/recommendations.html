@@ -27,18 +27,24 @@
                 <a href="{{item[14]}}" class="btn btn-success" target="_blank">Contribute</a>
               {% endif %}
             </div>
+            <div class="card-footer">
+              Desktop(s): {{item[9]}}
+            </div>
           </div>
         {% endfor %}
     </div>
   </div>
   {% endfor %}
-  <!-- jumbotron for similar distros -->
+
+  <!-- hacky workaround to only display similar jumbotron when there's any perfect distros -->
+  {% for item in isSimilar %}
   <section class="jumbotron text-center mx-5 mt-5">
         <div class="container">
           <h1 class="jumbotron-heading">Similar Matches</h1>
           <p class="lead">Similar matches, with distro's matching *almost* everything you wanted (what's missing will be written)</p>
         </div>
   </section>
+  {% endfor %}
   <!-- distro card rows and classes to align and justify them to the middle -->
   <div class="container">
     <div class="row justify-content-center align-items-center">
@@ -58,6 +64,9 @@
             <div class="card-footer">
               Has opposite of what you wanted for LTS
             </div>
+            <div class="card-footer">
+              Desktop(s): {{item[9]}}
+            </div>
           </div>
         {% endfor %}
 
@@ -75,6 +84,9 @@
             </div>
             <div class="card-footer">
               Has opposite of what you wanted for a niche distro
+            </div>
+            <div class="card-footer">
+              Desktop(s): {{item[9]}}
             </div>
           </div>
         {% endfor %}
@@ -94,6 +106,9 @@
             <div class="card-footer">
               Has opposite of what you wanted for a custom desktop
             </div>
+            <div class="card-footer">
+              Desktop(s): {{item[9]}}
+            </div>
           </div>
         {% endfor %}
 
@@ -111,6 +126,9 @@
             </div>
             <div class="card-footer">
               Has opposite of what you wanted for the extremely secure category
+            </div>
+            <div class="card-footer">
+              Desktop(s): {{item[9]}}
             </div>
           </div>
         {% endfor %}
