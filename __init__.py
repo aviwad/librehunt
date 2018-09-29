@@ -16,6 +16,7 @@ fullDB = cursor.fetchall()
 
 # Import random to shuffle distro list
 import random
+fullDB = random.shuffle(fullDB)
 # TODO: shuffle the list of distros so they get shuffled on recommendations page each time
 
 # empty array(s) waiting to be filled up corresponding to the list below
