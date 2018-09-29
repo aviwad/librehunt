@@ -6,7 +6,7 @@ First I will make a CLI edition of it, merely to test out and work on my algorit
 
 The database is SQLite3
 
-**To work on this / clone this / use this, install Flask (a pip install away!)**
+**To work on this / clone this / use this, install Flask (a pip install away!), and Flask-mail**
 
 This file is part of Librehunt.
 
