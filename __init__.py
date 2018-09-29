@@ -1,6 +1,8 @@
 from flask import (
     flash, g, redirect, render_template, request, url_for, Flask, send_from_directory
 )
+from flask_mail import Mail, Message
+import os
 app = Flask(__name__)
 
 # Use SQLite3 for the Distro Database
@@ -71,6 +73,25 @@ def index():
 
         # load no distro website if no distros found
         if (all == [[], [], [], [], [], []]):
+            mail_settings = {
+                "MAIL_SERVER": 'smtp.gmail.com',
+                "MAIL_PORT": 465,
+                "MAIL_USE_TLS": False,
+                "MAIL_USE_SSL": True,
+                "MAIL_USERNAME": "aviwad@gmail.com",
+                "MAIL_PASSWORD": os.environ['EMAIL_PASSWORD']
+            }
+
+            app.config.update(mail_settings)
+            mail = Mail(app)
+
+            with app.app_context():
+                msg = Message(subject="No Matches Found!",
+                              sender="aviwad@gmail.com",
+                              recipients=["aviwad@gmail.com"], # replace with your email for testing
+                              body="Hey, there's a bug in your code. no matches were found! technicalexpertise:"+str(technicalexpertise)+" lts: "+str(lts)+" oldnew: "+str(oldnew)+" fsfrating: "+str(fsfrating)+" lookalike: "+str(lookalike)+" touch: "+str(touch)+" secure: "+str(secure)+" niche: "+str(niche)+" customtweaks: "+str(customtweaks)+" version: v1.0")
+                mail.send(msg)
+
             return render_template('none.html', technicalexpertise=technicalexpertise, oldnew=oldnew, lts=lts, fsfrating=fsfrating, lookalike=lookalike, touch=touch, secure=secure, niche=niche, customtweaks=customtweaks)
 
         # else, load the recommendations page
