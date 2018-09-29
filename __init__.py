@@ -16,23 +16,24 @@ fullDB = cursor.fetchall()
 
 # Import random to shuffle distro list
 import random
-fullDB = random.shuffle(fullDB)
+random.shuffle(fullDB)
+print(fullDB)
 # TODO: shuffle the list of distros so they get shuffled on recommendations page each time
 
 # empty array(s) waiting to be filled up corresponding to the list below
-# perfect, lts, fsfrating, customtweaks, secure, niche
+# perfect, notrolling, fsfrating, customtweaks, secure, niche
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        # empty list containing separate lists for perfect, lts, fsfrating, customtweaks, secure, niche
+        # empty list containing separate lists for perfect, notrolling, fsfrating, customtweaks, secure, niche
         all = [[],[],[],[],[]]
 
         # take variables for user input, and default to 0
         technicalexpertise = int(request.form.get("technicalexpertise") or 0)
         oldnew = int(request.form.get("oldnew") or 0)
-        lts = int(request.form.get("lts") or 0)
+        notrolling = int(request.form.get("lts") or 0)
         lookalike = (request.form.get("lookalike") or "0")
         touch = int(request.form.get("touch") or 0)
         secure = int(request.form.get("secure") or 0)
@@ -58,7 +59,7 @@ def index():
                         trueRow[index] = int(not trueRow[index])
 
                     # check the values inputted with the distro values
-                    if trueRow[1] == lts and trueRow[4] == secure and trueRow[2] == niche and trueRow[3] == customtweaks:
+                    if trueRow[1] == notrolling and trueRow[4] == secure and trueRow[2] == niche and trueRow[3] == customtweaks:
                         # if the oldnew/touch/lookalike option is specified, filter with the distro
                         # TODO fix broken similar algorithm
                         # add distro only if doesn't matter in these filter options, or if matches with user option
@@ -94,13 +95,13 @@ def index():
                 msg = Message(subject="No Matches Found!",
                               sender="aviwad@gmail.com",
                               recipients=["aviwad@gmail.com"], # replace with your email for testing
-                              body="Hey, there's a bug in your code. no matches were found! technicalexpertise: "+str(technicalexpertise)+" lts: "+str(lts)+" oldnew: "+str(oldnew)+" lookalike: "+str(lookalike)+" touch: "+str(touch)+" secure: "+str(secure)+" niche: "+str(niche)+" customtweaks: "+str(customtweaks)+" version: v1.0")
+                              body="Hey, there's a bug in your code. no matches were found! technicalexpertise: "+str(technicalexpertise)+" notrolling: "+str(notrolling)+" oldnew: "+str(oldnew)+" lookalike: "+str(lookalike)+" touch: "+str(touch)+" secure: "+str(secure)+" niche: "+str(niche)+" customtweaks: "+str(customtweaks)+" version: v1.0")
                 mail.send(msg)
 
             return render_template('none.html')
 
         # else, load the recommendations page
-        return render_template('recommendations.html', isSimilar=isSimilar, isPerfect=isPerfect, perfect=all[0], lts=all[1], niche=all[2], customtweaks=all[3], secure=all[4])
+        return render_template('recommendations.html', isSimilar=isSimilar, isPerfect=isPerfect, perfect=all[0], notrolling=all[1], niche=all[2], customtweaks=all[3], secure=all[4])
 
     # else, if it was a GET request, just render the chooser page
     return render_template('index.html')
@@ -117,9 +118,9 @@ def about():
 #app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-@app.errorhandler(Exception)
-def page_not_found(e):
-    return render_template('404.html'), 404
+#@app.errorhandler(Exception)
+#def page_not_found(e):
+#    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":

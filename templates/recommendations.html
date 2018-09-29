@@ -49,8 +49,8 @@
   <div class="container">
     <div class="row justify-content-center align-items-center">
 
-        <!-- LTS distros cards -->
-        {% for item in lts %}
+        <!-- notrolling distros cards -->
+        {% for item in notrolling %}
           <div class="card mx-auto my-3 text-center" style="width: 18rem;">
             <img class="card-img-top" src="../static/logos/{{item[11]}}.png" alt="Card image cap">
             <div class="card-body">
@@ -62,7 +62,7 @@
               {% endif %}
             </div>
             <div class="card-footer">
-              Has opposite of what you wanted for LTS
+              Has opposite of what you wanted for Slow Updates
             </div>
             <div class="card-footer">
               Desktop(s): {{item[9]}}
