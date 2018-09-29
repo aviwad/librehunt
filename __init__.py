@@ -67,14 +67,14 @@ def index():
                                     all[index].append(row)
         # hack to check whether there are any perfect distros
         isPerfect = []
-        isSimilar = []
+        isSimilar = [1]
         if (len(all[0]) != 0):
             isPerfect.append(1)
         if (len(all[1]) != 0):
             if (len(all[2]) != 0):
                 if (len(all[3]) != 0):
                     if (len(all[4]) != 0):
-                        isSimilar.append(1)
+                        isSimilar.pop()
         # load no distro website if no distros found
         if (all == [[], [], [], [], []]):
             mail_settings = {
