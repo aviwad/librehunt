@@ -64,9 +64,6 @@ def index():
                             else:
                                 distro[similarvariable+14].append(1)
                 elif UserOptions[similarvariable-1] != distro[similarvariable]:
-                    type(distro)
-                    type(similarvariable)
-                    type(distro[similarvariable+14])
                     if len(distro[similarvariable+14])==1:
                         distro[similarvariable+14][0]=1
                     else:
