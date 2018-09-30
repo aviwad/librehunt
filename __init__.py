@@ -7,19 +7,6 @@ app = Flask(__name__)
 
 # Use SQLite3 for the Distro Database
 import sqlite3
-db = sqlite3.connect('static/distro.db')
-cursor = db.cursor()
-
-# Load entire Database as an array to use in Python
-cursor.execute('''SELECT name,technicalexpertise,oldnew,notrolling,lookalike,touch,secure,niche,customtweaks,desktops,codename,link,donate,shortdes FROM distro''')
-fullDB = cursor.fetchall()
-
-# Import random to shuffle distro list
-import random
-random.shuffle(fullDB)
-# convert sqlite list of tupple to list of list, so i can add on the values of disimilarity later on
-fullDB = [list(elem) for elem in fullDB]
-
 app = Flask(__name__)
 
 def takeTwentyFirst(elem):
@@ -28,6 +15,19 @@ def takeTwentyFirst(elem):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
+        db = sqlite3.connect('static/distro.db')
+        cursor = db.cursor()
+
+        # Load entire Database as an array to use in Python
+        cursor.execute('''SELECT name,technicalexpertise,oldnew,notrolling,lookalike,touch,secure,niche,customtweaks,desktops,codename,link,donate,shortdes FROM distro''')
+        fullDB = cursor.fetchall()
+
+        # Import random to shuffle distro list
+        import random
+        random.shuffle(fullDB)
+        # convert sqlite list of tupple to list of list, so i can add on the values of disimilarity later on
+        fullDB = [list(elem) for elem in fullDB]
+
         # user input, else default to 0
         technicalexpertise = int(request.form.get("technicalexpertise") or 0)
         oldnew = int(request.form.get("oldnew") or 0)
@@ -59,10 +59,20 @@ def index():
                     if similarvariable != 0:
                         # then continue and add a 1 to the array at the end coresponding to similarvariable if the distro and user have different values for the property
                         if UserOptions[similarvariable-1] != distro[similarvariable]:
-                            for loop in range(1):
+                            if len(distro[similarvariable+14]) == 1:
+                                distro[similarvariable+14][0]=1
+                            else:
                                 distro[similarvariable+14].append(1)
                 elif UserOptions[similarvariable-1] != distro[similarvariable]:
-                    for loop in range(1):
+                    print(distro)
+                    print(similarvariable)
+                    print(distro[similarvariable+14])
+                    type(distro)
+                    type(similarvariable)
+                    type(distro[similarvariable+14])
+                    if len(distro[similarvariable+14])==1:
+                        distro[similarvariable+14][0]=1
+                    else:
                         distro[similarvariable+14].append(1)
             # add a 0, so when totaling and sorting descending, it doesn't give error
             distro[21].append(0)
@@ -89,12 +99,12 @@ def about():
     return render_template('about.html')
 
 # add this for all errors to go to same generic page
-app.config['TRAP_HTTP_EXCEPTIONS']=True
+#app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-@app.errorhandler(Exception)
-def page_not_found(e):
-    return render_template('404.html'), 404
+#@app.errorhandler(Exception)
+#def page_not_found(e):
+#    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":
