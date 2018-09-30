@@ -56,7 +56,7 @@ def index():
                 # if similar variable is filter variable
                 if similarvariable == 0 or similarvariable == 2 or similarvariable == 3:
                     # if current filter variable is not 0
-                    if distro[similarvariable+2] != 0:
+                    if UserOptions[similarvariable+1] != 0:
                         # then continue and add a 1 to the array at the end coresponding to similarvariable if the distro and user have different values for the property
                         if UserOptions[similarvariable+1] != distro[similarvariable+2]:
                             if len(distro[similarvariable+14]) == 1:
