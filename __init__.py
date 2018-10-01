@@ -1,8 +1,6 @@
 from flask import (
     flash, g, redirect, render_template, request, url_for, Flask, send_from_directory
 )
-from flask_mail import Mail, Message
-import os
 app = Flask(__name__)
 
 # Use SQLite3 for the Distro Database
@@ -99,9 +97,9 @@ def about():
 #app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-#@app.errorhandler(Exception)
-#def page_not_found(e):
-#    return render_template('404.html'), 404
+@app.errorhandler(Exception)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":
