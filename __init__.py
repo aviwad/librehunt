@@ -3,6 +3,8 @@ from flask import (
 )
 app = Flask(__name__)
 
+# Import random to shuffle distro list
+import random
 # Use SQLite3 for the Distro Database
 import sqlite3
 app = Flask(__name__)
@@ -20,8 +22,6 @@ def index():
         cursor.execute('''SELECT name,technicalexpertise,oldnew,notrolling,lookalike,touch,secure,niche,customtweaks,desktops,codename,link,donate,shortdes FROM distro''')
         fullDB = cursor.fetchall()
 
-        # Import random to shuffle distro list
-        import random
         random.shuffle(fullDB)
         # convert sqlite list of tupple to list of list, so i can add on the values of disimilarity later on
         fullDB = [list(elem) for elem in fullDB]
@@ -93,13 +93,25 @@ def feedback():
 def about():
     return render_template('about.html')
 
+@app.route("/distrolist")
+def distrolist():
+    #db
+    #make db order random
+    # number of distro's
+    db = sqlite3.connect('static/distro.db')
+    cursor = db.cursor()
+    cursor.execute('''SELECT name,desktops,codename,link,donate,shortdes FROM distro''')
+    allDB = cursor.fetchall()
+    random.shuffle(allDB)
+    return render_template('distrolist.html', distros=allDB)
+
 # add this for all errors to go to same generic page
 #app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-@app.errorhandler(Exception)
-def page_not_found(e):
-    return render_template('404.html'), 404
+#@app.errorhandler(Exception)
+#def page_not_found(e):
+#    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":
