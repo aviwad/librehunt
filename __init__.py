@@ -42,7 +42,7 @@ def index():
         # loop through database
         for distro in fullDB:
             # add distro to selected distro's if the technical expertise is the same
-            if distro[1] == technicalexpertise:
+            if distro[1] <= technicalexpertise:
                 SelectedDistros.append(distro)
         # loop through selected distros
         for distro in SelectedDistros:
@@ -66,9 +66,6 @@ def index():
                         distro[similarvariable+14][0]=1
                     else:
                         distro[similarvariable+14].append(1)
-                if similarvariable==7:
-                    print("distro customtweaks: "+str(distro[similarvariable+14]))
-                    print("user customtweaks: "+str(UserOptions[similarvariable-1]))
             # add a 0, so when totaling and sorting descending, it doesn't give error
             distro[21].append(0)
             for similarvariable in range(7):
@@ -77,6 +74,7 @@ def index():
                     distro[21][0] = distro[21][0] + distro[similarvariable+14][0]
         # sort the distros by how similar they are to what the user wanted
         SelectedDistros.sort(key=takeTwentyFirst)
+        SelectedDistros=SelectedDistros[0:20]
         return render_template("recommendations.html", distros=SelectedDistros)
 
 
@@ -106,12 +104,12 @@ def distrolist():
     return render_template('distrolist.html', distros=allDB)
 
 # add this for all errors to go to same generic page
-#app.config['TRAP_HTTP_EXCEPTIONS']=True
+app.config['TRAP_HTTP_EXCEPTIONS']=True
 
 # generic error page
-#@app.errorhandler(Exception)
-#def page_not_found(e):
-#    return render_template('404.html'), 404
+@app.errorhandler(Exception)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 # use this for the DigitalOcean server
 if __name__ == "__main__":
