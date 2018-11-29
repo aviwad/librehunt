@@ -103,6 +103,10 @@ def distrolist():
     random.shuffle(allDB)
     return render_template('distrolist.html', distros=allDB)
 
+@app.route("/news")
+def news():
+    return render_template('news.html')
+
 # add this for all errors to go to same generic page
 app.config['TRAP_HTTP_EXCEPTIONS']=True
 
