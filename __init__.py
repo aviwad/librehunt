@@ -19,7 +19,7 @@ def index():
         cursor = db.cursor()
 
         # Load entire Database as an array to use in Python
-        cursor.execute('''SELECT name,technicalexpertise,oldnew,notrolling,lookalike,touch,secure,niche,customtweaks,desktops,codename,link,donate,shortdes FROM distro''')
+        cursor.execute('''SELECT name,technicalexpertise,oldnew,notrolling,lookalike,touch,secure,popularity,customtweaks,desktops,codename,link,donate,shortdes FROM distro''')
         fullDB = cursor.fetchall()
 
         random.shuffle(fullDB)
@@ -33,10 +33,10 @@ def index():
         lookalike = (request.form.get("lookalike") or "0")
         touch = int(request.form.get("touch") or 0)
         secure = int(request.form.get("secure") or 0)
-        niche = int(request.form.get("niche") or 0)
+        popularity = int(request.form.get("popularity") or 0)
         customtweaks = int(request.form.get("customtweaks") or 0)
         # this will be the order of user input, and distro output
-        UserOptions=[technicalexpertise,oldnew,notrolling,lookalike,touch,secure,niche,customtweaks]
+        UserOptions=[technicalexpertise,oldnew,notrolling,lookalike,touch,secure,popularity,customtweaks]
         # empty array for selected distros
         SelectedDistros = []
         # loop through database
