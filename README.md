@@ -1,12 +1,32 @@
-Hello all! This is my personal project, of a website to aid you on your libre/distro hunt!
+# LibreHunt
 
-It essentially asks you a few questions and decides which distro suits you! I plan to use Bootstrap for the CSS, Javascript, and flask+Python+sqlite3 for the backend.  it is 100% free software (free as in free speech).
+My personal project, of a website to aid you on your libre/distro hunt!
 
-First I will make a CLI edition of it, merely to test out and work on my algorithm, next an ugly, basic website, and finally, the proper fancy, Bootstrap website.
+# Use
 
-The database is SQLite3
+Available on <a>librehunt.org</a>
 
-**To work on this / clone this / use this, install Flask (a pip install away!)**
+# Features
+
+A website aimed at all (potential) Linux users! Helps everyone choose a Distro. It's also perfect to explain and convince anyone to choose Linux!
+Underneath the hood, it uses...
+* SQLite3 for the database of distros and their properties (46 distros currently!)
+* Flask for the server
+* Python for the backend logic / language
+* Bootstrap, with some of my customizations (such as purple and fluid buttons)
+* Twitter's Twemojis for the neat icons and emoji font
+
+# Install
+
+To work on this / clone this / use this, install Flask (a `pip install` away!)
+
+# Similar Projects
+
+It is quite similar to DistroChooser (<a>https://distrochooser.de/en</a>)
+
+# License
+
+GPL 3!
 
 This file is part of Librehunt.
 
@@ -25,6 +45,3 @@ along with Librehunt.  If not, see <https://www.gnu.org/licenses/>.
 
 Copyright 2018, Avi Wadhwa
 
-TODO:
-Check GitLab. 
-Now hosted on librehunt.org on DigitalOcean!!! woohoo!!!
