@@ -18,7 +18,7 @@ Underneath the hood, it uses...
 
 # Install
 
-To work on this / clone this / use this, install Flask (a `pip install` away!)
+To work on this / clone this / use this, install Flask (a `pip install` away)
 
 # Similar Projects
 
@@ -26,7 +26,7 @@ It is quite similar to DistroChooser (<a>https://www.distrochooser.de/en</a>)
 
 # License
 
-GPL 3!
+**GPL 3**
 
 This file is part of LibreHunt.
 
