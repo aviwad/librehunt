@@ -4,7 +4,7 @@ My MYP personal project, a website to aid you on your libre/distro hunt!
 
 # Use
 
-Available on <a>librehunt.org</a>
+Available on <a>https://www.librehunt.org</a>
 
 # Features
 
@@ -22,7 +22,7 @@ To work on this / clone this / use this, install Flask (a `pip install` away!)
 
 # Similar Projects
 
-It is quite similar to DistroChooser (<a>https://distrochooser.de/en</a>)
+It is quite similar to DistroChooser (<a>https://www.distrochooser.de/en</a>)
 
 # License
 
