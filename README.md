@@ -1,6 +1,6 @@
 # LibreHunt
 
-My personal project, of a website to aid you on your libre/distro hunt!
+My MYP personal project, a website to aid you on your libre/distro hunt!
 
 # Use
 
@@ -28,20 +28,20 @@ It is quite similar to DistroChooser (<a>https://distrochooser.de/en</a>)
 
 GPL 3!
 
-This file is part of Librehunt.
+This file is part of LibreHunt.
 
-Librehunt is free software: you can redistribute it and/or modify
+LibreHunt is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Librehunt is distributed in the hope that it will be useful,
+LibreHunt is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Librehunt.  If not, see <https://www.gnu.org/licenses/>.
+along with LibreHunt.  If not, see <https://www.gnu.org/licenses/>.
 
 Copyright 2018, Avi Wadhwa
 
