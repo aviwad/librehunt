@@ -1,9 +1,0 @@
-app	__init__.py	/^app = Flask(__name__)$/;"	v
-db	__init__.py	/^db = sqlite3.connect('static\/distro.db')$/;"	v
-cursor	__init__.py	/^cursor = db.cursor()$/;"	v
-fullDB	__init__.py	/^fullDB = cursor.fetchall()$/;"	v
-app	__init__.py	/^app = Flask(__name__)$/;"	v
-index	__init__.py	/^def index():$/;"	f
-feedback	__init__.py	/^def feedback():$/;"	f
-about	__init__.py	/^def about():$/;"	f
-page_not_found	__init__.py	/^def page_not_found(e):$/;"	f
