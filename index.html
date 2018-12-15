@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="librehunt.js"></script>
+  </head>
+  <body>
+    <h2>Choose a distro</h2>
+    <p>Linux Expertise</p>
+    <form>
+      <input type="radio" name="linuxexpertise" value="0" checked> Beginner<br>
+      <input type="radio" name="linuxexpertise" value="1"> Medium<br>
+      <input type="radio" name="linuxexpertise" value="2"> Advanced
+    </form>
+
+    <p>Old Hardware Support</p>
+    <form>
+      <input type="radio" name="oldnew" value="0" checked> Doesn't Matter<br>
+      <input type="radio" name="oldnew" value="1"> Yeah<br>
+    </form>
+
+    <p>Timely Updates</p>
+    <form>
+      <input type="radio" name="updates" value="0" checked> As they come<br>
+      <input type="radio" name="updates" value="1">  Once in a while<br>
+    </form>
+
+    <p>Lookalike</p>
+    <form>
+      <input type="radio" name="lookalike" value="0" checked> None<br>
+      <input type="radio" name="lookalike" value="mac"> macOS<br>
+      <input type="radio" name="lookalike" value="windows"> Windows
+    </form>
+
+    <p>Touch Support</p>
+    <form>
+      <input type="radio" name="touch" value="0" checked> Doesn't Matter<br>
+      <input type="radio" name="touch" value="1"> Yes<br>
+    </form>
+
+    <p>Extreme Security</p>
+    <form>
+      <input type="radio" name="secure" value="0" checked> No<br>
+      <input type="radio" name="secure" value="1"> Yes<br>
+    </form>
+
+    <p>Popularity + More Support</p>
+    <form>
+      <input type="radio" name="popularity" value="0" checked> No<br>
+      <input type="radio" name="popularity" value="1"> Yes<br>
+    </form>
+
+    <p>Custom Appearance</p>
+    <form>
+      <input type="radio" name="customtweaks" value="0" checked> No<br>
+      <input type="radio" name="customtweaks" value="1"> Yes<br>
+    </form>
+
+    <button type="button" onclick='distro()'>Find a distro!</button>
+  </body>
+</html>
