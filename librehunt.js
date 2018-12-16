@@ -69,6 +69,8 @@ function optionSelected(optionName) {
     break;
    }
   }
+  // if no checkmarks were clicked, default to 0
+  return 0;
 }
 
 function shuffle(a) {
@@ -145,10 +147,13 @@ function distro(){
   SelectedDistros.sort(function(a,b){
     return a[21] - b[21];
   });
-  // SelectedDistros = first twenty elements
-
   }
   SelectedDistros.splice(20);
+  // hide the entire html id questions
+  document.getElementById("questions").parentNode.removeChild(document.getElementById("questions"));
+  // fill the distrosFound div with
+  // for loop
+  // add card each time, with stuff
   console.log(SelectedDistros);
 
 }
