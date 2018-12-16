@@ -1,3 +1,4 @@
+// actual database for distros can be found in static/distro.db (SQLite3 database)
 distros = [['Elementary OS', 0, 0, 1, 'mac', 1, 0, 1, 1,
          "It's own unique Pantheon desktop", 'elementary',
          'https://elementary.io/', 'https://elementary.io/get-involved#funding',
@@ -55,7 +56,7 @@ distros = [['Elementary OS', 0, 0, 1, 'mac', 1, 0, 1, 1,
           ['NixOS', 2, 1, 0, '0', 0, 1, 0, 0, 'The KDE Plasma Desktop', 'nixos', 'https://nixos.org/', 'https://nixos.org/nixos/community.html', 'The Purely Functional Linux Distribution'],
           ['Void Linux', 2, 1, 0, '0', 0, 1, 0, 0, 'Enlightenment, Cinnamon, LXDE, Mate, and XFCE', 'void', 'https://voidlinux.org/', 'https://liberapay.com/voidforum/donate', 'Void Linux is an independent Linux distribution that uses the XBPS package manager along with the runit init system.'],
           ['Mageia XFCE and KDE Plasma', 1, 1, 1, 'Windows', 0, 0, 0, 0, 'KDE Plasma, and XFCE', 'mageia', 'https://www.mageia.org/en/', 'https://www.mageia.org/en/contribute/', 'Beyond delivering a secure, stable and sustainable operating system, is to also build great tools for people.'],
-          ['Alpine Linux', 2, 1, 0, '0', 0, 1, 0, 0, 'It comes without one', 'alpine', 'https://www.alpinelinux.org/', 'https://www.alpinelinux.org/community/', 'Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.']]
+          ['Alpine Linux', 2, 1, 0, '0', 0, 1, 0, 0, 'It comes without one', 'alpine', 'https://www.alpinelinux.org/', 'https://www.alpinelinux.org/community/', 'Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.']];
 function optionSelected(optionName) {
   var option = document.getElementsByName(optionName);
   for (var i = 0, length = option.length; i < length; i++)
@@ -64,15 +65,25 @@ function optionSelected(optionName) {
    {
     // return option
     return (option[i].value);
-
     // stop checking if found already
     break;
    }
   }
 }
 
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
 function distro(){
-  // value = value
+  // assign user values to variable
   linuxexpertise = optionSelected("linuxexpertise");
   oldnew = optionSelected("oldnew");
   updates = optionSelected("updates");
@@ -81,11 +92,63 @@ function distro(){
   secure = optionSelected("secure");
   popularity = optionSelected("popularity");
   customtweaks = optionSelected("customtweaks");
-  // get list of list of distros
+
   // shuffle the lists inside the list (order of distros)
+  distros = shuffle(distros);
 
   // this will be the order of user input, and distro output
-  //UserOptions=[technicalexpertise,oldnew,notrolling,lookalike,touch,secure,popularity,customtweaks];
+  var UserOptions=[linuxexpertise,oldnew,updates,lookalike,touch,secure,popularity,customtweaks];
   // empty array for selected distros
-  SelectedDistros = []
+  var SelectedDistros = [];
+  // loop through database
+  // 43 IS DISTRO LIST, CHANGE IF DISTROS ADDED
+  for (i = 0; i < 43; i++)  {
+    if (distros[i][1] <= linuxexpertise) {
+      // add distros[i] (the distro) to SelectedDistros list
+      SelectedDistros.push(distros[i]);
+    }
+  }
+  SelectedDistrosLength = SelectedDistros.length;
+  for (i = 0; i < SelectedDistrosLength; i++) {
+    // loop 8 times, add [] to current distro
+    for (j = 0; j < 8; j++){
+      SelectedDistros[i].push([]);
+    }
+    for (var index = 0; index < 7; index++){
+      if (index == 0 || index == 2 || index == 3){
+        if (UserOptions[index+1] != 0){
+          if (UserOptions[index+1] != SelectedDistros[i][index+2]){
+            if (SelectedDistros[i][index+14].length == 1){
+              SelectedDistros[i][index+14][0] = 1;
+            }
+            else{
+              SelectedDistros[i][index+14].push(1);
+            }
+          }
+        }
+      }
+      else if (UserOptions[index+1] != SelectedDistros[i][index+2]){
+        if (SelectedDistros[i][index+14].length == 1){
+          SelectedDistros[i][index+14][0] = 1;
+        }
+        else{
+          SelectedDistros[i][index+14].push(1);
+        }
+      }
+    }
+    SelectedDistros[i][21].push(0);
+    for (j = 0; j < 7; j++){
+      if (SelectedDistros[i][j+14].length == 1){
+        SelectedDistros[i][21][0] = SelectedDistros[i][21][0]+SelectedDistros[i][j+14][0];
+      }
+    }
+  SelectedDistros.sort(function(a,b){
+    return a[21] - b[21];
+  });
+  // SelectedDistros = first twenty elements
+
+  }
+  SelectedDistros.splice(20);
+  console.log(SelectedDistros);
+
 }
