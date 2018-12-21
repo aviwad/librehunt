@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!-- favicon, twemoji's penguin, in base64 -->
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAzrP//M6///zGz//8prv+9IKf/aCCn/2gprv+9MbP//zOv//8zrP//
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM7f/5jGl9f8jP1P7mIl+///05///9Of/mYt//yM/U/sx
+pfX/M7f/5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnEgT0nJSN///////7+/j/+/v4////
+//+clo7/JxIE9AAAAAAAAAAAAAAAAAAAAAAAAAAAMy4pQgAAAAAwJyBwPDcx///////7+vf/+fj1
+//n49f/7+vf//////zw3Mf8wJyByAAAAADMuKUIAAAAAAAAAADMuKewzLiliKSQfuJWSjv//////
++fj1//n49f/5+PX/+fj1//////+Vko7/KSQfuDMuKWIzLinsAAAAAAAAAAAzLinGNC8q/yQeGcvO
+zcr///77//n49f/5+PX/+fj1//n49f///vv/0M7L/yQeGcs0Lyr/My4pxgAAAAAAAAAAMy4phzQv
+Kv8hHBbn6+vo//z7+P/5+PX/+fj1//n49f/5+PX//Pv4/+vr6P8hHBbnNC8q/zMuKYcAAAAAAAAA
+ADMuKTk0Lyr/IBsW/fPx7v/7+vf/+fj1//n49f/5+PX/+fj1//v69//z8e7/IBsW/TQvKv8zLik5
+AAAAAAAAAAAAAAAANC8q/yIdGP/f3tr//fz5//n49f/5+PX/+fj1//n49f/9/Pn/397a/yIdGP80
+Lyr/AAAAAAAAAAAAAAAAAAAAADMuKWwmIRz/s7Gt/////v/5+PX/+fj1//n49f/5+PX////+/7Ox
+rf8mIRz/My4pbAAAAAAAAAAAAAAAAAAAAAAAAAAALSgj9mZhXf//////+fj1//n49f/5+PX/+fj1
+//////9mYV3/LSgj9gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADItKAgiHBf/6ejk////////////
+///////////p6OT/Ih0Y/zIuKQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALikkjEI8N//e
+3Nr/g356/4N5cP/e0MX/QjAi/y4bDXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAtJyL2Ix4Z/yQaEf8mZZH/JrP//y62//8zuP/9M7r/yQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAALikkKoyIhP//////VXeP/zGr//8zpvXuM6z/cQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAqJR87Ix0X/y0jGv8yGAM3AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAA4AcAAOAHAADwDwAAoAUAAIABAACAAQAAgAEAAIABAADAAwAAwAMAAOAHAADgBwAA8A8AAPgH
+AAD4DwAA/D8AAA==" rel="icon" type="image/x-icon" />
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?11.2"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126746270-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-126746270-1');
+        </script>
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- Custom Purple button CSS -->
+        <link rel="stylesheet" href="../static/customAndTwemoji.css">
+
+        <!-- Custom Responsive button CSS -->
+        <link rel="stylesheet" href="../static/customMediaCSS.css">
+
+        <!-- Custom Bootstrap Carousel example CSS -->
+        <link rel="stylesheet" href="../static/customCarouselBootstrap.css">
+
+        <!-- Custom Jumbotron Margin CSS -->
+        <link rel="stylesheet" href="../static/customJumbotronMargin.css">
+
+        <!-- Title -->
+        <title>LibreHunt:
+ About
+</title>
+        <meta name="title" content="LibreHunt">
+        <meta name="description" content="Choose a Linux Distro today!">
+        <meta name="keywords" content="Linux,Distro">
+        <meta name="author" content="Avi Wadhwa">
+    </head>
+
+    <body>
+      <!-- Navbar with purple color -->
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6d00bd;">
+        <!-- home button (librehunt) -->
+        <a class="navbar-brand" href="/">LibreHunt</a>
+
+        <!-- toggle button for mobile phones -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- main buttons (chooser, feedback, and about -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/distrolist">All Distros</a>
+            <a class="nav-item nav-link" href="/feedback">Feedback</a>
+            <a class="nav-item nav-link" href="/news">News</a>
+            <a class="nav-item nav-link" href="/about">About</a>
+          </div>
+        </div>
+      </nav>
+      <div id="content">
+
+  <!-- ABOUT THIS WEBSITE -->
+  <section class="jumbotron text-center mx-5 mt-5 jumbotron-little-padding">
+        <div class="container">
+          <h1>About this website</h1>
+
+        <!-- reusing recommendations.html code for centering! -->
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+              <div class="mx-auto my-3 text-center">
+                <img class="rounded-circle" src="../static/about/info.png" alt="Info icon" width="140" height="140">
+                <h2>Why did I make this?</h2>
+                <p>One day, my classmate in school saw my fancy Linux install on my laptop, and asked how I got it. After explaining to him what Linux was, he immediately wanted it, but got stuck in deciding which distro, out of the current thousand's, would he use. This got an idea in my head to create this website, making it easier for beginners as well as advanced users to have an easy method to use Linux. Just like all the distros curated in this website, the code for my website as well as the projects it uses are open source too! Click the button below to see the Git repo of my code.</p>
+                <p><a class="btn btn-purple" href="https://www.gitlab.com/aviwad/librehunt" role="button">View Code »</a></p>
+              </div>
+            </div>
+        </div>
+        </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section class="jumbotron text-center mx-5 mt-5 jumbotron-little-padding">
+        <div class="container">
+          <h1>About me</h1>
+        <!-- reusing recommendations.html code for centering! -->
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+              <div class="mx-auto my-3 text-center">
+                <img class="rounded-circle" src="../static/about/myFace.jpg" alt="My Face" width="140" height="140">
+                <h2>Avi Wadhwa</h2>
+                <p class="lead">Hello there! I'm a fifteen year old FOSS (Free, Open Source Software) enthusiast, working on this website. I currently use Fedora. You can contact me/see what I'm up to these days via the buttons below!</p>
+                  <button class="btn btn-primary btn-responsive-block-full mb-2" type="button" onclick="location.href='https://www.twitter.com/aviwad'">
+                    <span>My Twitter 🐦</span>
+                  </button>
+                  <button class="btn btn-warning btn-responsive-block-full mb-2" type="button" onclick="location.href='https://www.gitlab.com/aviwad'">
+                    <span>My GitLab 🦊</span>
+                  </button>
+                  <button class="btn btn-danger btn-responsive-block-full mb-2" type="button" onclick="location.href='mailto:aviwad@gmail.com'">
+                    <span>My Gmail 📧</span>
+                  </button>
+                  <button class="btn btn-secondary btn-responsive-block-full mb-2" type="button" onclick="location.href='https://www.github.com/aviwad'">
+                    <span>My GitHub</span>
+                    <img  src="../static/about/octocat.png" width="32" height="22"/>
+                  </button>
+              </div>
+            </div>
+        </div>
+        </div>
+  </section>
+
+  <section class="jumbotron text-center mx-5 mt-5 jumbotron-little-padding">
+        <div class="container">
+          <h1 class="mb-4">I gave a lightning talk at GUADEC! ⚡</h1>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-sm-8">
+            <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DTeVkaFqFsA?start=1753&end=1830" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <!-- THE PROJECTS THAT HELPED ME -->
+  <section class="jumbotron text-center mx-5 mt-5">
+        <div class="container">
+          <h1 class="jumbotron-heading">Shoutout to the projects, communities and people who helped in the making of this ✨</h1>
+        </div>
+  </section>
+
+  <!-- Bootstrap -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-4">
+              <img src="../static/about/credits/bootstrap.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">Bootstrap</h4>
+                <p class="card-text">Bootstrap is the CSS library used throughout this website. I used it, albeit with some slight modifications (like the purple buttons!)</p>
+                <a href="https://getbootstrap.com/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GNOME -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/gnome.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">GNOME</h4>
+                <p class="card-text">GNOME is dedicated to building a FOSS desktop with apps, and a toolkit. They are what got me interested in Linux in the first place, due to how clean and cohesive it is. I also built my website on Gnome Builder, Gnome's own IDE, while on my Gnome desktop powered Fedora laptop!</p>
+                <a href="https://www.gnome.org" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitLab --->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/gitlab.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">GitLab</h4>
+                <p class="card-text">Innovative hosting of Git, like GitHub, but open source as well. My code is hosted there!</p>
+                <a href="https://gitlab.com/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Git -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/git.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">Git</h4>
+                <p class="card-text">The most popular version control system. My code uses Git for version control!</p>
+                <a href="https://git-scm.com/" class="btn btn-purple btn-responsive-block">Website<a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Linux -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/linux.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">Linux</h4>
+                <p class="card-text">The Linux kernel, used on my laptop, on millions of other laptops, on the server hosting my website, as well as what all the distro's are based on. Without Linux there would be no distro's in the first place.</p>
+                <a href="https://kernel.org/" class="btn btn-purple btn-responsive-block">Website<a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flask -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/flask.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">Flask</h4>
+                <p class="card-text">A Python web microframework, used in my code for the backend. It's wonderful!</p>
+                <a href="http://flask.pocoo.org/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Python -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/python.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">Python</h4>
+                <p class="card-text">An awesome, interpreted Object Oriented Language. My code for the website is in Python, because this language is my favorite!</p>
+                <a href="https://www.python.org/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SQLite -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/sqlite.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">SQLite</h4>
+                <p class="card-text">A self contained rational database. I used this SQL database for storing my curated list of distro's and their properties.</p>
+                <a href="https://www.sqlite.org/index.html" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LetsEncrypt -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/letsencrypt.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">LetsEncrypt</h4>
+                <p class="card-text">Automated, secure, web certificates in a breeze! This project is the reason why my website is "secure" as said by Chrome under 2 minutes of setting up!</p>
+                <a href="https://letsencrypt.org/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DigitalOcean -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/digitalocean.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">DigitalOcean</h4>
+                <p class="card-text">Possibly the greatest web hosting service of them all. For $5 per month, I got an Ubuntu droplet running under 5 minutes, with my code shifting over to professional hosting services such as this giving me a huge learning experience too! </p>
+                <a href="https://www.digitalocean.com/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DistroWatch -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/distrowatch.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">DistroWatch</h4>
+                <p class="card-text">Although old, dusty, and not very user friendly, it is the most detailed website with details for each and every distro on the planet. I used this website to gather information about my curated list of distro's. </p>
+                <a href="https://distrowatch.com/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IB -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/ib.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">IB</h4>
+                <p class="card-text">I currently study under this diploma in a school (more realistically, the MYP diploma) and their "Personal Project" is what gave me an opportunity to take time and work on this hobby of mine and improve, and hone my skills under school time!</p>
+                <a href="https://www.ibo.org/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Twitter -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/twitter.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">Twitter</h4>
+                <p class="card-text">I use Twitter's emoji's as some icons in my website! (like the favicon, the penguin! 🐧)</p>
+                <a href="https://twitter.com/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GNU -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/GNU.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">GNU</h4>
+                <p class="card-text">Everyone talks about Linux, but in reality all distros are GNU/Linux, as Linux is only the kernel, and GNU has worked very hard, to make the open source licenses we all use today (which my code, and the other projects I used are also licensed in) as well as all the utilities used in common place Linux distros, such as the gcc compiler, and so many other nifty programs and utilities. They are the main force behind Free Software</p>
+                <a href="https://gnu.org/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OSI -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-4">
+              <img src="../static/about/credits/openSourceInitiative.png" class="mx-auto d-block">
+            </div>
+            <div class="col-md-8 px-3 py-3">
+              <div class="card-block px-3 py-3">
+                <h4 class="card-title">Open Source initiative</h4>
+                <p class="card-text">On the other hand, everyone credits Free Software, forgetting about the Open Source initiative. While more lenient on the political aspect compared to Free Software, has driven Open Source programs to popularity in the recent years. Many projects I used are Open Source, thanks to this great non-profit initiative!</p>
+                <a href="https://opensource.org/" class="btn btn-purple btn-responsive-block">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interviewees -->
+  <section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row justify-content-center align-items-center ">
+            <div class="col-md-12 my-3 text-center">
+              <div class="card-block px-3 py-3 my-3">
+                <h2 class="card-title">The wonderful people I interviewed</h4>
+                <p class="card-text">The wonderful developers and FOSS enthusiasts I interviewed for my personal project, way back in February. Cassidy James, Michael Hall, Brandon Nolet, Alecaddd, and Richard Brown. </p>
+                <a href="https://twitter.com/cassidyjames" class="btn btn-primary btn-responsive-block-full mb-2">Cassidy James' Twitter 🐦</a>
+                <a href="https://twitter.com/mhall119" class="btn btn-primary btn-responsive-block-full mb-2">Michael Hall's Twitter 🐦</a>
+                <a href="https://twitter.com/LinuxLiaison" class="btn btn-primary btn-responsive-block-full mb-2">Brandon Nolet's Twitter 🐦</a>
+                <a href="https://twitter.com/alecaddd" class="btn btn-primary btn-responsive-block-full mb-2">Alecaddd's Twitter 🐦</a>
+                <a href="https://twitter.com/sysrich" class="btn btn-primary btn-responsive-block-full mb-2">Richard Brown's Twitter 🐦</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      </div>
+      <script>
+        twemoji.parse(document.body);
+      </script>
+      <!-- bootstrap scripts at the end for the page to load faster -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

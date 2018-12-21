@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- favicon, twemoji's penguin, in base64 -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAzrP//M6///zGz//8prv+9IKf/aCCn/2gprv+9MbP//zOv//8zrP//
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM7f/5jGl9f8jP1P7mIl+///05///9Of/mYt//yM/U/sx
+    pfX/M7f/5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnEgT0nJSN///////7+/j/+/v4////
+    //+clo7/JxIE9AAAAAAAAAAAAAAAAAAAAAAAAAAAMy4pQgAAAAAwJyBwPDcx///////7+vf/+fj1
+    //n49f/7+vf//////zw3Mf8wJyByAAAAADMuKUIAAAAAAAAAADMuKewzLiliKSQfuJWSjv//////
+    +fj1//n49f/5+PX/+fj1//////+Vko7/KSQfuDMuKWIzLinsAAAAAAAAAAAzLinGNC8q/yQeGcvO
+    zcr///77//n49f/5+PX/+fj1//n49f///vv/0M7L/yQeGcs0Lyr/My4pxgAAAAAAAAAAMy4phzQv
+    Kv8hHBbn6+vo//z7+P/5+PX/+fj1//n49f/5+PX//Pv4/+vr6P8hHBbnNC8q/zMuKYcAAAAAAAAA
+    ADMuKTk0Lyr/IBsW/fPx7v/7+vf/+fj1//n49f/5+PX/+fj1//v69//z8e7/IBsW/TQvKv8zLik5
+    AAAAAAAAAAAAAAAANC8q/yIdGP/f3tr//fz5//n49f/5+PX/+fj1//n49f/9/Pn/397a/yIdGP80
+    Lyr/AAAAAAAAAAAAAAAAAAAAADMuKWwmIRz/s7Gt/////v/5+PX/+fj1//n49f/5+PX////+/7Ox
+    rf8mIRz/My4pbAAAAAAAAAAAAAAAAAAAAAAAAAAALSgj9mZhXf//////+fj1//n49f/5+PX/+fj1
+    //////9mYV3/LSgj9gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADItKAgiHBf/6ejk////////////
+    ///////////p6OT/Ih0Y/zIuKQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALikkjEI8N//e
+    3Nr/g356/4N5cP/e0MX/QjAi/y4bDXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAtJyL2Ix4Z/yQaEf8mZZH/JrP//y62//8zuP/9M7r/yQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAALikkKoyIhP//////VXeP/zGr//8zpvXuM6z/cQAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAqJR87Ix0X/y0jGv8yGAM3AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAA4AcAAOAHAADwDwAAoAUAAIABAACAAQAAgAEAAIABAADAAwAAwAMAAOAHAADgBwAA8A8AAPgH
+    AAD4DwAA/D8AAA==" rel="icon" type="image/x-icon" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?11.2"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126746270-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-126746270-1');
+    </script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom Purple button CSS -->
+    <link rel="stylesheet" href="../static/customAndTwemoji.css">
+    <!-- Custom Responsive button CSS -->
+    <link rel="stylesheet" href="../static/customMediaCSS.css">
+    <!-- Custom Bootstrap Carousel example CSS -->
+    <link rel="stylesheet" href="../static/customCarouselBootstrap.css">
+    <!-- Custom Jumbotron Margin CSS -->
+    <link rel="stylesheet" href="../static/customJumbotronMargin.css">
+    <!-- Title -->
+    <title>LibreHunt: Home</title>
+    <meta name="title" content="LibreHunt">
+    <meta name="description" content="Choose a Linux Distro today!">
+    <meta name="keywords" content="Linux,Distro">
+    <meta name="author" content="Avi Wadhwa">
+    <script src="../librehunt.js"></script>
+  </head>
+  <body>
+    <!-- NAVBAR (purple color) -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6d00bd;">
+      <!-- home button (librehunt) -->
+      <a class="navbar-brand" href="/">LibreHunt</a>
+
+      <!-- toggle button for mobile phones -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- main buttons (chooser, feedback, and about -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/distrolist">All Distros</a>
+          <a class="nav-item nav-link" href="/feedback">Feedback</a>
+          <a class="nav-item nav-link" href="/news">News</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--TEXT-->
+    <div class="container" id="text">
+      <!-- headline: use linux! -->
+      <div class="jumbotron text-center mt-5 custom-row">
+        <img src="../static/about/credits/linux.png">
+        <h1 class="jumbotron-heading mb-3" id="VocabJumbotron">Safe, private, and secure. Choose Linux today.</h1>
+        <h3 class="text-muted">Wait, what is linux?</h3>
+      </div>
+      <!-- explain what it is-->
+      <div class="text-center jumbotron custom-row">
+        <h2>It's an operating system. <span class="text-muted">Operating System?</span></h2>
+        <p class="lead">Operating systems are the main software behind your phone, or computer. Android, Windows, and macOS are operating systems.</p>
+        <img src="../static/home/linuxcircle.png" alt="Linux logo" class="img-fluid img-fluid-cooler m-3" width="175" height=auto>
+        <img src="../static/home/applecircle.png" alt="Apple logo"class="img-fluid img-fluid-cooler m-3" width="175" height=auto>
+        <img src="../static/home/windowscircle.png" alt="Windows logo" class="img-fluid img-fluid-cooler m-3" width="175" height=auto>
+      </div>
+      <div class="jumbotron text-center custom-row">
+        <h1 class="font-weight-bold">Alright, so why should I use Linux?</h1>
+      </div>
+      <!-- explain why to use it -->
+      <div class="jumbotron row">
+        <div class="col-md-7 text-center">
+          <h1>It's safe and private. <span class="text-muted">No tracking.</span></h1>
+          <p class="lead">No company watching over you, no "big brother is watching you" nonsense. Just your desktop and you, with no big scary corporation stealing all your data.</p>
+        </div>
+        <div class="col-md-5"><img alt="The spy emoji to characterize how secure Linux is" class="featurette-image img-fluid mx-auto d-block" height="auto" src="../static/home/safe.svg" width="220"></div>
+      </div>
+      <div class="jumbotron row">
+        <div class="col-md-7 text-center">
+          <h1>It's fast. <span class="text-muted">Lightning Fast.</span></h1>
+          <p class="lead">It's super fast. So fast, that 100% of super computers use it. All Android phones use it too, and most servers keeping your websites, apps, and cat videos online are as well.</p>
+        </div>
+        <div class="col-md-5"><img alt="The lightning emoji to characterize how fast Linux is" class="featurette-image img-fluid mx-auto d-block" height="auto" src="../static/home/fast.svg" width="220"></div>
+      </div>
+      <div class="jumbotron row">
+        <div class="col-md-7 text-center">
+          <h1>It's Open Source. <span class="text-muted">Open Source?</span></h1>
+          <p class="lead">Fancy term time! Open Source means anyone is free to do <span class="font-weight-bold">whatever</span> they want with Linux. You can copy and make your own version, change a few things and help out Linux, or really anything! It gives more power to you!</p>
+          <p class="lead">(fun fact, that's why this website is called <span class="font-weight-bold">libre</span>hunt, because libre is a french word for freedom, which is what Linux gives you)</p>
+        </div>
+        <div class="col-md-5"><img alt="The open source logo to show that Linux is open source" class="featurette-image img-fluid mx-auto d-block" height="auto" src="../static/home/openSource.png" width="220"></div>
+      </div>
+      <div class="jumbotron row">
+        <div class="col-md-7 text-center">
+          <h1>It's got many flavours! <span class="text-muted">Awesome!</span></h1>
+          <p class="lead">The actual term is "distro", as in your own distribution of Linux, but it just means that anyone can make their own Linux flavour by say, changing the theme, and putting different apps.</p>
+          <p class="lead">Some distros make it friendly for beginners, or something ultra-powerful, but scary looking, for super computers.</p>
+          <p class="lead">Just like Windows and Mac have a different desktop, or interface, Linux has many different ones too! Some distros have a desktop that's unique to the distro while others use ones that are common across multiple distributions.</p>
+        </div>
+        <div class="col-md-5"><img alt="The paint emoji to characterize how customizable Linux is" class="featurette-image img-fluid mx-auto d-block" height="auto" src="../static/home/flavour.svg" width="220"></div>
+      </div>
+    </div>
+
+    <!--QUESTIONS-->
+    <div class="jumbotron container text-center jumbotron-little-little-padding" id="questions">
+    		<h1 class="jumbotron-heading">Awesome, but there are a million Linux distros...</h1>
+    		<p class="lead">That's alright, because I've made the second part of this website to help you choose which distro/Linux flavour to use!</p>
+          <form>
+            <div id="chooserCarousel" class="carousel slide " data-ride="carousel" data-interval="false">
+              <ol class="carousel-indicators">
+                <li data-target="#chooserCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#chooserCarousel" data-slide-to="1"></li>
+                <li data-target="#chooserCarousel" data-slide-to="2"></li>
+                <li data-target="#chooserCarousel" data-slide-to="3"></li>
+                <li data-target="#chooserCarousel" data-slide-to="4"></li>
+                <li data-target="#chooserCarousel" data-slide-to="5"></li>
+                <li data-target="#chooserCarousel" data-slide-to="6"></li>
+                <li data-target="#chooserCarousel" data-slide-to="7"></li>
+                <li data-target="#chooserCarousel" data-slide-to="8"></li>
+                <li data-target="#chooserCarousel" data-slide-to="9"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/linux.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Choose a distro today</h1>
+                      <p>New to Linux? No idea what to use? Confused by the gazillions of distros out there? Click next to begin discovering your perfect distro (out of our curated list).</p>
+                      <div class="btn-group" role="group" aria-label="Continue with questions or read up first?">
+                        <a class="btn btn-lg btn-purple btn-responsive" href="#chooserCarousel" role="button" data-slide="next">Next!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/linuxexpertise.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Linux Expertise</h1>
+                      <p>How good are you with computers and Linux?</p>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
+                          <label class="btn btn-lg btn-purple btn-responsive">
+                            <input type="radio" name="linuxexpertise" value="0"/> Beginner
+                          </label>
+                          <label class="btn btn-lg btn-purple btn-responsive">
+                            <input type="radio" name="linuxexpertise" value="1"/> Medium
+                          </label>
+                          <label class="btn btn-lg btn-purple btn-responsive">
+                            <input type="radio" name="linuxexpertise" value="2"/> Advanced
+                          </label>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/oldnew.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Old Hardware Support</h1>
+                      <p>Do you need to run your distro on old hardware?</p>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
+                          <label class="btn btn-lg btn-purple btn-responsive">
+                            <input type="radio" name="oldnew" value="0"/> Doesn't Matter
+                          </label>
+                          <label class="btn btn-lg btn-purple btn-responsive">
+                            <input type="radio" name="oldnew" value="1"/> Yeah
+                          </label>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="fourth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Fourth slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/lts.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Timely Updates</h1>
+                      <p>Do you want app-like updates, as in updates as they come, or OS-like updates as in once in 6 months?</p>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
+                          <label class="btn btn-lg btn-purple btn-responsive">
+                            <input type="radio" name="updates" value="0"/> As they come
+                          </label>
+                          <label class="btn btn-lg btn-purple btn-responsive">
+                            <input type="radio" name="updates" value="1"/> Once in a while
+                          </label>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="sixth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Fifth slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/lookalike.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Lookalike</h1>
+                      <p>Do you want the distro to look something like macOS or Windows, or it doesn't matter?</p>
+                      <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="lookalike" value="0"/> None
+                        </label>
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="lookalike" value="mac"/> macOS
+                        </label>
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="lookalike" value="windows"/> Windows
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="seventh-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Sixth slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/touch.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Touch Support</h1>
+                      <p>Do you have a touchscreen? Will you be using the distro with a touchscreen?</p>
+                      <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="touch" value="0"/> Doesn't Matter
+                        </label>
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="touch" value="1"/> Yes
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="eighth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Seventh slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/secure1.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Extreme Security</h1>
+                      <p>For those okay with trading convenience for unusual amount of security/privacy. If you aren't an advanced user or security researcher, don't select this.</p>
+                      <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="secure" value="0"/> No
+                        </label>
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="secure" value="1"/> Yes
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="ninth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Eighth slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/chat.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Popularity + More Support</h1>
+                      <p>Would you want a distro with more popularity and support than something small and different?</p>
+                      <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="popularity" value="0"/> No
+                        </label>
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="popularity" value="1"/> Yes
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="tenth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Ninth slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/customtweaks.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Appearances</h1>
+                      <p>Would you want a unique experience and appearance the second you install it, than something with a typical stock appearance/desktop?</p>
+                      <div class="btn-group btn-group-toggle" data-toggle="buttons" href="#chooserCarousel" data-slide="next">
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="customtweaks" value="0"/> No
+                        </label>
+                        <label class="btn btn-lg btn-purple btn-responsive">
+                          <input type="radio" name="customtweaks" value="1"/> Yes
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="eleventh-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Tenth slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <img src="../static/home/submit.png" class="mb-3 img-fluid img-fluid-cooler">
+                      <h1>Submit</h1>
+                      <p>Hit the submit button to jump in and find some distros today!</p>
+                      <p><button type="button" class="btn btn-lg btn-purple btn-responsive" onclick='distro()'>Submit</button></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#chooserCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#chooserCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </form>
+    	</div>
+    <!--RESPONSES-->
+    <div id="distroFoundJumbotron">
+    </div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center" id="distroFound">
+      </div>
+    </div>
+    <script>
+      twemoji.parse(document.body);
+    </script>
+    <!-- bootstrap scripts at the end for the page to load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
