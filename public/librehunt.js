@@ -130,10 +130,10 @@ function distro(){
     // final part of list of list for distro to add all 0's and 1's (total)
     SelectedDistros[i].push(SelectedDistros[i][14]+SelectedDistros[i][15]+SelectedDistros[i][16]+SelectedDistros[i][17]+SelectedDistros[i][18]+SelectedDistros[i][19]+SelectedDistros[i][20]+SelectedDistros[i][21]);
     //sort the selected distro db by ascending order by the total part
-    SelectedDistros.sort(function(a,b){
-      return a[21] - b[21];
-    });
   }
+  SelectedDistros = SelectedDistros.sort(function(a,b){
+    return a[22] - b[22];
+  });
   //only take first 20 lists in the selected distro db list
   SelectedDistros.splice(20);
 
