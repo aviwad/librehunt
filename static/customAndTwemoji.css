@@ -1,26 +1,31 @@
+/* space between buttons */
+.btn-space {
+    margin-right: 5px;
+}
+
 /* purple button */
 .btn-purple {
-  color: #ffffff; 
-  background-color: #611BBD; 
+  color: #ffffff;
+  background-color: #611BBD;
   border-color: #611BBD;
-} 
- 
+}
+
 .btn-purple:hover,
 .btn-purple:focus,
 .btn-purple:active,
 .btn-purple.active,
 .open .dropdown-toggle.btn-purple {
-  color: #ffffff; 
+  color: #ffffff;
   background-color: #49247A;
   border-color: #611BBD;
-} 
- 
+}
+
 .btn-purple:active,
 .btn-purple.active,
 .open .dropdown-toggle.btn-purple {
-  background-image: none; 
-} 
- 
+  background-image: none;
+}
+
 .btn-purple.disabled,
 .btn-purple[disabled],
 fieldset[disabled] .btn-purple,
@@ -36,13 +41,13 @@ fieldset[disabled] .btn-purple:active,
 .btn-purple.disabled.active,
 .btn-purple[disabled].active,
 fieldset[disabled] .btn-purple.active {
-  background-color: #611BBD; 
+  background-color: #611BBD;
   border-color: #611BBD;
-} 
- 
+}
+
 .btn-purple .badge {
-  color: #611BBD; 
-  background-color: #ffffff; 
+  color: #611BBD;
+  background-color: #ffffff;
 }
 .btn-purple:not(:disabled):not(.disabled):focus,
 .btn-purple:not(:disabled):not(.disabled):active:focus,

@@ -33,7 +33,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-126746270-1');
     </script>
     <!-- JQuery -->
@@ -79,7 +78,7 @@
     </nav>
 
     <!--TEXT-->
-    <div class="container">
+    <div class="container" id="text">
       <!-- headline: use linux! -->
       <div class="jumbotron text-center mt-5 custom-row">
         <img src="../static/about/credits/linux.png">
@@ -337,9 +336,12 @@
           </form>
     	</div>
     <!--RESPONSES-->
-    <div id="distrosFound">
+    <div id="distroFoundJumbotron">
     </div>
-
+    <div class="container">
+      <div class="row justify-content-center align-items-center" id="distroFound">
+      </div>
+    </div>
     <script>
       twemoji.parse(document.body);
     </script>

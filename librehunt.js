@@ -57,6 +57,7 @@ distros = [['Elementary OS', 0, 0, 1, 'mac', 1, 0, 1, 1,
           ['Void Linux', 2, 1, 0, '0', 0, 1, 0, 0, 'Enlightenment, Cinnamon, LXDE, Mate, and XFCE', 'void', 'https://voidlinux.org/', 'https://liberapay.com/voidforum/donate', 'Void Linux is an independent Linux distribution that uses the XBPS package manager along with the runit init system.'],
           ['Mageia XFCE and KDE Plasma', 1, 1, 1, 'Windows', 0, 0, 0, 0, 'KDE Plasma, and XFCE', 'mageia', 'https://www.mageia.org/en/', 'https://www.mageia.org/en/contribute/', 'Beyond delivering a secure, stable and sustainable operating system, is to also build great tools for people.'],
           ['Alpine Linux', 2, 1, 0, '0', 0, 1, 0, 0, 'It comes without one', 'alpine', 'https://www.alpinelinux.org/', 'https://www.alpinelinux.org/community/', 'Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.']];
+
 function optionSelected(optionName) {
   var option = document.getElementsByName(optionName);
   for (var i = 0, length = option.length; i < length; i++)
@@ -74,14 +75,14 @@ function optionSelected(optionName) {
 }
 
 function shuffle(a) {
-    var j, x, i;
-    for (i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = a[i];
-        a[i] = a[j];
-        a[j] = x;
-    }
-    return a;
+  var j, x, i;
+  for (i = a.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = a[i];
+      a[i] = a[j];
+      a[j] = x;
+  }
+  return a;
 }
 
 function distro(){
@@ -97,63 +98,67 @@ function distro(){
 
   // shuffle the lists inside the list (order of distros)
   distros = shuffle(distros);
-
   // this will be the order of user input, and distro output
   var UserOptions=[linuxexpertise,oldnew,updates,lookalike,touch,secure,popularity,customtweaks];
-  // empty array for selected distros
   var SelectedDistros = [];
-  // loop through database
-  // 43 IS DISTRO LIST, CHANGE IF DISTROS ADDED
+
+  // add to selected distro db if technical expertise is lower or equal to user
   for (i = 0; i < 43; i++)  {
     if (distros[i][1] <= linuxexpertise) {
       // add distros[i] (the distro) to SelectedDistros list
       SelectedDistros.push(distros[i]);
     }
   }
-  SelectedDistrosLength = SelectedDistros.length;
-  for (i = 0; i < SelectedDistrosLength; i++) {
-    // loop 8 times, add [] to current distro
-    for (j = 0; j < 8; j++){
-      SelectedDistros[i].push([]);
-    }
-    for (var index = 0; index < 7; index++){
-      if (index == 0 || index == 2 || index == 3){
-        if (UserOptions[index+1] != 0){
-          if (UserOptions[index+1] != SelectedDistros[i][index+2]){
-            if (SelectedDistros[i][index+14].length == 1){
-              SelectedDistros[i][index+14][0] = 1;
-            }
-            else{
-              SelectedDistros[i][index+14].push(1);
-            }
-          }
+  for (i = 0; i < SelectedDistros.length; i++) {
+    // 0 or 1 for same or not as user per DistroProperty (if property is a filter one and user clicked doesn't care, give a 0)
+    for (var variable = 0; variable < 8; variable++) {
+      if (variable == 0 || variable == 2 || variable == 3) {
+        if (UserOptions[variable+1]==0 || UserOptions[variable+1] == SelectedDistros[i][variable+2]){
+          SelectedDistros[i].push(0);
+        }
+        else {
+          SelectedDistros[i].push(1);
         }
       }
-      else if (UserOptions[index+1] != SelectedDistros[i][index+2]){
-        if (SelectedDistros[i][index+14].length == 1){
-          SelectedDistros[i][index+14][0] = 1;
-        }
-        else{
-          SelectedDistros[i][index+14].push(1);
-        }
+      else if (UserOptions[variable+1] == SelectedDistros[i][variable+2]){
+        SelectedDistros[i].push(0);
+      }
+      else {
+        SelectedDistros[i].push(1);
       }
     }
-    SelectedDistros[i][21].push(0);
-    for (j = 0; j < 7; j++){
-      if (SelectedDistros[i][j+14].length == 1){
-        SelectedDistros[i][21][0] = SelectedDistros[i][21][0]+SelectedDistros[i][j+14][0];
-      }
-    }
-  SelectedDistros.sort(function(a,b){
-    return a[21] - b[21];
-  });
+    // final part of list of list for distro to add all 0's and 1's (total)
+    SelectedDistros[i].push(SelectedDistros[i][14]+SelectedDistros[i][15]+SelectedDistros[i][16]+SelectedDistros[i][17]+SelectedDistros[i][18]+SelectedDistros[i][19]+SelectedDistros[i][20]+SelectedDistros[i][21]);
+    //sort the selected distro db by ascending order by the total part
+    SelectedDistros.sort(function(a,b){
+      return a[21] - b[21];
+    });
   }
+  //only take first 20 lists in the selected distro db list
   SelectedDistros.splice(20);
+
   // hide the entire html id questions
   document.getElementById("questions").parentNode.removeChild(document.getElementById("questions"));
-  // fill the distrosFound div with
-  // for loop
-  // add card each time, with stuff
-  console.log(SelectedDistros);
+  document.getElementById("text").parentNode.removeChild(document.getElementById("text"));
 
+  // add Jumbotron
+  document.getElementById("distroFoundJumbotron").innerHTML += '<section class="jumbotron mx-5 my-5"><div class="container text-center"><h1 class="jumbotron-heading">Distros found!</h1><p class="lead">All distros matching even a little of what you said are here, ordered ascending to what is the most similar to what you wanted to what is the most dissimilar</p></div></section>';
+
+  //array with does match, doesn't match
+  match=["Does Match ✔️","Does Not Match ❌"];
+
+  // add card each time in for loop, with distro
+  for (j = 0; j < SelectedDistros.length; j++){
+    current = SelectedDistros[j];
+    document.getElementById("distroFound").innerHTML +='<div class="card mx-auto my-3 text-center" style="width: 22rem;"><div class="align-items-center"><img class="m-2"src="../static/logos/'+current[10]+'.png" alt="Disro Logo" width="200" height=auto></div><div class="card-body"><h5 class="card-title">'+current[0]+'</h5><p class="card-text font-weight-bold">'+current[13]+'</p><p class="card-text">Old Hardware Support:'+match[current[14]]+'</p><p class="card-text">Timely Updates:'+match[current[15]]+'</p><p class="card-text">Lookalike:'+match[current[16]]+'</p><p class="card-text">Touch Support:'+match[current[17]]+'</p><p class="card-text">Extreme Security:'+match[current[18]]+'</p><p class="card-text">Popularity and Support:'+match[current[19]]+'</p><p class="card-text">Appearance:'+match[current[20]]+'</p><a href='+current[11]+' class="btn btn-purple btn-space" target="_blank">Website</a><a href='+current[12]+' class="btn btn-success btn-space" target="_blank">Contribute</a></div><div class="card-footer">Desktop(s): '+current[9]+'</div></div>';
+  }
+  twemoji.parse(document.body);
+  scroll(0,0);
+}
+function distrolist(){
+  distrolist=shuffle(distros)
+  console.log(distrolist)
+  for (var i = 0; i < 43; i++){
+    document.getElementById("distrolist").innerHTML +='<div class="card mx-auto my-3 text-center" style="width: 22rem;"><div class="align-items-center"><img class="m-2"src="../static/logos/'+distrolist[i][10]+'.png" alt="Card image cap" width="200" height=auto></div><div class="card-body"><h5 class="card-title">'+distrolist[i][0]+'</h5><p class="card-text font-weight-bold">'+distrolist[i][13]+'</p><a href="'+distrolist[i][11]+'" class="btn btn-purple btn-space" target="_blank">Website</a><a href="'+distrolist[i][12]+'" class="btn btn-success btn-space" target="_blank">Contribute</a></div><div class="card-footer">Desktop(s): '+distrolist[i][9]+'</div></div>'
+  }
 }
