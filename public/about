@@ -367,7 +367,7 @@ AAD4DwAA/D8AAA==" rel="icon" type="image/x-icon" />
       <div class="card">
         <div class="row justify-content-center align-items-center ">
           <div class="col-md-4">
-              <img src="../static/aboutImages/credits/distrowatch.png" class="mx-auto d-block">
+              <img src="aboutImages/credits/distrowatch.png" class="mx-auto d-block">
             </div>
             <div class="col-md-8 px-3 py-3">
               <div class="card-block px-3 py-3">
