@@ -85,7 +85,7 @@
         <div class="container">
             <div class="row justify-content-center align-items-center">
               <div class="mx-auto my-3 text-center">
-                <img src="news/newspaper.png" alt="News icon" width="140" height="140" class="mb-3">
+                <img src="newsImages/newspaper.png" alt="News icon" width="140" height="140" class="mb-3">
                 <h1>News and updates!</h1>
               </div>
             </div>
