@@ -4,7 +4,7 @@ My MYP personal project, a website to aid you on your libre/distro hunt, now in 
 
 # Use
 
-Not available yet
+available at <a>https://www.librehunt.org</a>!
 
 # Features
 
@@ -17,7 +17,7 @@ Work in Progress
 # Similar Projects
 
 It is quite similar to DistroChooser (<a>https://www.distrochooser.de/en</a>)
-It is the JavaScript version of LibreHunt (<a>https://www.librehunt.org</a>)
+It is the upgraded, less buggy version of the original Pythonic version of LibreHunt (<a>https://www.gitlab.com/aviwad/oldLibrehunt</a>)
 
 # License
 
