@@ -7,7 +7,7 @@ distros = [['Elementary OS', 0, 0, 1, 'mac', 1, 0, 1, 1,
           'https://linuxmint.com/donors.php', 'A modern, elegant and comfortable operating system which is both powerful and easy to use.']
           , ['Ubuntu', 0, 0, 1, '0', 1, 0, 1, 1, 'A customized GNOME desktop', 'ubuntu', 'https://www.ubuntu.com/download/desktop',
           'https://www.ubuntu.com/download/desktop/thank-you', 'Linux for Human Beings.'], ['Solus', 1, 0, 0, '0', 1, 0, 1, 0,
-          'Budgie, GNOME, and Mate', 'solus', 'https://getsol.us/', 'https://solus-project.com/support/', 'The Personal OS for Personal Computers.'],
+          'Budgie, GNOME, and Mate', 'solus', 'https://getsol.us/', 'https://getsol.us/articles/contributing/getting-involved/en/', 'The Personal OS for Personal Computers.'],
           ['Zorin OS', 0, 0, 1, 'windows', 1, 0, 0, 1, 'A customized GNOME desktop', 'zorin', 'https://zorinos.com/', 'https://zorinos.com/about/', "A desktop as versatile as it's easy to use."],
           ['Endless OS', 0, 0, 0, 'windows', 1, 1, 1, 1, 'A GNOME based desktop', 'endless', 'https://endlessos.com/',
           'https://endlessos.com/community/', 'The operating system that comes with everything your family needs.'],
