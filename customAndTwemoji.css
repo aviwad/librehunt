@@ -1,3 +1,9 @@
+/* Cantarell font! */
+@import url('https://fonts.googleapis.com/css?family=Cantarell&display=swap');
+body {
+  font-family: 'Cantarell', sans-serif;
+}
+
 /* space between buttons */
 .btn-space {
     margin-right: 5px;
