@@ -1,4 +1,5 @@
 // actual database for distros can be found in static/distro.db (SQLite3 database)
+// TODO change to JSON
 distros = [['Elementary OS', 0, 0, 1, 'mac', 1, 0, 1, 1,
          "It's own unique Pantheon desktop", 'elementary',
          'https://elementary.io/', 'https://elementary.io/get-involved#funding',
@@ -74,6 +75,8 @@ function optionSelected(optionName) {
   return 0;
 }
 
+
+// generic shuffle function, used to shuffle distros when displayed in the chooser and the distro list
 function shuffle(a) {
   var j, x, i;
   for (i = a.length - 1; i > 0; i--) {
@@ -150,15 +153,53 @@ function distro(){
   // add card each time in for loop, with distro
   for (j = 0; j < SelectedDistros.length; j++){
     current = SelectedDistros[j];
-    document.getElementById("distroFound").innerHTML +='<div class="card mx-auto my-3 text-center" style="width: 22rem;"><div class="align-items-center"><img class="m-2"src="logos/'+current[10]+'.png" alt="Distro Logo" width="200" height=auto></div><div class="card-body"><h5 class="card-title">'+current[0]+'</h5><p class="card-text font-weight-bold">'+current[13]+'</p><p class="card-text">Old Hardware Support: '+match[current[14]]+'</p><p class="card-text">Timely Updates: '+match[current[15]]+'</p><p class="card-text">Lookalike: '+match[current[16]]+'</p><p class="card-text">Touch Support: '+match[current[17]]+'</p><p class="card-text">Extreme Security: '+match[current[18]]+'</p><p class="card-text">Popularity and Support: '+match[current[19]]+'</p><p class="card-text">Appearance: '+match[current[20]]+'</p><a href='+current[11]+' class="btn btn-purple btn-space" target="_blank">Website</a><a href='+current[12]+' class="btn btn-success btn-space" target="_blank">Contribute</a></div><div class="card-footer">Desktop(s): '+current[9]+'</div></div>';
+    document.getElementById("distroFound").innerHTML +=
+    // card div
+    '<div class="card mx-auto my-3 text-center" style="width: 22rem;">'+
+      '<div class="align-items-center">'+
+        // distro logo
+        '<img class="m-2"src="logos/'+current[10]+'.png" alt="'+current[0]+' Logo" width="200" height=auto>'+
+      '</div>'+
+      // body, including if each category matches or not
+      '<div class="card-body">'+
+        '<h5 class="card-title">'+current[0]+'</h5>'+
+        '<p class="card-text font-weight-bold">'+current[13]+'</p>'+
+        '<p class="card-text">Old Hardware Support: '+match[current[14]]+'</p>'+
+        '<p class="card-text">Timely Updates: '+match[current[15]]+'</p>'+
+        '<p class="card-text">Lookalike: '+match[current[16]]+'</p>'+
+        '<p class="card-text">Touch Support: '+match[current[17]]+'</p>'+
+        '<p class="card-text">Extreme Security: '+match[current[18]]+'</p>'+
+        '<p class="card-text">Popularity and Support: '+match[current[19]]+'</p>'+
+        '<p class="card-text">Appearance: '+match[current[20]]+'</p>'+
+        '<a href='+current[11]+' class="btn btn-purple btn-space" target="_blank">Website</a>'+
+        '<a href='+current[12]+' class="btn btn-success btn-space" target="_blank">Contribute</a>'+
+      '</div>'+
+      // which desktops the distro has
+      '<div class="card-footer">Desktop(s): '+current[9]+'</div>'+
+    '</div>';
   }
   twemoji.parse(document.body);
   scroll(0,0);
 }
 function distrolist(){
   distrolist=shuffle(distros)
-  console.log(distrolist)
   for (var i = 0; i < 43; i++){
-    document.getElementById("distrolist").innerHTML +='<div class="card mx-auto my-3 text-center" style="width: 22rem;"><div class="align-items-center"><img class="m-2"src="logos/'+distrolist[i][10]+'.png" alt="Card image cap" width="200" height=auto></div><div class="card-body"><h5 class="card-title">'+distrolist[i][0]+'</h5><p class="card-text font-weight-bold">'+distrolist[i][13]+'</p><a href="'+distrolist[i][11]+'" class="btn btn-purple btn-space" target="_blank">Website</a><a href="'+distrolist[i][12]+'" class="btn btn-success btn-space" target="_blank">Contribute</a></div><div class="card-footer">Desktop(s): '+distrolist[i][9]+'</div></div>'
+    document.getElementById("distrolist").innerHTML +=
+    // card div
+    '<div class="card mx-auto my-3 text-center" style="width: 22rem;">'+
+      '<div class="align-items-center">'+
+        // distro logo
+        '<img class="m-2"src="logos/'+distrolist[i][10]+'.png" alt="'+distrolist[i][0]+' logo" width="200" height=auto>'+
+      '</div>'+
+      // card body, including title, description, website button, and contribution button
+      '<div class="card-body">'+
+        '<h5 class="card-title">'+distrolist[i][0]+'</h5>'+
+        '<p class="card-text font-weight-bold">'+distrolist[i][13]+'</p>'+
+        '<a href="'+distrolist[i][11]+'" class="btn btn-purple btn-space" target="_blank">Website</a>'+
+        '<a href="'+distrolist[i][12]+'" class="btn btn-success btn-space" target="_blank">Contribute</a>'+
+      '</div>'+
+      // card body including each desktop in the distro
+      '<div class="card-footer">Desktop(s): '+distrolist[i][9]+'</div>'+
+    '</div>'
   }
 }
