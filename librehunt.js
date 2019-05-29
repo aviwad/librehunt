@@ -142,7 +142,7 @@ function distro(){
   document.getElementById("text").parentNode.removeChild(document.getElementById("text"));
 
   // add Jumbotron
-  document.getElementById("distroFoundJumbotron").innerHTML += '<section class="jumbotron mx-5 my-5"><div class="container text-center"><h1 class="jumbotron-heading">Distros found!</h1><p class="lead">All distros matching even a little of what you said are here, ordered ascending to what is the most similar to what you wanted to what is the most dissimilar</p></div></section>';
+  document.getElementById("distroFoundJumbotron").innerHTML += '<section class="jumbotron mx-5 my-5"><div class="container text-center"><h1 class="jumbotron-heading">Distros found!</h1><p class="lead">All distros found are ordered descending from peak similarity</p></div></section>';
 
   //array with does match, doesn't match
   match=["Does Match ✔️","Does Not Match ❌"];
