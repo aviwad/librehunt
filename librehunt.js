@@ -524,7 +524,7 @@ var distros = [
       "link":"http://www.slackware.com/",
       "linuxexpertise":2,
       "codename":"slackware",
-      "donate":"https://www.reddit.com/r/linux/comments/93bkga/slackware_founder_getting_ripped_off_by_slackware/",
+      "donate":"https://www.patreon.com/slackwarelinux",
       "customtweaks":0,
    },
    {
