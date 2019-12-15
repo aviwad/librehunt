@@ -795,7 +795,8 @@ function distro(){
 
     // CUSTOM TWEAKS
     // if it's a generic desktop (like gnome), or something different (like elementary)
-    if (SelectedDistros[i].customtweaks == customtweaks){
+    // if it's same as user choice, or if 0 (doesn't matter)
+    if (SelectedDistros[i].customtweaks == customtweaks || customtweaks == 0){
       SelectedDistros[i].matches.push(0);
     }
     else {
