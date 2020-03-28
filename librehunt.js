@@ -56,7 +56,7 @@ var distros = [
       "oldnew":0,
       "shortdes":"The Personal OS for Personal Computers.",
       "touch":1,
-      "desktops":"Budgie, GNOME, and Mate",
+      "desktops":"Budgie, GNOME, KDE Plasma and Mate",
       "link":"https://solus-project.com/",
       "linuxexpertise":1,
       "codename":"solus",
