@@ -440,11 +440,11 @@ var distros = [
       "oldnew":1,
       "shortdes":"Made for today and tomorrow's generation. Fast updates, but stable. Customizable, with unique apps and features.",
       "touch":0,
-      "desktops":"A customized Cinnamon desktop",
+      "desktops":"Customized XFCE and Cinnamon",
       "link":"https://ferenos.weebly.com/",
       "linuxexpertise":0,
       "codename":"ferenos",
-      "donate":"https://gitlab.com/Feren-OS/feren-OS-Bug-Reporting/issues",
+      "donate":"https://ferenos.weebly.com/feedback-center.html ",
       "customtweaks":1,
    },
    {
