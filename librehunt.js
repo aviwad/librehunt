@@ -440,7 +440,7 @@ var distros = [
       "oldnew":1,
       "shortdes":"Made for today and tomorrow's generation. Fast updates, but stable. Customizable, with unique apps and features.",
       "touch":0,
-      "desktops":"Customized XFCE and Cinnamon",
+      "desktops":"Customized Plasma and Cinnamon",
       "link":"https://ferenos.weebly.com/",
       "linuxexpertise":0,
       "codename":"ferenos",
