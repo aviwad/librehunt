@@ -61,10 +61,10 @@ var distros = [
       "shortdes":"The Personal OS for Personal Computers.",
       "touch":1,
       "desktops":"Budgie, GNOME, KDE Plasma and Mate",
-      "link":"https://solus-project.com/",
+      "link":"https://getsol.us/",
       "linuxexpertise":1,
       "codename":"solus",
-      "donate":"https://solus-project.com/support/",
+      "donate":"https://getsol.us/articles/contributing/getting-involved/en/",
       "customtweaks":0,
    },
    {
