@@ -817,7 +817,7 @@ function distro(){
   document.getElementById("text").parentNode.removeChild(document.getElementById("text"));
 
   // add Jumbotron
-  document.getElementById("distroFoundJumbotron").innerHTML += '<section class="jumbotron mx-5 my-5"><div class="container text-center"><h1 class="jumbotron-heading">Distros found!</h1><p class="lead">All distros found are ordered descending from peak similarity</p></div></section>';
+  document.getElementById("distroFoundJumbotron").innerHTML += '<section class="jumbotron mx-5 my-5"><div class="container text-center"><h1 class="jumbotron-heading">Distros found!</h1><p class="lead">All distros found are ordered descending from peak similarity</p><p class="lead">Easily test out any Linux distro with Shells, a subscription service to run Linux through your web browser.</p></div></section>';
 
   //array with does match, doesn't match
   match=[" ✔️"," ❌"];
@@ -856,8 +856,11 @@ function distro(){
         '<p class="card-text">'+touchsupport[current.touch]+match[current.matches[3]]+'</p>'+
         '<p class="card-text">'+popularitysupport[current.popularity]+match[current.matches[4]]+'</p>'+
         '<p class="card-text">'+appearancesupport[current.customtweaks]+match[current.matches[5]]+'</p>'+
+        '<div class="btn-group-vertical">'+
         '<a href='+current.link+' class="btn btn-purple btn-space" target="_blank">Website</a>'+
         '<a href='+current.donate+' class="btn btn-success btn-space" target="_blank">Contribute</a>'+
+        '<a href="https://www.shells.com/?_a=C6Kx9Z" class="btn btn-danger" target="_blank">Try With Shells.com</a>'+
+        '</div>'+
       '</div>'+
       // which desktops the distro has
       '<div class="card-footer">Desktop(s): '+current.desktops+'</div>'+
