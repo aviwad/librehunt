@@ -15,6 +15,22 @@ var distros = [
       "donate":"https://elementary.io/get-involved#funding",
       "customtweaks":1,
    },
+      {
+      "notrolling":1,
+      "matches":[],
+      "name":"IonOS",
+      "lookalike":0,
+      "popularity":0,
+      "oldnew":1,
+      "shortdes":"IonOS is a tiny OS written for the web, in the web.",
+      "touch":0,
+      "desktops":"Its own shell. Really just a launcher and a clock.",
+      "link":"https://brahma.codeberg.page/os/",
+      "linuxexpertise":0,
+      "codename":"ionos",
+      "donate":"about:blank",
+      "customtweaks":1,
+   },
    {
       "notrolling":1,
       "matches":[],
@@ -871,7 +887,7 @@ function distro(){
 }
 function distrolist(){
   distrolist=shuffle(distros)
-  for (var i = 0; i < 43; i++){
+  for (var i = 0; i < 44; i++){
     document.getElementById("distrolist").innerHTML +=
     // card div
     '<div class="card mx-auto my-3 text-center" style="width: 22rem;">'+
