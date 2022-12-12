@@ -6,6 +6,7 @@ var distros = [
       "lookalike":"mac",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"A fast and open replacement for Windows and macOS",
       "touch":1,
       "desktops":"Its own unique Pantheon desktop",
@@ -22,6 +23,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":1,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"A modern, elegant and comfortable operating system which is both powerful and easy to use.",
       "touch":0,
       "desktops":"Mate, Cinnamon, and XFCE",
@@ -38,6 +40,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"Linux for Human Beings.",
       "touch":1,
       "desktops":"A customized GNOME desktop",
@@ -54,6 +57,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"The Personal OS for Personal Computers.",
       "touch":1,
       "desktops":"Budgie, GNOME, KDE Plasma and Mate",
@@ -70,6 +74,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"A desktop as versatile as it is easy to use.",
       "touch":1,
       "desktops":"A customized GNOME desktop",
@@ -86,6 +91,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":1,
       "oldnew":0,
+      "gaming":0,
       "shortdes":"The operating system that comes with everything your family needs.",
       "touch":1,
       "desktops":"A GNOME based desktop",
@@ -102,6 +108,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":0,
+      "gaming":0,
       "shortdes":"A user friendly, secure and freedom respecting OS for your daily usage.",
       "touch":1,
       "desktops":"The GNOME Desktop",
@@ -118,6 +125,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"A fully free operating system for home users, small enterprises and educational centers.",
       "touch":0,
       "desktops":"The Mate Desktop",
@@ -134,6 +142,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"A distro giving you complete control over your system, with 100% 'libre' software.",
       "touch":0,
       "desktops":"It comes without one",
@@ -150,6 +159,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"An advanced distribution of the GNU operating system developed by the GNU Project which respects the freedom of computer users.",
       "touch":0,
       "desktops":"It comes without one",
@@ -166,6 +176,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Penetration Testing and Ethical Hacking Linux Distribution.",
       "touch":0,
       "desktops":"GNOME, Mate, KDE Plasma, LXQT, Enlightenment, and XFCE",
@@ -182,6 +193,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":0,
+      "gaming":0,
       "shortdes":"Privacy for anyone anywhere.",
       "touch":0,
       "desktops":"A customized GNOME desktop",
@@ -198,6 +210,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":0,
+      "gaming":0,
       "shortdes":"A reasonably secure operating system",
       "touch":0,
       "desktops":"It comes without one",
@@ -214,6 +227,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"Choose Freedom. Choose Fedora.",
       "touch":1,
       "desktops":"GNOME, but has spins for Mate, Cinnamon, KDE Plasma, XFCE, and LXQT",
@@ -230,6 +244,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"The Universal Operating System. Super stable, with most other distros being based on this.",
       "touch":1,
       "desktops":"GNOME, KDE Plasma, XFCE, LXQT, and Mate",
@@ -246,6 +261,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"Get the most complete Linux distribution with openSUSE's latest regular-release version!",
       "touch":1,
       "desktops":"Cinnamon, Englightenment, Gnome, KDE Plasma, Mate, XFCE, and LXQT",
@@ -262,6 +278,7 @@ var distros = [
       "lookalike":"mac",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"An elegant, user-friendly and reliable operating system. ",
       "touch":1,
       "desktops":"Its own unique Deepin desktop",
@@ -278,6 +295,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"A lightweight and flexible Linux distribution that tries to Keep It Simple.",
       "touch":0,
       "desktops":"It comes without one",
@@ -294,6 +312,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Welcome to Gentoo, a flexible, source-based Linux distribution that becomes just about any system you need and much more.",
       "touch":0,
       "desktops":"It comes without one",
@@ -310,6 +329,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"The newest Linux packages with OpenSUSE's rolling release. Fast! Integrated! Stabilized! Tested!",
       "touch":1,
       "desktops":"Cinnamon, Englightenment, Gnome, KDE Plasma, Mate, XFCE, and LXQT",
@@ -326,6 +346,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"Professional and user-friendly Linux at its best. Evolving and giving the Linux world a new face and operating experience.",
       "touch":1,
       "desktops":"XFCE, KDE Plasma, and GNOME, but has community editions for Budgie, Cinnamon, Deepin, Mate, and LXQT",
@@ -342,6 +363,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"An OS for the software developer, maker, and computer science professional.",
       "touch":1,
       "desktops":"A customized GNOME desktop",
@@ -358,6 +380,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Beyond delivering a secure, stable and sustainable operating system, is to also build great tools for people.",
       "touch":1,
       "desktops":"KDE Plasma, GNOME, and XFCE",
@@ -374,6 +397,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":1,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"The latest and greatest of the KDE Plasma desktop on the rock solid base of Ubuntu.",
       "touch":0,
       "desktops":"The KDE Plasma Desktop",
@@ -390,6 +414,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"With a Windows-like interface given a design reboot, it's an easy to use and very customizable Ubuntu based distro.",
       "touch":0,
       "desktops":"A customized XFCE desktop",
@@ -406,6 +431,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Lightweight, with its own in-house Enlightenment desktop, while being based on Ubuntu.",
       "touch":0,
       "desktops":"The Enlightenment Desktop",
@@ -422,6 +448,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"An operating system designed to flash and run, straight from a CD/Pendrive.",
       "touch":0,
       "desktops":"The LXDE Desktop",
@@ -438,6 +465,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":0,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"Made for today and tomorrow's generation. Fast updates, but stable. Customizable, with unique apps and features.",
       "touch":0,
       "desktops":"Customized Plasma and Cinnamon",
@@ -454,6 +482,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":0,
+      "gaming":0,
       "shortdes":"BlackArch Linux is an Arch Linux-based penetration testing distribution for penetration testers and security researchers. ",
       "touch":0,
       "desktops":"It comes without one",
@@ -470,6 +499,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":0,
+      "gaming":0,
       "shortdes":"An 'out of the box' experience, while based on Gentoo.",
       "touch":1,
       "desktops":"KDE Plasma, GNOME, Mate, and XFCE",
@@ -486,6 +516,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":0,
       "oldnew":0,
+      "gaming":0,
       "shortdes":"A pinch of passion, A pinch of innovation, flavoured with fun.",
       "touch":0,
       "desktops":"The KDE Plasma Desktop",
@@ -502,6 +533,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":0,
       "oldnew":0,
+      "gaming":0,
       "shortdes":"The design decisions of Slackware, the package manager of Arch, and mixing easy to use with the terminal. A unique combination!",
       "touch":0,
       "desktops":"GNOME, KDE Plasma, XFCE, and Mate",
@@ -518,6 +550,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Slackware has been around for almost forever! An advanced distro with a goal of being stable and easy to use.",
       "touch":0,
       "desktops":"KDE Plasma, and XFCE",
@@ -534,6 +567,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Simple to use, and Grandpa-certified. Comes in many bases and flavours.",
       "touch":0,
       "desktops":"A customized JWM desktop",
@@ -550,6 +584,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":0,
       "oldnew":0,
+      "gaming":1,
       "shortdes":"An independent distro with strong ties to QT and the KDE desktop. It tries minimizing uses of other toolkits to stick with QT, and KDE.",
       "touch":0,
       "desktops":"The KDE Plasma Desktop",
@@ -566,6 +601,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":1,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"The stable, and Ubuntu based KDE distro! Vanilla KDE Plasma combined with the stability and ease of use of Ubuntu!",
       "touch":0,
       "desktops":"The KDE Plasma Desktop",
@@ -582,6 +618,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"The lightweight yet powerful XFCE desktop, now on Ubuntu.",
       "touch":0,
       "desktops":"The XFCE Desktop",
@@ -598,6 +635,7 @@ var distros = [
       "lookalike":"0",
       "popularity":1,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"Solus's home grown Budgie desktop, customizable yet quick, unique yet easy to use, now on Ubuntu!",
       "touch":0,
       "desktops":"The Budgie Desktop",
@@ -614,6 +652,7 @@ var distros = [
       "lookalike":"windows",
       "popularity":1,
       "oldnew":1,
+      "gaming":1,
       "shortdes":"Ubuntu Mate - For a retrospective future",
       "touch":0,
       "desktops":"A customized Mate desktop",
@@ -630,6 +669,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"The Purely Functional Linux Distribution",
       "touch":0,
       "desktops":"The KDE Plasma Desktop",
@@ -646,6 +686,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Void Linux is an independent Linux distribution that uses the XBPS package manager along with the runit init system.",
       "touch":0,
       "desktops":"Enlightenment, Cinnamon, LXDE, Mate, and XFCE",
@@ -662,6 +703,7 @@ var distros = [
       "lookalike":"Windows",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Beyond delivering a secure, stable and sustainable operating system, is to also build great tools for people.",
       "touch":0,
       "desktops":"KDE Plasma, and XFCE",
@@ -678,6 +720,7 @@ var distros = [
       "lookalike":"0",
       "popularity":0,
       "oldnew":1,
+      "gaming":0,
       "shortdes":"Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.",
       "touch":0,
       "desktops":"It comes without one",
@@ -722,6 +765,7 @@ function distro(){
   // assign user values to variable
   linuxexpertise = optionSelected("linuxexpertise");
   oldnew = optionSelected("oldnew");
+  gaming = optionSelected("gaming");
   updates = optionSelected("updates");
   lookalike = optionSelected("lookalike");
   touch = optionSelected("touch");
@@ -731,7 +775,7 @@ function distro(){
   // shuffle the lists inside the list (order of distros)
   distros = shuffle(distros);
   // this will be the order of user input, and distro output
-  //var UserOptions=[linuxexpertise,oldnew,updates,lookalike,touch,popularity,customtweaks];
+  //var UserOptions=[linuxexpertise,oldnew,gaming,updates,lookalike,touch,popularity,customtweaks];
   var SelectedDistros = [];
   var SelectedDistrosMatches = [];
 
@@ -747,6 +791,15 @@ function distro(){
     // if old hardware support is "don't care" or it matches with the distro, say it matches with the user choice
     // has a "don't care" option
     if (oldnew == 0 || SelectedDistros[i].oldnew == oldnew){
+      SelectedDistros[i].matches.push(0);
+    }
+    else {
+      SelectedDistros[i].matches.push(1);
+    }
+
+    // GAMING
+    // if a distro has good compatibility with games it gets a 1, otherwise it is 0
+    if (gaming == 0 || SelectedDistros[i].gaming == gaming){
       SelectedDistros[i].matches.push(0);
     }
     else {
@@ -822,6 +875,7 @@ function distro(){
   //array with does match, doesn't match
   match=[" ✔️"," ❌"];
   oldnewsupport=["Doesn't support old hardware","Supports old hardware"]
+  gamingsupport=["Not good with games","Good with games"]
   updatesupport =["Fast updates","Stable updates"]
   touchsupport=["No touch support","Touch support"]
   popularitysupport=["Less popular","Very popular"]
@@ -851,6 +905,7 @@ function distro(){
         '<h5 class="card-title">'+current.name+'</h5>'+
         '<p class="card-text font-weight-bold">'+current.shortdes+'</p>'+
         '<p class="card-text">'+oldnewsupport[current.oldnew]+match[current.matches[0]]+'</p>'+
+        '<p class="card-text">'+gamingsupport[current.gaming]+match[current.matches[1]]+'</p>'+
         '<p class="card-text">'+updatesupport[current.notrolling]+match[current.matches[1]]+'</p>'+
         '<p class="card-text">'+lookalikesupport+match[current.matches[2]]+'</p>'+
         '<p class="card-text">'+touchsupport[current.touch]+match[current.matches[3]]+'</p>'+
