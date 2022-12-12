@@ -78,10 +78,10 @@ var distros = [
       "shortdes":"A desktop as versatile as it is easy to use.",
       "touch":1,
       "desktops":"A customized GNOME desktop",
-      "link":"https://zorinos.com/",
+      "link":"https://zorin.com/",
       "linuxexpertise":0,
       "codename":"zorin",
-      "donate":"https://zorinos.com/about/",
+      "donate":"https://zorin.com/os/download/",
       "customtweaks":1,
    },
    {
