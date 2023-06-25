@@ -914,7 +914,6 @@ function distro(){
         '<div class="btn-group-vertical">'+
         '<a href='+current.link+' class="btn btn-purple btn-space" target="_blank">Website</a>'+
         '<a href='+current.donate+' class="btn btn-success btn-space" target="_blank">Contribute</a>'+
-        '<a href="https://www.shells.com/?_a=C6Kx9Z" class="btn btn-danger" target="_blank">Try With Shells.com</a>'+
         '</div>'+
       '</div>'+
       // which desktops the distro has
