@@ -689,11 +689,11 @@ var distros = [
       "gaming":0,
       "shortdes":"Void Linux is an independent Linux distribution that uses the XBPS package manager along with the runit init system.",
       "touch":0,
-      "desktops":"Enlightenment, Cinnamon, LXDE, Mate, and XFCE",
+      "desktops":"XFCE, or without",
       "link":"https://voidlinux.org/",
       "linuxexpertise":2,
       "codename":"void",
-      "donate":"https://liberapay.com/voidforum/donate",
+      "donate":"https://docs.voidlinux.org/contributing/index.html",
       "customtweaks":0,
    },
    {
