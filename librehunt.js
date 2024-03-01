@@ -870,7 +870,7 @@ function distro(){
   document.getElementById("text").parentNode.removeChild(document.getElementById("text"));
 
   // add Jumbotron
-  document.getElementById("distroFoundJumbotron").innerHTML += '<section class="jumbotron mx-5 my-5"><div class="container text-center"><h1 class="jumbotron-heading">Distros found!</h1><p class="lead">All distros found are ordered descending from peak similarity</p><p class="lead">Easily test out any Linux distro with Shells, a subscription service to run Linux through your web browser.</p></div></section>';
+  document.getElementById("distroFoundJumbotron").innerHTML += '<section class="jumbotron mx-5 my-5"><div class="container text-center"><h1 class="jumbotron-heading">Distros found!</h1><p class="lead">All distros found are ordered descending from peak similarity</p></div></section>';
 
   //array with does match, doesn't match
   match=[" ✔️"," ❌"];
