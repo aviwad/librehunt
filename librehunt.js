@@ -773,7 +773,7 @@ function distro(){
   customtweaks = optionSelected("customtweaks");
 
   // shuffle the lists inside the list (order of distros)
-  distros = shuffle(distros);
+  //distros = shuffle(distros);
   // this will be the order of user input, and distro output
   //var UserOptions=[linuxexpertise,oldnew,gaming,updates,lookalike,touch,popularity,customtweaks];
   var SelectedDistros = [];
@@ -859,7 +859,7 @@ function distro(){
     SelectedDistros[i].matches.push(SelectedDistros[i].matches[0]+SelectedDistros[i].matches[1]+SelectedDistros[i].matches[2]+SelectedDistros[i].matches[3]+SelectedDistros[i].matches[4]+SelectedDistros[i].matches[5]);
     //sort the selected distro db by ascending order by the total part
   }
-  SelectedDistros = SelectedDistros.sort((a, b) => parseFloat(a.matches[6]) - parseFloat(b.matches[6]));
+  SelectedDistros = SelectedDistros.sort((a, b) => parseFloat(a.matches[7]) - parseFloat(b.matches[7]));
 
   // only take first 20 lists in the selected distro db list
   SelectedDistros.splice(20);
