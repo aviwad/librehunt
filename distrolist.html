@@ -82,7 +82,8 @@
         <section class="jumbotron mt-5 custom-row">
           <div class="container text-center">
             <h1 class="jumbotron-heading">All distros.</h1>
-            <p class="lead">All distros in the database. Currently 44 distros curated! (always shuffled on reload of the page)</p>
+            <p class="lead" id="distrolisttext"></p> <!-- Number of distros is not hardcoded -->
+			<script>distrolisttext();</script>
           </div>
         </section>
         <div class="container">

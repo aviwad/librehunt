@@ -1,3 +1,5 @@
+Here is a text file containing some future ideas. It will not be changed until further notice.
+
 // list of questions =
 // how good are you with computers? DONE
 // for retro gaming only? LATER
