@@ -15,6 +15,9 @@ var distros = [
       "codename":"elementary",
       "donate":"https://elementary.io/get-involved#funding",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -32,6 +35,9 @@ var distros = [
       "codename":"mint",
       "donate":"https://linuxmint.com/donors.php",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -49,6 +55,9 @@ var distros = [
       "codename":"ubuntu",
       "donate":"https://www.ubuntu.com/download/desktop/thank-you",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -66,6 +75,9 @@ var distros = [
       "codename":"solus",
       "donate":"https://getsol.us/articles/contributing/getting-involved/en/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -83,6 +95,9 @@ var distros = [
       "codename":"zorin",
       "donate":"https://zorin.com/os/download/",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -100,6 +115,9 @@ var distros = [
       "codename":"endless",
       "donate":"https://endlessos.com/community/",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -117,6 +135,9 @@ var distros = [
       "codename":"pure",
       "donate":"https://puri.sm/products/",
       "customtweaks":0,
+      "freesoftware":1,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -134,6 +155,9 @@ var distros = [
       "codename":"trisquel",
       "donate":"https://trisquel.info/en/donate",
       "customtweaks":0,
+      "freesoftware":1,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -151,6 +175,9 @@ var distros = [
       "codename":"parabola",
       "donate":"https://liberapay.com/Parabola/donate",
       "customtweaks":0,
+      "freesoftware":1,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -168,6 +195,9 @@ var distros = [
       "codename":"guix",
       "donate":"https://www.gnu.org/software/guix/contribute/",
       "customtweaks":0,
+      "freesoftware":1,
+      "architecture":["x86"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -185,6 +215,9 @@ var distros = [
       "codename":"kali",
       "donate":"https://docs.kali.org/contribute",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -202,6 +235,9 @@ var distros = [
       "codename":"tails",
       "donate":"https://tails.boum.org/donate?r=sidebar",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -213,12 +249,15 @@ var distros = [
       "gaming":0,
       "shortdes":"A reasonably secure operating system",
       "touch":0,
-      "desktops":"It comes without one",
+      "desktops":"The XFCE Desktop",
       "link":"https://www.qubes-os.org/",
       "linuxexpertise":2,
       "codename":"qubes",
       "donate":"https://www.qubes-os.org/donate/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -236,6 +275,9 @@ var distros = [
       "codename":"fedora",
       "donate":"https://fedoraproject.org/wiki/Donations",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -253,6 +295,9 @@ var distros = [
       "codename":"debian",
       "donate":"https://www.debian.org/donations",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -270,6 +315,9 @@ var distros = [
       "codename":"leap",
       "donate":"https://en.opensuse.org/Portal:How_to_participate",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -287,6 +335,9 @@ var distros = [
       "codename":"deepin",
       "donate":"http://feedback.deepin.org/",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -304,6 +355,9 @@ var distros = [
       "codename":"arch",
       "donate":"https://www.archlinux.org/donate/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -321,6 +375,9 @@ var distros = [
       "codename":"gentoo",
       "donate":"https://www.gentoo.org/get-involved/contribute/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":1,
    },
    {
       "notrolling":0,
@@ -338,6 +395,9 @@ var distros = [
       "codename":"tumbleweed",
       "donate":"https://en.opensuse.org/Portal:How_to_participate",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -355,6 +415,9 @@ var distros = [
       "codename":"manjaro",
       "donate":"https://manjaro.org/feedback/",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -372,6 +435,9 @@ var distros = [
       "codename":"popos",
       "donate":"https://system76.com/pop/community",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -389,6 +455,9 @@ var distros = [
       "codename":"mageia",
       "donate":"https://www.mageia.org/en/contribute/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -406,6 +475,9 @@ var distros = [
       "codename":"neon",
       "donate":"https://www.kde.org/donations",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -423,6 +495,9 @@ var distros = [
       "codename":"linuxlite",
       "donate":"https://www.linuxliteos.com/donate.html",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -440,6 +515,9 @@ var distros = [
       "codename":"bodhi",
       "donate":"https://www.bodhilinux.com/donate/",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -457,9 +535,12 @@ var distros = [
       "codename":"knoppix",
       "donate":"http://www.knopper.net/kontakt/index-en.php",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86"],
+      "sourcebased":0,
    },
    {
-      "notrolling":0,
+      "notrolling":1,
       "matches":[],
       "name":"Feren OS",
       "lookalike":"windows",
@@ -468,12 +549,15 @@ var distros = [
       "gaming":1,
       "shortdes":"Made for today and tomorrow's generation. Fast updates, but stable. Customizable, with unique apps and features.",
       "touch":0,
-      "desktops":"Customized Plasma and Cinnamon",
+      "desktops":"A customized KDE Plasma desktop",
       "link":"https://ferenos.weebly.com/",
       "linuxexpertise":0,
       "codename":"ferenos",
-      "donate":"https://ferenos.weebly.com/feedback-center.html ",
+      "donate":"https://ferenos.weebly.com/feedback-center.html",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -491,23 +575,29 @@ var distros = [
       "codename":"blackarch",
       "donate":"https://blackarch.org/donate.html",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
       "matches":[],
-      "name":"Sabayon",
+      "name":"MocaccinoOS",
       "lookalike":"0",
       "popularity":0,
       "oldnew":0,
       "gaming":0,
-      "shortdes":"An 'out of the box' experience, while based on Gentoo.",
+      "shortdes":"MocaccinoOS is a minimal Linux meta-distribution for the 21st century!",
       "touch":1,
       "desktops":"KDE Plasma, GNOME, Mate, and XFCE",
-      "link":"https://www.sabayon.org/",
+      "link":"https://www.mocaccino.org/",
       "linuxexpertise":2,
       "codename":"sabayon",
-      "donate":"https://www.sabayon.org/donate/",
+      "donate":"https://www.mocaccino.org/docs/donate/",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -525,6 +615,9 @@ var distros = [
       "codename":"openmandriva",
       "donate":"https://www.openmandriva.org/en/documentation/association/Donate?q=%2Fdonate",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -542,6 +635,9 @@ var distros = [
       "codename":"frugalware",
       "donate":"https://frugalware.org/donations",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -559,6 +655,9 @@ var distros = [
       "codename":"slackware",
       "donate":"https://www.patreon.com/slackwarelinux",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -576,23 +675,9 @@ var distros = [
       "codename":"puppylinux",
       "donate":"https://www.paypal.com/donate/?token=36saFjRNFZ7Dr479mP2l14_jcylLi7JPK57tNoOg_wZMRF-DPp5ZgRJqCS-rTi1vugso3m&country.x=PH&locale.x=PH",
       "customtweaks":1,
-   },
-   {
-      "notrolling":0,
-      "matches":[],
-      "name":"Chakra Linux",
-      "lookalike":"windows",
-      "popularity":0,
-      "oldnew":0,
-      "gaming":1,
-      "shortdes":"An independent distro with strong ties to QT and the KDE desktop. It tries minimizing uses of other toolkits to stick with QT, and KDE.",
-      "touch":0,
-      "desktops":"The KDE Plasma Desktop",
-      "link":"https://www.chakralinux.org/",
-      "linuxexpertise":1,
-      "codename":"chakralinux",
-      "donate":"https://www.chakralinux.org/?donate",
-      "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -610,6 +695,9 @@ var distros = [
       "codename":"kubuntu",
       "donate":"https://kubuntu.org/contribute-to-kubuntu/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -627,6 +715,9 @@ var distros = [
       "codename":"xubuntu",
       "donate":"https://xubuntu.org/donations/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -644,6 +735,9 @@ var distros = [
       "codename":"ubuntubudgie",
       "donate":"https://ubuntubudgie.org/contribute",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -661,6 +755,9 @@ var distros = [
       "codename":"ubuntumate",
       "donate":"https://ubuntu-mate.org/donate/",
       "customtweaks":1,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -672,12 +769,15 @@ var distros = [
       "gaming":0,
       "shortdes":"The Purely Functional Linux Distribution",
       "touch":0,
-      "desktops":"The KDE Plasma Desktop",
+      "desktops":"GNOME, KDE Plasma, and others, or without",
       "link":"https://nixos.org/",
       "linuxexpertise":2,
       "codename":"nixos",
       "donate":"https://nixos.org/nixos/community.html",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -695,6 +795,9 @@ var distros = [
       "codename":"void",
       "donate":"https://docs.voidlinux.org/contributing/index.html",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    },
    {
       "notrolling":1,
@@ -712,6 +815,9 @@ var distros = [
       "codename":"mageia",
       "donate":"https://www.mageia.org/en/contribute/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    },
    {
       "notrolling":0,
@@ -729,6 +835,69 @@ var distros = [
       "codename":"alpine",
       "donate":"https://www.alpinelinux.org/community/",
       "customtweaks":0,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
+   },
+   {
+      "notrolling":0,
+      "matches":[],
+      "name":"Garuda Linux",
+      "lookalike":"0",
+      "popularity":1,
+      "oldnew":0,
+      "gaming":1,
+      "shortdes":"Garuda Linux is a Linux distribution based on Arch Linux that emphasizes performance.",
+      "touch":0,
+      "desktops":"KDE Plasma (customized and generic editions), GNOME, Cinnamon, Xfce, Sway, i3, and Hyprland",
+      "link":"https://garudalinux.org/",
+      "linuxexpertise":1,
+      "codename":"garuda",
+      "donate":"https://garudalinux.org/donate",
+      "customtweaks":1,
+      "freesoftware":0,
+      "architecture":[],
+      "sourcebased":0,
+   },
+   {
+      "notrolling":1,
+      "matches":[],
+      "name":"Elive",
+      "lookalike":"0",
+      "popularity":0,
+      "oldnew":1,
+      "gaming":0,
+      "shortdes":"Elive, maybe the best Linux OS ever made, and probably the only distro you'll stay with.",
+      "touch":1,
+      "desktops":"The Enlightenment Desktop",
+      "link":"https://www.elivecd.org/",
+      "linuxexpertise":0,
+      "codename":"elive",
+      "donate":"https://www.elivecd.org/premium/",
+      "customtweaks":1,
+      "freesoftware":0,
+      "architecture":["x86"],
+      "sourcebased":0,
+   },
+   {
+      "notrolling":1,
+      "matches":[],
+      "name":"MX Linux",
+      "lookalike":"windows",
+      "popularity":1,
+      "oldnew":1,
+      "gaming":1,
+      "shortdes":"MX Linux is a family of operating systems that are designed to combine elegant and efficient desktops with high stability and solid performance.",
+      "touch":0,
+      "desktops":"XFCE, KDE Plasma, and Fluxbox",
+      "link":"https://mxlinux.org/",
+      "linuxexpertise":1,
+      "codename":"mxlinux",
+      "donate":"https://mxlinux.org/donate/",
+      "customtweaks":1,
+      "freesoftware":0,
+      "architecture":["x86", "other"],
+      "sourcebased":0,
    }
 ]
 
@@ -762,31 +931,43 @@ function shuffle(a) {
 }
 
 function distro(){
+  questions = 10;
   // assign user values to variable
   linuxexpertise = optionSelected("linuxexpertise");
   oldnew = optionSelected("oldnew");
+  architecture = optionSelected("architecture");
   gaming = optionSelected("gaming");
   updates = optionSelected("updates");
   lookalike = optionSelected("lookalike");
   touch = optionSelected("touch");
   popularity = optionSelected("popularity");
   customtweaks = optionSelected("customtweaks");
+  freesoftware = optionSelected("freesoftware");
+  sourcebased = optionSelected("sourcebased");
 
   // shuffle the lists inside the list (order of distros)
   //distros = shuffle(distros);
   // this will be the order of user input, and distro output
   //var UserOptions=[linuxexpertise,oldnew,gaming,updates,lookalike,touch,popularity,customtweaks];
   var SelectedDistros = [];
-  var SelectedDistrosMatches = [];
+  // var SelectedDistrosMatches = []; // Is this variable even used?
 
+  // add to selected distro db if the distro supports given architecture
   // add to selected distro db if technical expertise is lower or equal to user
-  for (i = 0; i < 43; i++)  {
-    if (distros[i].linuxexpertise <= linuxexpertise) {
+  for (i = 0; i < distros.length; i++)  {
+    if (distros[i].architecture.includes(architecture) || architecture == 0) {
       // add distros[i] (the distro) to SelectedDistros list
       SelectedDistros.push(distros[i]);
     }
   }
   for (i = 0; i < SelectedDistros.length; i++) {
+    // LINUX EXPERTISE
+    if (SelectedDistros[i].linuxexpertise <= linuxexpertise) {
+      console.log(SelectedDistros[i].linuxexpertise)
+      SelectedDistros[i].matches.push(0);
+    } else {
+      SelectedDistros[i].matches.push(1);
+    }
     // OLD HARDWARE SUPPORT
     // if old hardware support is "don't care" or it matches with the distro, say it matches with the user choice
     // has a "don't care" option
@@ -809,8 +990,6 @@ function distro(){
     // UPDATES
     // notrolling basically means stable, and 0 means fast, 1 means stable TODO add slow option
     if (SelectedDistros[i].notrolling == updates){
-      console.log(SelectedDistros[i].name)
-      console.log("same")
       SelectedDistros[i].matches.push(0);
     }
     else {
@@ -855,11 +1034,30 @@ function distro(){
     else {
       SelectedDistros[i].matches.push(1);
     }
+	
+    // FREE SOFTWARE
+    // 0 if it includes non-free drivers and codecs, 1 for free software only
+    if (SelectedDistros[i].freesoftware == freesoftware || freesoftware == 0) {
+      SelectedDistros[i].matches.push(0);
+    } else {
+      SelectedDistros[i].matches.push(1);
+    }
+    
+    // METHOD OF INSTALLING PACKAGES
+    // 0 for binary packages with optional source, 1 for source packages
+    if (SelectedDistros[i].sourcebased == sourcebased) {
+      SelectedDistros[i].matches.push(0);
+    } else {
+      SelectedDistros[i].matches.push(1);
+    }
     // final part of list of list for distro to add all 0's and 1's (total)
-    SelectedDistros[i].matches.push(SelectedDistros[i].matches[0]+SelectedDistros[i].matches[1]+SelectedDistros[i].matches[2]+SelectedDistros[i].matches[3]+SelectedDistros[i].matches[4]+SelectedDistros[i].matches[5]);
+    var points = 0;
+    for (j = 0; j < questions; j++)
+      points += SelectedDistros[i].matches[j];
+      SelectedDistros[i].matches.push(points);
     //sort the selected distro db by ascending order by the total part
   }
-  SelectedDistros = SelectedDistros.sort((a, b) => parseFloat(a.matches[7]) - parseFloat(b.matches[7]));
+  SelectedDistros = SelectedDistros.sort((a, b) => parseFloat(a.matches[questions]) - parseFloat(b.matches[questions]));
 
   // only take first 20 lists in the selected distro db list
   SelectedDistros.splice(20);
@@ -874,12 +1072,15 @@ function distro(){
 
   //array with does match, doesn't match
   match=[" ✔️"," ❌"];
+  linuxexpertisesupport=["For beginning users", "For users with medium expertise", "For advanced users"]
   oldnewsupport=["Doesn't support old hardware","Supports old hardware"]
   gamingsupport=["Not good with games","Good with games"]
   updatesupport =["Fast updates","Stable updates"]
   touchsupport=["No touch support","Touch support"]
   popularitysupport=["Less popular","Very popular"]
   appearancesupport=["A default desktop","A unique aesthetic and design"]
+  freesoftwaresupport=["Includes non-free drivers and codecs", "Includes free software only"]
+  sourcebasedsupport=["Mainly uses binary packages","Mainly uses source packages"]
 
   // add card each time in for loop, with distro
   for (j = 0; j < SelectedDistros.length; j++){
@@ -904,13 +1105,16 @@ function distro(){
       '<div class="card-body">'+
         '<h5 class="card-title">'+current.name+'</h5>'+
         '<p class="card-text font-weight-bold">'+current.shortdes+'</p>'+
-        '<p class="card-text">'+oldnewsupport[current.oldnew]+match[current.matches[0]]+'</p>'+
-        '<p class="card-text">'+gamingsupport[current.gaming]+match[current.matches[1]]+'</p>'+
-        '<p class="card-text">'+updatesupport[current.notrolling]+match[current.matches[1]]+'</p>'+
-        '<p class="card-text">'+lookalikesupport+match[current.matches[2]]+'</p>'+
-        '<p class="card-text">'+touchsupport[current.touch]+match[current.matches[3]]+'</p>'+
-        '<p class="card-text">'+popularitysupport[current.popularity]+match[current.matches[4]]+'</p>'+
-        '<p class="card-text">'+appearancesupport[current.customtweaks]+match[current.matches[5]]+'</p>'+
+        '<p class="card-text">'+linuxexpertisesupport[current.linuxexpertise]+match[current.matches[0]]+'</p>'+
+        '<p class="card-text">'+oldnewsupport[current.oldnew]+match[current.matches[1]]+'</p>'+
+        '<p class="card-text">'+gamingsupport[current.gaming]+match[current.matches[2]]+'</p>'+
+        '<p class="card-text">'+updatesupport[current.notrolling]+match[current.matches[3]]+'</p>'+
+        '<p class="card-text">'+lookalikesupport+match[current.matches[4]]+'</p>'+
+        '<p class="card-text">'+touchsupport[current.touch]+match[current.matches[5]]+'</p>'+
+        '<p class="card-text">'+popularitysupport[current.popularity]+match[current.matches[6]]+'</p>'+
+        '<p class="card-text">'+appearancesupport[current.customtweaks]+match[current.matches[7]]+'</p>'+
+        '<p class="card-text">'+freesoftwaresupport[current.freesoftware]+match[current.matches[8]]+'</p>'+
+        '<p class="card-text">'+sourcebasedsupport[current.sourcebased]+match[current.matches[9]]+'</p>'+
         '<div class="btn-group-vertical">'+
         '<a href='+current.link+' class="btn btn-purple btn-space" target="_blank">Website</a>'+
         '<a href='+current.donate+' class="btn btn-success btn-space" target="_blank">Contribute</a>'+
@@ -925,7 +1129,7 @@ function distro(){
 }
 function distrolist(){
   distrolist=shuffle(distros)
-  for (var i = 0; i < 43; i++){
+  for (var i = 0; i < distros.length; i++){
     document.getElementById("distrolist").innerHTML +=
     // card div
     '<div class="card mx-auto my-3 text-center" style="width: 22rem;">'+
@@ -944,4 +1148,9 @@ function distrolist(){
       '<div class="card-footer">Desktop(s): '+distrolist[i].desktops+'</div>'+
     '</div>'
   }
+}
+
+function distrolisttext(){
+  document.getElementById("distrolisttext").innerHTML
+  += "All distros in the database. Currently " + distros.length + " distros curated! (always shuffled on reload of the page)"
 }
